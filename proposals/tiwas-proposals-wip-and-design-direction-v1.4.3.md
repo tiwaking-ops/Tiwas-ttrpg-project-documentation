@@ -298,6 +298,67 @@ This is not canonical.
 
 Effects must never modify the historical die roll.
 
+## 3.4 S-3 designer rulings and menu structure (non-canonical, 2026-08-29)
+
+**Status: Non-Canonical.** These are real in-session human/designer rulings (2026-08-29)
+about candidate S-3 material, recorded in
+`investigations/tiwas-s3-designer-rulings-and-handoff-2026-08-29.md` and classified in
+`_consolidation/decision-register.md` §D (DEC-023–DEC-030). They are **not** Canonical
+rules; they replace the earlier §3.1/§3.2 candidates as the current non-canonical S-3
+working direction. Any promotion to Canonical still requires the full 8-step Promotion
+Rule (§21).
+
+### 3.4.1 Effect menu — RULED: tiered menu (DEC-023 / Q-S3-1)
+
+- **Base tier (usable now, self-contained against Canonical):**
+  - **Inflict Injury** — HP-only form (plain damage; does not touch S-4 wounds).
+  - **Open Retreat / Compel Yield.**
+- **Gated tiers** (each unlocks automatically when its dependency locks; no hooks are
+  pre-built in the meantime per Roadmap §9's deferral discipline and §24 Rule 6):
+  - *Position tier* — Force Movement / Seize Position, Seize Tempo → Time/Action (§12).
+  - *Condition tier* — Impose Condition, Bleed/Ongoing Drain, and **Dizzy** (new,
+    session-proposed candidate, not part of the original §3.1 menu — flagged) →
+    Conditions (§10).
+  - *Equipment tier* — Damage Equipment → Equipment (§13).
+  - *Defense tier* — Guard Break → S-6 (§6).
+  - *Location tier* — Choose Location → S-2 invocation-policy promotion (§2.1A).
+- **Disarm / Break Hold** — placed via Q-S3-3's combined Tag+Location gating (DEC-028).
+
+### 3.4.2 Effect multiplicity — RULED: flat one-Effect-per-win (DEC-024 / Q-S3-2)
+
+No Quality-based scaling, no "purchasing" of additional Effects off the size of a single
+win. A successful S-1 contest earns exactly one Effect from the currently unlocked tiers.
+A second/additional Effect requires a **separate opposed roll** — mechanism not yet
+designed, deferred (Q-S3-2b). This supersedes the earlier §3.2 candidate.
+
+### 3.4.3 State-3 Effects — RULED: combined Location + Tag gating (DEC-028 / Q-S3-3)
+
+For the in-scope S-3 Effects (**Disarm/Break Hold, Equipment Damage, Armor Bypass**),
+triggering requires **both** a matching Tag (e.g., `[Disarming]`, `[Armor-Piercing]`)
+**and** a supporting Zero-Step Location Index (Tier 1+). **Function Impairment** and
+**Incapacitation** are deferred **out** of S-3 scope (Incapacitation → S-7; Function
+Impairment → S-4/Condition) — they are not part of the §3.1 menu and no S-3 ruling
+applies to them.
+
+Dependencies: a starter Tag vocabulary covering these Effects (Tags subsystem, §11,
+Reserved); the anatomical mapping table (Canonical §14.3, unbuilt); and the S-2
+invocation policy (§2.1A, requires its own independent promotion path).
+
+### 3.4.4 S-3/S-4 boundary — RULED: prototype-only, no interface work yet (DEC-029 / Q-S3-4)
+
+No S-3/S-4 interface is currently prototyped because base-tier Injury is HP-only. The
+Roadmap §10 boundary holds and is dormant. The **S-4 direction** (location-based injury
+from repeated hits; no Location Index → no Injury; per-location hit-history by GM
+adjudication; healing open) is a **steer for a future S-4 investigation**, not an S-3
+ruling and not Canonical — see `investigations/tiwas-s3-outcome-effects-investigation-v0.1-draft.md` §Q-S3-4.
+
+### 3.4.5 Open items (deferred to the Effect Identity & Multi-Effect Opposition thread)
+
+Q-S3-2a (Effect naming/gating, DEC-025), Q-S3-2b (second-Effect opposed-roll mechanism,
+DEC-026), Q-S3-5 (auto-apply vs. contested application, DEC-027), and Q-S3-3a (partial
+Tag/Location match, DEC-030) remain **Open** and are tracked in
+`investigations/tiwas-s3-effect-identity-and-multi-effect-opposition-investigation-v0.1-open.md`.
+
 ---
 
 # 4. S-4 — Two-Track Harm and Wounds
