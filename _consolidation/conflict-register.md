@@ -6,14 +6,14 @@ document:
 provenance:
   author_llm: {name: "Claude Sonnet 5", version: "claude-sonnet-5"}
   assessor_llm: {name: "Claude Sonnet 5", version: "claude-sonnet-5"}
-  last_modified_by_llm: {name: "Claude Sonnet 5", version: "claude-sonnet-5"}
+  last_modified_by_llm: {name: "opencode", version: "big-pickle"}
   created_date: "2026-08-29"
   last_modified_date: "2026-08-29"
 ---
 
 # Phase 2 — Conflict Register
 
-The corpus is unusually self-consistent (it appears to already be a governed documentation set, not raw disorganized material). Most "conflicts" found are **resolved-in-place** — i.e., the corpus itself records a correction or ruling that supersedes an earlier position, and both the earlier position and the resolution are visible in the same document. These are recorded below for traceability, distinguished from the one genuine **evidentiary gap** (C5) this consolidation cannot resolve.
+The corpus is unusually self-consistent (it appears to already be a governed documentation set, not raw disorganized material). Most "conflicts" found are **resolved-in-place** — i.e., the corpus itself records a correction or ruling that supersedes an earlier position, and both the earlier position and the resolution are visible in the same document. These are recorded below for traceability, distinguished from the one genuine **evidentiary gap** (C5) this consolidation cannot resolve — later accepted by human ruling (2026-08-29) as a permanent limitation (see C5).
 
 ## C1 — Structural Weak Points: State 1 vs. State 2
 
@@ -51,8 +51,9 @@ The corpus is unusually self-consistent (it appears to already be a governed doc
 - **What's missing:** Canonical Rules v1.2 and earlier "Core Rules"/standalone locked-subsystem documents; Roadmap v1.4.2 (old Phase 2/§9, old S-2 row of §4); Proposals/WIP v1.4.1 and v1.4.2 (old §2 text pre-investigation); Investigation D4's pre-correction "uploaded v5" synthesis; Non-Attack "Starter Brief v1.1" (D5's own predecessor).
 - **Why this matters:** Every one of these is referenced as being superseded/corrected/replaced by the current documents, and the current documents summarize *what changed*, but this consolidation cannot independently verify those summaries against the original prior text, because that text was never supplied.
 - **Resolution:** None possible from this corpus. This is recorded as an explicit evidentiary limitation, not resolved, not archived (nothing to archive), and not treated as if the missing documents' content is known. See `document-inventory.md` note 2 and `consolidation-plan.md` "Known limitations."
-- **Status:** Unresolved — evidentiary gap, flagged for any future session that gains access to the missing prior-version files.
+- **Human ruling (2026-08-29):** Accepted as a **permanent limitation** — per `tiwas-consolidation-priority7-repository-hygiene-decisions-2026-08-29.md` (Priority 7). Recovery of the prior-version full text is **no longer required**; the gap is closed by designer decision and must not be re-opened as a recovery obligation unless a new designer ruling explicitly reverses this.
+- **Status:** **Accepted permanent limitation (2026-08-29)** — closed (was: unresolved evidentiary gap).
 
 ## Summary
 
-No unresolved *substantive rules conflict* exists in the supplied corpus. The one standing item requiring future-session awareness is C5 (missing prior-version source text), which is an evidence gap rather than a contradiction between documents that were actually supplied.
+No unresolved *substantive rules conflict* exists in the supplied corpus. The single evidence-gap item (C5, missing prior-version source text) is now closed as an **accepted permanent limitation** by human ruling (2026-08-29); recovery is no longer required.

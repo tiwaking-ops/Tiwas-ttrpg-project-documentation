@@ -11,8 +11,8 @@ provenance:
     name: "Claude Sonnet 5"
     version: "claude-sonnet-5"
   last_modified_by_llm:
-    name: "Claude Sonnet 5"
-    version: "claude-sonnet-5"
+    name: "opencode"
+    version: "big-pickle"
   created_date: "2026-08-29"
   last_modified_date: "2026-08-29"
 ---
@@ -141,7 +141,7 @@ No other corpus material (no prior repository, no separate audit files, no chat 
 ## Cross-cutting inventory notes
 
 1. **No conflicting-authority documents were found.** All five documents are internally consistent about where they sit in the authority hierarchy: D1 is canonical; D2, D3, D4, D5 all explicitly disclaim canonical/rule-making authority for themselves. This is unusually clean for a "disorganized corpus" — the self-declared status headers are treated here as strong evidence (not blind trust — see `conflict-register.md` and `decision-register.md` for the underlying reasoning), because they are corroborated by cross-references between the documents rather than resting on any single document's say-so.
-2. **Several referenced prior-version documents were not supplied in the corpus**: Canonical Rules v1.2 (and original "v1" Core Rules / standalone locked subsystem docs), Roadmap v1.4.2 (Phase 2/§9 and old S-2 row only), Proposals/WIP v1.4.2 (old §2 text) and v1.4.1, the pre-correction "uploaded v5" Investigation synthesis, and the Non-Attack "Starter Brief v1.1". These are **referenced by title/version and by summarized content** inside the supplied documents, but their full original text was not part of this corpus. They therefore cannot be archived (there is nothing to move) and no claim is made here about their exact original wording. See `conflict-register.md` item C5.
+2. **Several referenced prior-version documents were not supplied in the corpus**: Canonical Rules v1.2 (and original "v1" Core Rules / standalone locked subsystem docs), Roadmap v1.4.2 (Phase 2/§9 and old S-2 row only), Proposals/WIP v1.4.2 (old §2 text) and v1.4.1, the pre-correction "uploaded v5" Investigation synthesis, and the Non-Attack "Starter Brief v1.1". These are **referenced by title/version and by summarized content** inside the supplied documents, but their full original text was not part of this corpus. They therefore cannot be archived (there is nothing to move) and no claim is made here about their exact original wording. See `conflict-register.md` item C5. *(As of 2026-08-29, Priority 7 closed C5 as an accepted permanent limitation — recovery is no longer required.)*
 3. **No audits, no separate decision log, no requirements spec, and no prior repository structure** were supplied. `audits/`, and most of `canonical/systems/` and `canonical/decisions/` therefore start empty or near-empty in this consolidation — see those folders' own README notes.
 
 ---

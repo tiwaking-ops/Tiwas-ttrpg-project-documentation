@@ -306,7 +306,8 @@ about candidate S-3 material, recorded in
 `_consolidation/decision-register.md` §D (DEC-023–DEC-030). They are **not** Canonical
 rules; they replace the earlier §3.1/§3.2 candidates as the current non-canonical S-3
 working direction. Any promotion to Canonical still requires the full 8-step Promotion
-Rule (§21).
+Rule (§21). **All eight S-3 session decisions (DEC-023…DEC-030) are now ruled
+(non-canonical); no S-3 design fork remains open** (see §3.4.9 below).
 
 ### 3.4.1 Effect menu — RULED: tiered menu (DEC-023 / Q-S3-1)
 
@@ -352,12 +353,76 @@ from repeated hits; no Location Index → no Injury; per-location hit-history by
 adjudication; healing open) is a **steer for a future S-4 investigation**, not an S-3
 ruling and not Canonical — see `investigations/tiwas-s3-outcome-effects-investigation-v0.1-draft.md` §Q-S3-4.
 
-### 3.4.5 Open items (deferred to the Effect Identity & Multi-Effect Opposition thread)
+### 3.4.5 Partial Tag/Location match — RULED: fail-and-fall-back (DEC-030 / Q-S3-3a)
 
-Q-S3-2a (Effect naming/gating, DEC-025), Q-S3-2b (second-Effect opposed-roll mechanism,
-DEC-026), Q-S3-5 (auto-apply vs. contested application, DEC-027), and Q-S3-3a (partial
-Tag/Location match, DEC-030) remain **Open** and are tracked in
-`investigations/tiwas-s3-effect-identity-and-multi-effect-opposition-investigation-v0.1-open.md`.
+On a **partial Tag/Location match** for any Tag+Location-gated Effect (**Disarm/Break
+Hold, Equipment Damage, Armor Bypass**), the declared Effect **fails entirely** and the
+successful S-1 contest applies the **Base-tier Effect Inflict Injury (HP-only form)**.
+There is **no partial/reduced outcome and no residual state** — the partial match
+generates no Advantage, magnitude, duration, or secondary effect. Designer clarification:
+any further Effect beyond the single free one from a win requires a **separate opposed
+roll using an appropriate Advanced Skill** (the actor accepts the risk of that roll). This
+is consistent with, and does not expand, the flat one-Effect-per-win ruling (DEC-024).
+With this ruling, Disarm/Break Hold's tier (Tag+Location-gated, DEC-028) and its failure
+behaviour (fall back to Base Inflict Injury) are fully determined.
+
+- **Status:** Non-canonical designer ruling (human, 2026-08-29; post-handoff
+  confirmation). Recorded in `_consolidation/decision-register.md` §D.
+- **Consequence:** partial-match behaviour is binary (fail/success only); graded /
+  residual Effects are explicitly rejected for the S-3 gated Effects.
+
+### 3.4.6 Effect identity / naming — RULED: pure declared intent (DEC-025 / Q-S3-2a)
+
+Effects are granted **solely by the declared outcome** of a successful S-1 contest
+(subject to the other gates already ruled: gear/ability Tag + Location Index where
+required, DEC-028). The **Skill name carries no mechanical weight** and does not entitle
+or gate any Effect. A **formal tag/category system on Advanced Skills is rejected**
+(designer rationale: formal tags are exploitable and would push players to limit Skill
+choices to degenerate mechanical Effects). No Skill-side tag/category or
+Effect-entitlement vocabulary is introduced; REQ-017 satisfied; reinforces Canonical §12.3.
+
+- **Status:** Non-canonical designer ruling (human, 2026-08-29). Recorded in
+  `_consolidation/decision-register.md` §D.
+
+### 3.4.7 Second-Effect opposed-roll mechanism — RULED: different Advanced Skill, defensive roll deferred (DEC-026 / Q-S3-2b)
+
+The separate opposed roll for any Effect beyond the single free one (DEC-024) uses a
+**different Advanced Skill** that is **domain-appropriate** to the declared second
+Effect; the actor accepts the risk of the additional roll. The **full 9-step Core Test
+Transaction applies** (REQ-018). The target receives **no defensive roll until S-6
+locks**; any provisional resistance used in the interim is **non-canonical scaffolding
+only** and must be discarded when S-6 locks. **Same-Skill and flat-check options are
+rejected.** No residual Advantage/Margin/state carries from the first contest. Sequencing:
+the Free Effect resolves first; the second roll is a separate, subsequent transaction.
+
+- **Status:** Non-canonical designer ruling (human, 2026-08-29). Recorded in
+  `_consolidation/decision-register.md` §D.
+- **Consequence:** the multi-Effect path is high-friction — it requires possessing (and
+  risking) a second relevant Advanced Skill; low-Skill-count characters are effectively
+  capped at one Effect until they acquire appropriate Advanced Skills.
+
+### 3.4.8 Effect application mode — RULED: auto-apply (DEC-027 / Q-S3-5)
+
+Winning an S-1 opposed contest with a declared Effect applies that Effect **directly**;
+no secondary application contest is required. Gate checks (Tag + Location Index where
+required per DEC-028; fail-and-fall-back per DEC-030) remain in force and are evaluated
+**once, post-win**. S-6 (Defense) remains free to introduce Tags/equipment that counter
+or prevent specific Effects after auto-apply (e.g., locked gauntlets prevent Disarm).
+**Contested application is rejected as the S-3 default**; any future contested-application
+mechanic is deferred to **S-6 as an optional modifier**, not an S-3 default rule.
+
+- **Status:** Non-canonical designer ruling (human, 2026-08-29). Recorded in
+  `_consolidation/decision-register.md` §D.
+- **Consequence:** the default application path is fully specified for all currently
+  unlocked Effects (auto-apply, buildable against the locked Core + S-1 + Zero-Step).
+
+### 3.4.9 S-3 design-questions status
+
+**All eight S-3 session rulings (DEC-023…DEC-030) are Ruled (non-canonical).** No S-3
+design fork remains open; the `investigations/tiwas-s3-effect-identity-and-multi-effect-opposition-investigation-v0.1-open.md`
+thread is **closed**. The one-Effect-per-win path is now fully specified and buildable
+against the locked Core + S-1 + Zero-Step; the S-6 boundary items (second-effect defensive
+roll; contested-application modifier) are explicitly deferred to S-6.
 
 ---
 

@@ -165,27 +165,27 @@ S-3 interacts with subsystems that remain Open:
 
 ---
 
-## 4. Design questions — RULED and OPEN
+## 4. Design questions — all RULED
 
 Consistent with Roadmap §24 Rule 6 ("never silently resolve an open designer fork") and
-REQ-021, the items below are recorded with their current state. Q-S3-1 through Q-S3-4
-have been **ruled by the human** (2026-08-29, recorded in
-`_consolidation/decision-register.md` §D, DEC-023–DEC-030, and filed in `proposals/` §3.4).
-The remaining items are **open** and are surfaced for human/designer ruling.
+REQ-021, the items below are recorded with their current state. **All eight S-3 design
+questions (Q-S3-1 through Q-S3-4, Q-S3-2a, Q-S3-2b, Q-S3-3a, Q-S3-5) have been ruled by
+the human** (2026-08-29, recorded in `_consolidation/decision-register.md` §D,
+DEC-023–DEC-030, and filed in `proposals/` §3.4). No S-3 design fork remains open.
 
 ### Q-S3-1 — Final Effect menu scope — **RULED (DEC-023)**
 **Tiered Effect menu**: base tier = **Inflict Injury (HP-only)** + **Open Retreat /
 Compel Yield**; five gated tiers keyed to their owning subsystem's lock status
 (Position → Time/Action; Condition → Conditions; Equipment → Equipment; Defense → S-6;
 Location → S-2 invocation promotion). **Disarm / Break Hold** is placed via Q-S3-3's
-combined Tag+Location gating (DEC-028); its specific tier and partial-match behaviour
-depend on Q-S3-3a.
+combined Tag+Location gating (DEC-028); its specific tier and partial-match behaviour are
+now resolved by DEC-030 (falls back to Base Inflict Injury HP-only).
 
 ### Q-S3-2 — Purchasing / Advantage basis — **RULED (DEC-024)**
 **Flat one-Effect-per-win.** No Quality-based scaling, no purchasing of additional
 Effects off a single win. A second/additional Effect requires a **separate opposed roll**
-— mechanism not yet designed, deferred to the Effect Identity & Multi-Effect Opposition
-thread (Q-S3-2b).
+— mechanism now **ruled** (DEC-026): a different domain-appropriate Advanced Skill, full
+9-step Core Test Transaction, no target defensive roll until S-6.
 
 > This supersedes the Proposals/WIP §3.2 candidate (Quality/Net-Advantage bands) as the
 > basis for effect multiplicity. The two-track/Quality machinery remains relevant only
@@ -207,20 +207,40 @@ repeated hits; no Location Index → no Injury; per-location hit-history by GM
 adjudication; healing open) is recorded as a **steer for a future S-4 investigation**,
 not an S-3 ruling and not Canonical.
 
-### Q-S3-2a, Q-S3-2b, Q-S3-5, Q-S3-3a — Effect identity, gating & multi-effect opposition — **OPEN**
-These are split into a dedicated non-canonical investigation thread:
-`investigations/tiwas-s3-effect-identity-and-multi-effect-opposition-investigation-v0.1-open.md`
-(status Open, no rulings yet on its open items). It tracks:
-- **Q-S3-2a** (DEC-025) — Effect naming identity/gating (tag/category system vs.
-  declared intent).
-- **Q-S3-2b** (DEC-026) — Second-Effect opposed-roll mechanism (same/different/flat
-  Skill; target defensive roll gated on S-6 being Open).
-- **Q-S3-5** (DEC-027) — Auto-apply vs. contested application (only auto-apply is
-  buildable while S-6 is unlocked).
-- **Q-S3-3a** (DEC-030) — Partial Tag/Location match behavior: fail-and-fall-back-to-
-  plain-damage vs. partial/reduced outcome.
-- **Disarm/Break Hold** specific tier assignment (carried from Q-S3-1), informed by
-  Q-S3-3a.
+### Q-S3-3a — Partial Tag/Location match — **RULED (DEC-030)**
+**Fail-and-fall-back (Option A).** On a partial Tag/Location match for any
+Tag+Location-gated Effect (Disarm/Break Hold, Equipment Damage, Armor Bypass), the
+declared Effect fails entirely and the successful S-1 contest applies the Base-tier
+Effect **Inflict Injury (HP-only form)** — no partial/reduced outcome, no residual
+state. Designer clarification: any further Effect beyond the single free one from a win
+requires a **separate opposed roll using an appropriate Advanced Skill** (the actor
+accepts the risk of that roll). This also determines Disarm/Break Hold's tier
+(Tag+Location-gated, DEC-028) and failure behaviour (falls back to Base Inflict Injury).
+Recorded with the other S-3 rulings in `_consolidation/decision-register.md` §D.
+
+### Q-S3-2a — Effect identity / naming gating — **RULED (DEC-025)**
+**Pure declared intent.** Effects are granted solely by the declared outcome of a
+successful S-1 contest (subject to the other gates already ruled). The Skill name carries
+no mechanical weight and does not entitle or gate any Effect; a formal tag/category
+system on Advanced Skills is **rejected** (rationale: exploitable; would push players to
+limit Skill choices to degenerate mechanical Effects). Reinforces Canonical §12.3;
+REQ-017 satisfied.
+
+### Q-S3-2b — Second-Effect opposed-roll mechanism — **RULED (DEC-026)**
+The separate opposed roll for any Effect beyond the single free one (DEC-024) uses a
+**different Advanced Skill** that is domain-appropriate to the declared second Effect;
+the actor accepts the risk of the additional roll. The **full 9-step Core Test
+Transaction applies** (REQ-018). The target receives **no defensive roll until S-6 locks**
+(any interim resistance is non-canonical scaffolding and must be discarded when S-6
+locks). Same-Skill and flat-check options are **rejected**. No residual Advantage/Margin/
+state carries from the first contest.
+
+### Q-S3-5 — Effect application mode — **RULED: Auto-apply (DEC-027)**
+Winning S-1 with a declared Effect applies it **directly**; no secondary application
+contest is required. Gate checks (Tag + Location Index where required, DEC-028;
+fail-and-fall-back per DEC-030) are evaluated once, post-win. Contested application is
+**rejected as the S-3 default**, deferred to S-6 as an optional modifier; S-6 may later
+add Tags/equipment that counter specific Effects (e.g., locked gauntlets prevent Disarm).
 
 ---
 
@@ -229,23 +249,21 @@ These are split into a dedicated non-canonical investigation thread:
 These follow the promotion lifecycle (Idea → Proposal → WIP → Review → Simulation →
 Ruling → Accepted → Locked) and are **recommendations only**:
 
-1. **Ruled:** Q-S3-1 (Tiered menu, DEC-023), Q-S3-2 (Flat one-Effect-per-win, DEC-024),
-   Q-S3-3 (Combined Tag+Location gating, DEC-028), Q-S3-4 (S-3/S-4 boundary, DEC-029) —
-   recorded in `_consolidation/decision-register.md` §D and filed in `proposals/` §3.4.
-2. **Still open:** Q-S3-2a (DEC-025), Q-S3-2b (DEC-026), Q-S3-5 (DEC-027), Q-S3-3a
-   (DEC-030), and the Disarm/Break Hold tier placement, all in the dedicated Effect
-   Identity & Multi-Effect Opposition thread.
-3. Once the open forks are ruled, formalize a **non-canonical S-3 proposal variant** in
-   `proposals/` (either replacing/amending Proposals/WIP §3 or as a companion),
-   preserving provenance metadata.
-4. Design the **structural Effect interface** first (per Roadmap §10), scoped to the
+1. **All S-3 design questions are now ruled (non-canonical).** Q-S3-1 (DEC-023), Q-S3-2
+   (DEC-024), Q-S3-3 (DEC-028), Q-S3-4 (DEC-029), Q-S3-3a (DEC-030), Q-S3-5 (DEC-027),
+   Q-S3-2a (DEC-025), and Q-S3-2b (DEC-026) — recorded in `_consolidation/decision-register.md`
+   §D and filed in `proposals/` §3.4. No S-3 design fork remains open.
+2. Formalize a **non-canonical S-3 proposal variant** in `proposals/` (either
+   replacing/amending Proposals/WIP §3 or as a companion), preserving provenance
+   metadata.
+3. Design the **structural Effect interface** first (per Roadmap §10), scoped to the
    ruled tiered menu.
-5. Prototype the **S-3/S-4 harm hand-off** as an architectural exercise only — no S-4
+4. Prototype the **S-3/S-4 harm hand-off** as an architectural exercise only — no S-4
    thresholds locked.
-6. Run the **Phase 3 simulation gate** (Effect frequency, exchange length, resource
+5. Run the **Phase 3 simulation gate** (Effect frequency, exchange length, resource
    expenditure, wound frequency, severe injury, state-change density) before any
    numerical threshold is proposed for lock.
-7. Only after the full 8-step Promotion Rule — including human acceptance and Canonical
+6. Only after the full 8-step Promotion Rule — including human acceptance and Canonical
    update — would any of this become Canonical.
 
 ---
@@ -272,12 +290,10 @@ Ruling → Accepted → Locked) and are **recommendations only**:
 
 - Status: **Non-canonical investigation proposal (draft).**
 - It does **not** alter Canonical Rules.
-- Q-S3-1 (Tiered menu, DEC-023), Q-S3-2 (Flat one-Effect-per-win, DEC-024), Q-S3-3
-  (Combined Tag+Location gating, DEC-028), and Q-S3-4 (S-3/S-4 boundary, DEC-029) are
-  **ruled** (non-canonical), recorded in `_consolidation/decision-register.md` §D and
-  filed in `proposals/` §3.4.
-- Q-S3-2a (DEC-025), Q-S3-2b (DEC-026), Q-S3-5 (DEC-027), Q-S3-3a (DEC-030), and the
-  pending Disarm/Break Hold tier placement remain **open**, tracked in the dedicated
-  Effect Identity & Multi-Effect Opposition thread.
+- **All eight S-3 design questions are now ruled (non-canonical).** Q-S3-1 (DEC-023),
+  Q-S3-2 (DEC-024), Q-S3-3 (DEC-028), Q-S3-4 (DEC-029), Q-S3-3a (DEC-030), Q-S3-5
+  (DEC-027), Q-S3-2a (DEC-025), and Q-S3-2b (DEC-026) — recorded in
+  `_consolidation/decision-register.md` §D and filed in `proposals/` §3.4. No S-3 design
+  fork remains open; the Effect Identity & Multi-Effect Opposition thread is closed.
 - It is placed in `investigations/` as evidentiary/analytical work product feeding the
   Proposals/WIP layer, consistent with how D4/D5 (the S-2 investigations) are handled.

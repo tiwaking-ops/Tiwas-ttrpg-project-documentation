@@ -19,6 +19,22 @@ revision_note: >
   and corrects a loose citation. No ruling content from Part 1 is reversed — this
   revision narrows scope and adds flags only. See inline notes marked
   "[Revision note]" at point of change.
+  post_handoff_note: >
+    Post-handoff confirmation (same date, per
+    tiwas-s3-documentarian-handoff-report-2026-08-29.md): the human confirmed
+    **Q-S3-3a (DEC-030) — Option A, Fail-and-fall-back**, with the clarification that any
+    further Effect beyond the single free one from a win requires a separate opposed roll
+    using an appropriate Advanced Skill (the actor accepts the risk of that roll). This
+    resolves the previously-open Part 2 item Q-S3-3a and the carried-forward Disarm/Break
+    Hold tier/failure behaviour. See Part 2 Q-S3-3a for the recorded ruling.
+    post_handoff_closures: >
+      Subsequent per-decision handoff reports (same date, dec027/dec025/dec026) closed
+      the remaining Part 2 open items: **Q-S3-5 (DEC-027) — auto-apply**; **Q-S3-2a
+      (DEC-025) — pure declared intent, formal tag/category system on Advanced Skills
+      rejected**; and **Q-S3-2b (DEC-026) — different domain-appropriate Advanced Skill
+      for the second-effect roll, full 9-step Core Test Transaction, no target defensive
+      roll until S-6 (same-Skill and flat-check rejected)**. All Part 2 items are now
+      ruled; the Effect Identity & Multi-Effect Opposition thread is closed.
 ---
 
 # Tiwas S-3 — Designer Rulings & Handoff to OpenCode
@@ -177,29 +193,43 @@ S-3's own scope.
 
 ## Part 2 — New investigation to open: "S-3 Effect Identity, Gating & Multi-Effect Opposition"
 
-Status: **Open, non-canonical, no rulings.** Suggested location: `investigations/`,
+Status: **Closed, non-canonical.** All Part 2 items have been ruled by the human —
+Q-S3-3a (DEC-030), Q-S3-5 (DEC-027), Q-S3-2a (DEC-025), and Q-S3-2b (DEC-026) — see below
+and the post_handoff_closures provenance note. Suggested location: `investigations/`,
 same tier as D4/D5 and the S-3 draft itself.
 
-- **Q-S3-2a — Effect identity / naming-collision risk.** Named Effects (Disarm,
-  Bleed, etc.) create a naming-collision risk: since Advanced Skill names carry zero
-  mechanical weight (Canonical §12.3), nothing currently stops a player from naming a
-  skill after an Effect and arguing entitlement to it. Needs a ruling on whether
-  Effects require a formal tag/category system on Advanced Skills, or stay purely
-  declared-intent with no skill-name-based gating at all.
-- **Q-S3-2b — Second-Effect opposed-roll mechanism.** What governs the roll for an
-  additional Effect beyond the free one (per the Q-S3-2 ruling above)? Same Skill as
-  the original contest, a different Skill, a flat check? Does the target get any
-  defensive roll, given S-6 Defense is still Open?
-- **Q-S3-3a — Partial Tag/Location match behavior.** If an attempted Effect has a
-  matching Tag but the Location Index doesn't support it (or vice versa), does the
-  Effect simply fail and fall back to plain damage (consistent with the flat
-  one-Effect-per-win ruling), or is there a partial/reduced outcome?
-- **Q-S3-5 — Auto-apply vs. contested application.** Does winning S-1 with a declared
-  Effect apply it automatically, or does the Effect itself require passing some
-  further check against the target? Currently undecided; only "auto-apply" is
-  buildable today since S-6 Defense isn't locked.
-- **Disarm/Break Hold's specific tier assignment** (carried over from Q-S3-1),
-  informed by how Q-S3-3's combined gating and Q-S3-3a resolve.
+- **Q-S3-2a — Effect identity / naming-collision risk — RULED (DEC-025).** Effects
+  are granted solely by the declared outcome of a successful S-1 contest (subject to the
+  other gates already ruled). The Skill name carries no mechanical weight and does not
+  entitle or gate any Effect; a formal tag/category system on Advanced Skills is
+  **rejected** (rationale: exploitable; would push players to limit Skill choices to
+  degenerate mechanical Effects). No Skill-side tag/category vocabulary introduced;
+  Reinforces Canonical §12.3.
+- **Q-S3-2b — Second-Effect opposed-roll mechanism — RULED (DEC-026).** The separate
+  opposed roll for an additional Effect beyond the free one uses a **different
+  Advanced Skill** that is domain-appropriate to the declared second Effect; the actor
+  accepts the risk of the additional roll. The **full 9-step Core Test Transaction
+  applies** (REQ-018). The target receives **no defensive roll until S-6 locks** (any
+  interim resistance is non-canonical scaffolding). Same-Skill and flat-check options
+  are **rejected**.
+- **Q-S3-3a — Partial Tag/Location match behavior — RULED (DEC-030).** If an attempted
+  Effect has a matching Tag but the Location Index doesn't support it (or vice versa),
+  the declared Effect **fails entirely** and the successful S-1 contest applies the
+  Base-tier Effect **Inflict Injury (HP-only form)** — no partial/reduced outcome, no
+  residual state. Designer clarification: any further Effect beyond the single free one
+  from a win requires a **separate opposed roll using an appropriate Advanced Skill**
+  (the actor accepts the risk of that roll). Closing this also determines Disarm/Break
+  Hold's tier and failure behaviour (see carried-over item below).
+- **Q-S3-5 — Auto-apply vs. contested application — RULED (DEC-027).** Winning S-1 with
+  a declared Effect applies it **directly**; no secondary application contest is
+  required. Gate checks (Tag + Location Index where required, DEC-028; fail-and-fall-back
+  per DEC-030) are evaluated once, post-win. Contested application is **rejected as the
+  S-3 default** and deferred to S-6 as an optional modifier; S-6 may later add
+  Tags/equipment that counter specific Effects (e.g., locked gauntlets prevent Disarm).
+- **Disarm/Break Hold's specific tier assignment** (carried over from Q-S3-1) — now
+  **determined** by Q-S3-3 (DEC-028, Tag+Location-gated) and Q-S3-3a (DEC-030): on a
+  partial match it falls back to Base Inflict Injury (HP-only), like Equipment Damage
+  and Armor Bypass.
 
 ---
 

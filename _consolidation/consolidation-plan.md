@@ -6,7 +6,7 @@ document:
 provenance:
   author_llm: {name: "Claude Sonnet 5", version: "claude-sonnet-5"}
   assessor_llm: {name: "Claude Sonnet 5", version: "claude-sonnet-5"}
-  last_modified_by_llm: {name: "Claude Sonnet 5", version: "claude-sonnet-5"}
+  last_modified_by_llm: {name: "opencode", version: "big-pickle"}
   created_date: "2026-08-29"
   last_modified_date: "2026-08-29"
 ---
@@ -33,12 +33,12 @@ None found. Each of the five source documents covers distinct subject matter; no
 
 ## Major conflicts discovered
 
-Four recorded, three of them already resolved **within the corpus itself** (not resolved by this consolidation), one recorded as an open evidentiary gap:
+Four recorded, three of them already resolved **within the corpus itself** (not resolved by this consolidation), one recorded as an evidentiary gap now **closed as a permanent limitation** (Priority 7):
 
 - C1 — Structural Weak Points State 1→2 reclassification (resolved in-place, designer ruling).
 - C2 — Armor Bypass basis wording overclaim (resolved in-place, wording correction only).
 - C3 — Non-attack Location Index source, competing directions (resolved in-place, designer ruling: categorical deferral).
-- C5 — Referenced prior-version documents not supplied in corpus (**unresolved**, evidentiary gap — see `archive/README.md`).
+- C5 — Referenced prior-version documents not supplied in corpus (**closed 2026-08-29 as accepted permanent limitation**, Priority 7 — see `archive/README.md`).
 
 Full detail in `conflict-register.md`.
 
@@ -48,9 +48,9 @@ This consolidation relied on the corpus's own self-declared document-status head
 
 ## Unresolved issues (left unresolved, as required)
 
-- OPEN-001 through OPEN-005 in `decision-register.md` (H0 Rider B's sub-options; Tier-selection policy; anatomical mapping; Tier-2 procedure; all of S-3 through S-12).
-- Conflict-register item C5 (missing prior-version source text).
-- Whether the single canonical-placement decision above should stand as-is (flagged for your confirmation).
+- OPEN-001 through OPEN-005 in `decision-register.md` (H0 Rider B's sub-options; Tier-selection policy; anatomical mapping; Tier-2 procedure; all of S-3 through S-12). *(Note: the S-3 *non-canonical* design forks are now all ruled, DEC-023–DEC-030 — see `decision-register.md` §D and `proposals/` §3.4 — but the S-3 subsystem itself remains non-canonical/Reserved within OPEN-005.)*
+- Conflict-register item C5 (missing prior-version source text) — ~~left as an evidentiary gap~~ **closed 2026-08-29 as an accepted permanent limitation** (Priority 7; recovery no longer required).
+- ~~Whether the single canonical-placement decision above should stand as-is (flagged for your confirmation).~~ — **Resolved/closed 2026-08-29 by human confirmation** (see the updated "Human approval points" below).
 
 None of these were silently resolved. Where the corpus itself already resolved something (C1–C3), this consolidation recorded that resolution rather than re-litigating it.
 
@@ -80,8 +80,8 @@ Claude Sonnet 5 (`claude-sonnet-5`), single session, 2026-08-29. No other LLM is
 ## Proposed actions not authorized (flagged, not performed)
 
 - Splitting `canonical/rules/` into per-system files (recommended in `canonical/systems/README.md`) — not performed; recommendation only.
-- Any archival of prior-version material — cannot be performed without the missing source text; flagged for a future session that has it.
-- Independent (second-model) assessment of this consolidation's own output — recommended in `governance/provenance.md`, not performed here.
+- Any archival of prior-version material — cannot be performed without the missing source text; not required after Priority 7 (2026-08-29) closed C5 as a permanent limitation and made recovery optional only via a new designer ruling.
+- Independent (second-model) assessment of this consolidation's own output — **required (mandatory) as of Priority 7 (2026-08-29)**; recommended in `governance/provenance.md`. Reserved under `audits/`; the assessment itself is a separate-session action and not performed here.
 - Any Git commit or push — no Git repository is in use in this working environment; N/A, noted for completeness per the specification's Git-integrity checklist.
 
 ## Significant classification decisions
@@ -97,9 +97,22 @@ Directory structure created; five source documents extracted verbatim and copied
 
 ## Human approval points
 
-1. **Confirm or override the D1 → `canonical/` placement** (see above — this is the only placement judged to cross into canonicalization territory).
-2. **Decide whether to pursue the missing prior-version documents** for `archive/`, or accept the current evidentiary gap (C5) as a permanent limitation of this repository's history.
-3. **Decide whether a second model/session should independently assess** this consolidation before it is relied upon for further project work.
+1. **Confirm or override the D1 → `canonical/` placement** (see above — this is the only placement judged to cross into canonicalization territory). — **CONFIRMED by the human (2026-08-29)**, per `tiwas-consolidation-priority5-canonical-placement-confirmation-2026-08-29.md` (human statement: "this was the canonical document from previous development before project file consolidation"). The D1 placement under `canonical/rules/` is treated as **settled**; no further relocation or provisional marking is required. This closing is purely structural — it does not promote any non-canonical mechanic, and the 8-step Promotion Rule is not implicated.
+2. **Decide whether to pursue the missing prior-version documents** for `archive/`, or accept the current evidentiary gap (C5) as a permanent limitation of this repository's history. — **RESOLVED 2026-08-29: C5 accepted as a permanent limitation** (Priority 7). Recovery of prior-version text is no longer required; `archive/` remains intentionally empty. Void/`archive` population only if a future designer ruling explicitly reverses this.
+3. **Decide whether a second model/session should independently assess** this consolidation before it is relied upon for further project work. — **REQUIRED 2026-08-29 (mandatory, blocking)** (Priority 7). An independent second-model/second-session assessment **must** be completed and recorded under `audits/` before the consolidated repository may be treated as the authoritative baseline for further design work. Until that record exists, the consolidation remains under **provisional** governance status for reliance. (Reserved `audits/` placeholder; the assessment itself is a separate-session action, not performed here.)
+
+> **Confirmation record (2026-08-29):** The human confirmed the D1 → `canonical/rules/`
+> placement as prior-development Canonical. Added by the project documentarian
+> (opencode/big-pickle) on 2026-08-29 per the Priority-5 confirmation report. No
+> substantive text in the Canonical Rules document was altered.
+
+> **Priority-7 confirmation record (2026-08-29):** The human accepted C5 as a
+> **permanent limitation** (recovery no longer required) and made the independent
+> **second-model assessment mandatory** (blocking further reliance until recorded under
+> `audits/`). Per `tiwas-consolidation-priority7-repository-hygiene-decisions-2026-08-29.md`.
+> Structural/governance only — no mechanic promoted; 8-step Promotion Rule not implicated.
+> Filed by the project documentarian (opencode/big-pickle) on 2026-08-29. The second-model
+> assessment itself is a separate-session action and was **not** performed here.
 
 No other action in this repository requires approval before use — `roadmap/`, `proposals/`, and `investigations/` placements simply restate what those documents already say about themselves, and nothing was archived, deleted, or rewritten.
 
@@ -107,5 +120,6 @@ No other action in this repository requires approval before use — `roadmap/`, 
 
 1. Any new locked mechanic goes through the 8-step Promotion Rule (`governance/status-model.md`) and is appended to `canonical/rules/...` §17's changelog, not written into a new file.
 2. Any new non-canonical proposal or investigation is added to `proposals/` or `investigations/` respectively, with the same provenance-metadata discipline used here.
-3. When prior-version source text becomes available, populate `archive/` per the process outlined in `archive/README.md`.
-4. Future sessions should treat this repository — not prior conversational context — as the source of truth about project state, per the governing specification's "Repository as persistent project memory" principle.
+3. The missing prior-version documents are **not** recovered: C5 was closed as a permanent limitation (Priority 7, 2026-08-29). `archive/` stays intentionally empty unless a future designer ruling explicitly reverses that decision (in which case follow the process in `archive/README.md`).
+4. The **independent second-model assessment** (Priority 7) must be completed and its record filed under `audits/` before this consolidated repository is treated as the authoritative baseline for further design work; until then it is provisional for reliance.
+5. Future sessions should treat this repository — not prior conversational context — as the source of truth about project state, per the governing specification's "Repository as persistent project memory" principle.
