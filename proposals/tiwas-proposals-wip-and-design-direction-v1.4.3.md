@@ -174,46 +174,42 @@ For Tier 1, the Location Index is a numeric intermediate value, not a body-part 
 
 - whether the location tier is universally fixed or selected by situation, scene or campaign — **still open.** The candidate invocation policy determines *when a Location Index is warranted within whatever tier is in use*; it does not determine *whether a scene/campaign uses Tier 0, Tier 1, or Tier 2* in the first place. The candidate policy is a relevant input to that future decision, not a resolution of it.
 - when Tier 1 is invoked (attack-side) — **the mechanism for this is now addressed** (the candidate invocation policy directly answers "does this specific resolution warrant a Location Index"), but this is narrower than the scene/campaign tier-selection question above, which remains open.
-- **whose roll, if any, supplies a Location Index for non-attack physical resolutions (hazards, falls, structural interactions with no adversarial "attacker") — RESOLVED BY DESIGNER RULING (see §2.5A immediately below). No longer an open question in the "undecided" sense; it is a closed deferral pending an explicit future reopening trigger.**
+- **whose roll, if any, supplies a Location Index for non-attack physical resolutions (hazards, falls, structural interactions with no adversarial "attacker") — REOPENED BY S-4 RULING DEC-036. The prior categorical deferral is superseded for Wound Effects. A new Location Index generation rule for non-attack cases is now required (OPEN-008). H0 and its riders (DEC-022) are starting hypotheses only.**
 - the anatomical mapping table (numeric Location Index → structural/anatomical component) — still open, untouched by this investigation. This includes the structural-destruction case in §2.1A's Conceptual Anchor table: its State-2 status establishes narrative resolvability only, not a settled mapping.
 - Tier-2 procedure and resolution cost — still open, untouched.
 - interaction with wounds, armour, defence and Outcome Effects — still open; the investigation's State-3 findings (Disarm, Equipment, Impairment, Armor Bypass, Incapacitation all currently unanchored to location) are directly relevant inputs to this future work.
 - final GM-facing wording for the simplified invocation procedure (§2.1A) — drafted, not yet separately validated.
 
-## 2.5A Non-Attack Location Index Source — Designer Ruling (New in v1.4.3)
+## 2.5A Non-Attack Location Index Source — Designer Ruling (New in v1.4.3) **Superseded by S-4 Ruling DEC-036**
 
-**Status: Designer Ruling. Closes the S-2 Non-Attack Location Index Source investigation (starter brief v1.1) as a deferral. Not a Canonical change; recorded here as the current non-canonical governing position until formally promoted.**
+**Status: Designer Ruling. Closes the S-2 Non-Attack Location Index Source investigation (starter brief v1.1) as a deferral. Not a Canonical change; recorded here as the current non-canonical governing position until formally promoted. **Superseded in part by S-4 ruling DEC-036 — see below.**
 
-> **Ruling: Non-attack physical resolutions (falls, hazards, structural collapses, and other non-adversarial physical events) generate no Tier-1 Location Index under current design — categorically, regardless of GM framing, stated stakes, or whether a governing Core Test exists for the resolution. This is a deferral, not a claim that non-attack location is impossible in principle.**
+> **Original Ruling (superseded for Wound Effects):** Non-attack physical resolutions (falls, hazards, structural collapses, and other non-adversarial physical events) generate no Tier-1 Location Index under current design — categorically, regardless of GM framing, stated stakes, or whether a governing Core Test exists for the resolution. This is a deferral, not a claim that non-attack location is impossible in principle.
 
-This applies regardless of:
+**S-4 Ruling DEC-036 Reopening:** The S-4 Wound activation/severity ruling has met the reopening condition for this deferral. **Non-attack physical resolutions can now produce Wounds if a Wound Effect is successfully applied and a Location Index is generated for the scenario.** The mechanism for generating a Location Index in non-attack cases is a **new open question (OPEN-008)**.
 
-- whether an underlying Core Test exists for the resolution;
-- who made that test (the affected character, the causing character, a third party);
-- whether the hazard was caused intentionally or accidentally;
-- how specifically the GM narrates the physical consequence;
-- the severity of the consequence.
+This applies to Wound Effects specifically:
 
-**Zero-Step Location Index generation remains attack-side only** under current design. The canonical Zero-Step mechanism itself (Canonical §14.1–§14.2) is entirely untouched by this ruling — this ruling only concerns whether non-attack resolutions are eligible to invoke it at all, and the answer is currently no.
+- Whether an underlying Core Test exists for the resolution;
+- Who made that test (the affected character, the causing character, a third party);
+- Whether the hazard was caused intentionally or accidentally;
+- How specifically the GM narrates the physical consequence;
+- The severity of the consequence.
+
+**Zero-Step Location Index generation remains attack-side only** under the *original* S-2 design. A **new Location Index generation rule for non-attack cases** is now required (OPEN-008). The canonical Zero-Step mechanism itself (Canonical §14.1–§14.2) is entirely untouched by this ruling.
 
 **Investigation record retained, not deleted:**
 
 | Item | Status |
 |---|---|
-| H0 (governing Core Test provenance rule) | Retained as an inert candidate record — a starting hypothesis if this question is reopened, not a validated operative rule |
+| H0 (governing Core Test provenance rule) | Retained as an inert candidate record — a starting hypothesis for OPEN-008, not a validated operative rule |
 | H0 Rider A (no cross-character roll-sharing) | Retained, inert, tied to H0 |
 | H0 Rider B (multi-test causal-chain tie-break) | Retained, inert, tied to H0 — two sub-options were identified but never adjudicated against each other |
 | GM-authored hazard warrant (rejected candidate direction) | Rejected for now, not deleted from the record |
-| Named-Outcome/Warrant Test transfer to non-attack cases | Deferred, not resolved — moot while non-attack generation is off entirely |
-| Blind provenance trial | Not authorized — correctly withheld, since the category is closed |
+| Named-Outcome/Warrant Test transfer to non-attack cases | **Now relevant for OPEN-008** — requires resolution for non-attack Wound Effects |
+| Blind provenance trial | Not authorized — correctly withheld, since the category was closed |
 
-**Reopening conditions.** This ruling is a deferral tied to specific future work, not a permanent architectural conclusion. It should be **explicitly reopened**, not silently inherited, when:
-
-- **S-4** (Wound activation/severity) reaches a design stage where localized non-attack injury becomes relevant;
-- **S-7** (Incapacitation/death) reaches a design stage where hazard severity needs finer resolution than flat damage;
-- **S-8** (Difficulty/Stakes Gate) reaches a design stage where hazard-stakes framing is formally defined — flagged as the most likely natural reopening trigger.
-
-When reopened, H0 and its riders serve as a starting hypothesis to re-validate against whatever S-4/S-7/S-8 actually specify — not a pre-approved answer to carry forward unexamined.
+**Reopening conditions (updated):** This ruling was a deferral tied to specific future work. **It has been explicitly reopened by S-4 ruling DEC-036.** When reopened, H0 and its riders serve as a starting hypothesis to re-validate against whatever OPEN-008 specifies — not a pre-approved answer to carry forward unexamined. The Warrant-transfer question (Direction 1, or a new alternative) must also be decided for non-attack cases.
 
 **Does not affect:** Zero-Step (attack-side), S-1, the attack-side invocation/warrant policy (§2.1A), Structural Weak Points' State-2 classification, the W3 cache, or Tier 0/1/2 scene-selection policy. None of these are reopened by this ruling.
 
@@ -348,10 +344,12 @@ invocation policy (§2.1A, requires its own independent promotion path).
 ### 3.4.4 S-3/S-4 boundary — RULED: prototype-only, no interface work yet (DEC-029 / Q-S3-4)
 
 No S-3/S-4 interface is currently prototyped because base-tier Injury is HP-only. The
-Roadmap §10 boundary holds and is dormant. The **S-4 direction** (location-based injury
+Roadmap §10 boundary holds and is dormant. **The prior S-4 direction (location-based injury
 from repeated hits; no Location Index → no Injury; per-location hit-history by GM
-adjudication; healing open) is a **steer for a future S-4 investigation**, not an S-3
-ruling and not Canonical — see `investigations/tiwas-s3-outcome-effects-investigation-v0.1-draft.md` §Q-S3-4.
+adjudication; healing open) has been superseded by S-4 rulings DEC-032–DEC-036.** The
+current S-4 ruling is: Wounds are exclusively triggered as a selectable Effect from a
+successful S-1 contest; requires a Location Index if localized; Overflow never causes Wounds;
+severity is numerical; both Track A and Track B can apply from one hit. See §4 below.
 
 ### 3.4.5 Partial Tag/Location match — RULED: fail-and-fall-back (DEC-030 / Q-S3-3a)
 
@@ -428,7 +426,7 @@ roll; contested-application modifier) are explicitly deferred to S-6.
 
 # 4. S-4 — Two-Track Harm and Wounds
 
-**Status: Reserved / WIP Direction**
+**Status: Partially Ruled (Non-Canonical) / WIP Direction**
 
 The current design direction separates:
 
@@ -442,21 +440,51 @@ Resource exhaustion can create Overflow → HP damage.
 
 Where locations are active, meaningful physical injury can produce localized Wounds and Conditions.
 
-The intended Wound states are currently:
+## 4.1 Terminology Lock (DEC-032)
 
-- Light;
-- Serious;
-- Critical.
+- **Injury** = HP damage (Track A harm).
+- **Wound** = Localized, lasting state, tracked numerically, distinct from HP damage (Track B harm). Each individual Wound is functionally equivalent at base level.
 
-Exact activation thresholds, severity formulas and consequences are unresolved.
+## 4.2 Wound Activation Trigger (DEC-033)
 
-## 4.1 Design constraints
+**RULED:** Wounds are **exclusively triggered as a selectable Effect** from a successful S-1 contest. Wound is realized as the **"Wounded" Condition**, selected via S-3 Effect #2 (Impose Condition) — not a standalone 11th menu entry. **Overflow never causes Wounds.** A Location Index is required for localized Wound Effects. **Both *Inflict Injury* (Effect #1) and *Impose Condition: Wounded* require a Location Index when selected as Effects.** Overflow→HP damage is exempt (automatic; no Effect selection).
+
+## 4.3 Track A / Track B Interaction (DEC-034)
+
+**RULED:** Both Track A (Overflow→HP) and Track B (Wound Effects) **can apply from one hit, sequentially**. The Core Test Transaction resolves Overflow first; on a successful S-1 contest, an Effect is then chosen and applied.
+
+## 4.4 Wound Severity (DEC-035)
+
+**RULED:** Wound severity is **numerical** (e.g., count of Wounds inflicted). Light / Serious / Critical are **descriptive categories** for accumulated numerical Wounds, not distinct Wound states themselves.
+
+Specific numerical thresholds for these categories require a **simulation gate** before locking (measure Effect frequency, exchange length, resource expenditure, wound frequency, severe-injury rate).
+
+## 4.5 "Greater Wound" Effects
+
+It is possible for greater wounds (e.g., "Serious Frost," "Serious Fire," "Serious Shock") to be inflicted as **distinct, selectable Effects** (gated by Quality per DEC-031). These are independent of the base numerical Wound counter and do not change the state of lower versions of the effect. Healing might not cure higher levels of such Effects.
+
+## 4.6 S-2 Non-Attack Deferral Reopening (DEC-036)
+
+**RULED:** DEC-020 (S-2 non-attack deferral) is **reopened**. Non-attack physical resolutions (falls, hazards, structural collapses) **can** produce Wounds if a Wound Effect is successfully applied and a Location Index is generated for the scenario. The mechanism for generating a Location Index in non-attack cases is defined by the **DEC-037** ruling below (closing OPEN-008).
+
+## 4.6.1 Non-Attack Location Index Generation (DEC-037)
+
+**RULED:** When a character fails a governing Core Test against an environmental hazard, obstacle, or physical risk (e.g. Jump, Climb, Evasion, Spot Trap), that **same failed d100 roll** supplies the digits for Zero-Step Tier-1 Location Index generation (exchanging tens/units digits per Canonical §14.1–14.2). A failed test constitutes a "win" for the hazard; if failure margin/severity qualifies for an S-3 Effect, the applicable Effect (Inflict Injury or Impose Condition: Wounded) is applied to the location indicated by the character's failed roll. Global/systemic threats (Drowning, Suffocation, Extreme Temperature, Poison) apply direct HP/Conditions without a Location Index. If a physical impact occurs with no roll of any kind, the system outputs a **numeric stub Location Index** (e.g. `00` or `50`) routed through Zero-Step, deferring anatomical naming until OPEN-003 locks (supersedes the earlier "Center Mass/Torso" wording). **The stress-test reopening step is satisfied** by a literal re-run of the full 14-scenario set against this model — see `investigations/tiwas-s4-dec037-stress-test-rerun-2026-08-30.md` (non-blocking residual flags: H0 Rider B tie-break for Extended Tests; S-8 Stakes Gate dependency for retroactive resolution).
+
+## 4.7 Design Constraints (Retained / Updated)
 
 - Empty PE/MP must not automatically mean defeat.
-- Overflow remains HP damage.
+- **Overflow remains HP damage; it never produces Wounds.**
 - HP = 0 should not automatically equal death.
-- Wounds are not intended to become a second conventional HP pool.
-- Injury must remain consequential without producing excessive permanent character loss.
+- Wounds are not intended to become a second conventional HP pool (they are a numerical counter of localized lasting states).
+- Injury (HP damage) must remain consequential without producing excessive permanent character loss.
+
+## 4.8 Open Dependencies
+
+- **Anatomical Mapping (OPEN-003):** Required for any localized Wound Effect (Location Index → body/structural component).
+- **OPEN-006:** Numerical thresholds for Light/Serious/Critical descriptive categories (requires simulation gate).
+- **OPEN-007:** Consequences of numerical Wound accumulation and/or specific "Greater Wound" Effects (requires definition).
+- **OPEN-008 (RULED / CLOSED via DEC-037):** How a Location Index is generated for non-attack physical resolutions when a Wound Effect is applied — resolved by governing failed-roll provenance + passive-stub fallback (see §4.6.1).
 
 ---
 
@@ -857,9 +885,9 @@ No current Tiwas subsystem depends on it.
 
 | ID | Decision | Current status |
 |---|---|---|
-| S-2 | Broader hit-location architecture: tier policy, mapping and downstream interaction. Zero-Step (Tier-1 Location Index provider) is locked. **Invocation/warrant policy (attack-side): candidate accepted (S-2 Design Investigation v1–v5), non-canonical, pending promotion. Non-attack Location Index generation: RULED — deferred, none generated until S-4/S-7/S-8 reopens the question (§2.5A).** Anatomical mapping, Tier-2 procedure remain fully open. | Partially locked / WIP — Tier-1 provider locked; candidate invocation policy accepted for further development; non-attack question closed as a deferral |
+| S-2 | Broader hit-location architecture: tier policy, mapping and downstream interaction. Zero-Step (Tier-1 Location Index provider) is locked. **Invocation/warrant policy (attack-side): candidate accepted (S-2 Design Investigation v1–v5), non-canonical, pending promotion. Non-attack Location Index generation: REOPENED by S-4 (DEC-036) and mechanism defined by DEC-037 (governing failed-roll provenance + passive-stub fallback; closes OPEN-008).** Anatomical mapping, Tier-2 procedure remain fully open. | Partially locked / WIP — Tier-1 provider locked; candidate invocation policy accepted; non-attack mechanism ruled by DEC-037 |
 | S-3 | Effect thresholds/purchasing | Open |
-| S-4 | Wound activation/severity | Open |
+| S-4 | Wound activation/severity | **Partially Ruled (DEC-032–DEC-037): Terminology (Injury=HP, Wound=numerical localized state); Trigger = selectable Effect only (Wound realized as "Wounded" Condition via Impose Condition); Overflow never causes Wounds; Track A/B both apply sequentially; Severity = numerical count; Light/Serious/Critical = descriptive categories; DEC-020 reopened with LI mechanism defined (DEC-037, closes OPEN-008). Remaining open: numerical thresholds (OPEN-006), consequences (OPEN-007).** |
 | S-5 | Armor interaction | Open |
 | S-6 | Defense model | Open |
 | S-7 | Incapacitation/death | Open |
@@ -953,4 +981,14 @@ Direct effects of this ruling:
 This ruling does not reopen, alter, or narrow: Zero-Step (attack-side, Canonical §14.1–§14.2), S-1, the attack-side invocation/warrant policy (§2.1A), the Structural Weak Points State-2 classification, the W3 cache, or Tier 0/1/2 scene-selection policy. No Canonical Rules changed. Nothing in this revision is promoted to Canonical status; see §21.
 
 The former §2.5 non-attack bullet (as it stood in v1.4.2, "still open") is superseded by the ruling recorded in §2.5A but retains historical significance as the pre-ruling open-question state.
+
+---
+
+# 25. v1.4.4 Revision Record
+
+- **S-4 (Two-Track Harm and Wounds) (§4):** Partially ruled by human designer (2026-08-30). Established Terminology Lock (Injury=HP, Wound=numerical localized state), Wound activation trigger (selectable Effect only; Wound realized as "Wounded" Condition via Impose Condition; localized Wounds require Location Index; Overflow never causes Wounds), Track A/B interaction (sequential), Severity (numerical counter, categories are descriptive), the S-2 non-attack deferral reopening (DEC-036), and the non-attack Location Index generation mechanism (DEC-037, closing OPEN-008). OPEN-006 and OPEN-007 remain as residual S-4 design questions.
+- **S-2 (Hit-Location Architecture) (§2.5, §2.5A):** Reopened via DEC-036. Non-attack resolution Location Index generation for Wound Effects resolved by DEC-037 (governing failed-roll provenance + passive-stub fallback).
+- **Residual Decision Register (§20):** Updated to reflect the S-4 rulings (DEC-032–DEC-037) and remaining open questions (OPEN-006–OPEN-007).
+
+No Canonical Rules changed. Nothing in this revision is promoted to Canonical status; see §21.
 
