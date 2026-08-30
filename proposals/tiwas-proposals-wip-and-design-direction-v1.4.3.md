@@ -453,11 +453,15 @@ Where locations are active, meaningful physical injury can produce localized Wou
 
 **RULED:** Both Track A (Overflow→HP) and Track B (Wound Effects) **can apply from one hit, sequentially**. The Core Test Transaction resolves Overflow first; on a successful S-1 contest, an Effect is then chosen and applied.
 
-## 4.4 Wound Severity (DEC-035)
+## 4.4 Wound Severity (DEC-035) — corrected
 
-**RULED:** Wound severity is **numerical** (e.g., count of Wounds inflicted). Light / Serious / Critical are **descriptive categories** for accumulated numerical Wounds, not distinct Wound states themselves.
+**RULED (CORRECTED):** Wound severity/quality comes from the **S-3 gated Effect** that inflicts the wound — a "Serious wound" is a distinct S-3 Effect (e.g. Greater Wound: Serious Frost/Fire/Shock) which **by definition** makes the character seriously wounded. It does **not** derive from an accumulated count of wounds. A character's ability to *withstand* a wound (an adult shrugs off a wound a child cannot) is a matter of that character's capacity to endure mechanical negatives, not what makes the wound "serious."
 
-Specific numerical thresholds for these categories require a **simulation gate** before locking (measure Effect frequency, exchange length, resource expenditure, wound frequency, severe-injury rate).
+*Correction note:* The earlier recorded version — "severity is numerical (count); Light/Serious/Critical are descriptive categories for accumulated numerical Wounds" — was an LLM misreading of the designer's phrase "more wounds = more severe" and is superseded by this entry.
+
+## 4.4.1 Wound Consequences (OPEN-007 — RULED)
+
+**RULED:** Wounds carry **individual mechanical attribute penalties**; different wounds may have different magnitudes (e.g. −1, −5, −30, −80, −100). More wounds / more severe wounds → more mechanical negatives. Accumulating too many negatives → the character is "game overed." A weaker character (fewer/weaker resources) reaches that failure point faster. Healing cost scales with the magnitude of the negative (healing a single −50 is far costlier than healing fifty −1s). Greater Wound Effects cause serious negatives. Wounds are recorded on the character sheet with their count and magnitude (e.g. "3 wounds −1, 4 wounds −5").
 
 ## 4.5 "Greater Wound" Effects
 
@@ -476,14 +480,14 @@ It is possible for greater wounds (e.g., "Serious Frost," "Serious Fire," "Serio
 - Empty PE/MP must not automatically mean defeat.
 - **Overflow remains HP damage; it never produces Wounds.**
 - HP = 0 should not automatically equal death.
-- Wounds are not intended to become a second conventional HP pool (they are a numerical counter of localized lasting states).
+- Wounds are not a second conventional HP pool; each Wound is a localized lasting state recorded with its own numerical magnitude (e.g. "3 wounds −1, 4 wounds −5").
 - Injury (HP damage) must remain consequential without producing excessive permanent character loss.
 
 ## 4.8 Open Dependencies
 
-- **Anatomical Mapping (OPEN-003):** Required for any localized Wound Effect (Location Index → body/structural component).
-- **OPEN-006:** Numerical thresholds for Light/Serious/Critical descriptive categories (requires simulation gate).
-- **OPEN-007:** Consequences of numerical Wound accumulation and/or specific "Greater Wound" Effects (requires definition).
+- **Anatomical Mapping (OPEN-003):** A Location Index is required for any localized **Wound** Effect (Location Index → body/structural component). Without a location there is **no Wound** — but damage and a wide range of other Effects (frozen, burned, shocked, bleed, etc.) still fully apply without one. Wounding is one Effect among hundreds, not a gate on all non-attack resolution.
+- **OPEN-006 (MIS-FRAMED / CLOSED via DEC-035):** The prior "numerical thresholds for Light/Serious/Critical categories (requires simulation gate)" framing misconstrued severity as an accumulated-count threshold; severity comes from the S-3 gated Effect (see §4.4). No count-to-tier gate exists.
+- **OPEN-007 (RULED):** Wound consequences = individual mechanical attribute penalties; more/more-severe wounds = more negatives; too many → "game overed" (faster for weaker characters); healing scales with magnitude (see §4.4.1).
 - **OPEN-008 (RULED / CLOSED via DEC-037):** How a Location Index is generated for non-attack physical resolutions when a Wound Effect is applied — resolved by governing failed-roll provenance + passive-stub fallback (see §4.6.1).
 
 ---
@@ -887,7 +891,7 @@ No current Tiwas subsystem depends on it.
 |---|---|---|
 | S-2 | Broader hit-location architecture: tier policy, mapping and downstream interaction. Zero-Step (Tier-1 Location Index provider) is locked. **Invocation/warrant policy (attack-side): candidate accepted (S-2 Design Investigation v1–v5), non-canonical, pending promotion. Non-attack Location Index generation: REOPENED by S-4 (DEC-036) and mechanism defined by DEC-037 (governing failed-roll provenance + passive-stub fallback; closes OPEN-008).** Anatomical mapping, Tier-2 procedure remain fully open. | Partially locked / WIP — Tier-1 provider locked; candidate invocation policy accepted; non-attack mechanism ruled by DEC-037 |
 | S-3 | Effect thresholds/purchasing | Open |
-| S-4 | Wound activation/severity | **Partially Ruled (DEC-032–DEC-037): Terminology (Injury=HP, Wound=numerical localized state); Trigger = selectable Effect only (Wound realized as "Wounded" Condition via Impose Condition); Overflow never causes Wounds; Track A/B both apply sequentially; Severity = numerical count; Light/Serious/Critical = descriptive categories; DEC-020 reopened with LI mechanism defined (DEC-037, closes OPEN-008). Remaining open: numerical thresholds (OPEN-006), consequences (OPEN-007).** |
+| S-4 | Wound activation/severity | **Ruled (DEC-032–DEC-037, DEC-035 corrected): Terminology (Injury=HP, Wound=numerical localized state); Trigger = selectable Effect only (Wound realized as "Wounded" Condition via Impose Condition); Overflow never causes Wounds; Track A/B both apply sequentially; Severity from the S-3 gated Effect (not accumulated count); Wound consequences = individual mechanical attribute penalties (§4.4.1); DEC-020 reopened with LI mechanism defined (DEC-037, closes OPEN-008). OPEN-006 closed via DEC-035; OPEN-007 ruled; OPEN-008 closed.** |
 | S-5 | Armor interaction | Open |
 | S-6 | Defense model | Open |
 | S-7 | Incapacitation/death | Open |
@@ -986,9 +990,9 @@ The former §2.5 non-attack bullet (as it stood in v1.4.2, "still open") is supe
 
 # 25. v1.4.4 Revision Record
 
-- **S-4 (Two-Track Harm and Wounds) (§4):** Partially ruled by human designer (2026-08-30). Established Terminology Lock (Injury=HP, Wound=numerical localized state), Wound activation trigger (selectable Effect only; Wound realized as "Wounded" Condition via Impose Condition; localized Wounds require Location Index; Overflow never causes Wounds), Track A/B interaction (sequential), Severity (numerical counter, categories are descriptive), the S-2 non-attack deferral reopening (DEC-036), and the non-attack Location Index generation mechanism (DEC-037, closing OPEN-008). OPEN-006 and OPEN-007 remain as residual S-4 design questions.
+- **S-4 (Two-Track Harm and Wounds) (§4):** Partially ruled by human designer (2026-08-30). Established Terminology Lock (Injury=HP, Wound=numerical localized state), Wound activation trigger (selectable Effect only; Wound realized as "Wounded" Condition via Impose Condition; localized Wounds require Location Index; Overflow never causes Wounds), Track A/B interaction (sequential), the S-2 non-attack deferral reopening (DEC-036), and the non-attack Location Index generation mechanism (DEC-037, closing OPEN-008). **DEC-035 corrected** (Wound severity comes from the S-3 gated Effect, not from an accumulated count — the earlier "severity = accumulated count" recording was an LLM misreading of "more wounds = more severe" and is superseded). OPEN-006 closed via DEC-035 (mis-framed count-threshold); OPEN-007 ruled (individual mechanical attribute penalties; more/severe wounds = more negatives; too many → "game overed", faster for weaker characters; healing scales with magnitude).
 - **S-2 (Hit-Location Architecture) (§2.5, §2.5A):** Reopened via DEC-036. Non-attack resolution Location Index generation for Wound Effects resolved by DEC-037 (governing failed-roll provenance + passive-stub fallback).
-- **Residual Decision Register (§20):** Updated to reflect the S-4 rulings (DEC-032–DEC-037) and remaining open questions (OPEN-006–OPEN-007).
+- **Residual Decision Register (§20):** Updated to reflect the S-4 rulings (DEC-032–DEC-037), the DEC-035 correction, and closure of OPEN-006/OPEN-007.
 
 No Canonical Rules changed. Nothing in this revision is promoted to Canonical status; see §21.
 
