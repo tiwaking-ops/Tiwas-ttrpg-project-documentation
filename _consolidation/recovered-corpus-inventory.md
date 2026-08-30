@@ -1,7 +1,7 @@
 ---
 document:
   title: "Recovered Corpus Inventory — Tiwas historical material staged from C:\\temp\\tttrpg-merge"
-  version: "1.1"
+  version: "1.2"
   status: "Consolidation working record (not canonical)"
 provenance:
   author_llm:
@@ -31,8 +31,8 @@ The original consolidation (`_consolidation/document-inventory.md`) covered the 
 `TTTRPG-merge-v1.md` snapshot (5 embedded documents: Canonical Rules v1.3, Roadmap v1.4.3,
 Proposals/WIP v1.4.3, S-2 v5 synthesis, S-2 Non-Attack Closure Record v1.2). That snapshot
 was **incomplete** — it omitted the earlier versions and investigation rounds listed here.
-This is the **inventory of the recovered, previously-missing corpus** (92 `.md` + 1 `.docx`
-= 93 files). It is a separate working record held distinct from the original
+This is the **inventory of the recovered, previously-missing corpus** (93 `.md` + 1 `.docx`
++ 1 `.pdf` = 95 files). It is a separate working record held distinct from the original
 `document-inventory.md` so the two phases do not blur.
 
 ## Provenance note (important)
@@ -53,8 +53,8 @@ beyond staging. All files remain byte-identical to their source in `C:\temp\tttr
 
 - **Source:** `C:\temp\tttrpg-merge` (flat, 91 `.md` files); plus 2 items recovered from the
   Windows Recycle Bin (see §1.1)
-- **Destination:** `sources/incoming/tiwas-tttrpg-merge/` (93 files verbatim: 92 `.md` +
-  1 `.docx`)
+- **Destination:** `sources/incoming/tiwas-tttrpg-merge/` (95 files verbatim: 93 `.md` +
+  1 `.docx` + 1 `.pdf`)
 - **Byte-identity:** verified — all 91 original files copied with matching byte lengths;
   spot-check SHA256/binary comparison confirmed identical on Canonical Rules v1.1, v1.2,
   v1.3, and the S-2 Tier-1 Provider RULED record.
@@ -90,8 +90,8 @@ duplicate of the staged v1.3), and all out-of-scope TCIndustries / non-Tiwas ite
 
 Family counts: Canonical Rules 6 · Implementation Roadmap 13 · Proposals/WIP 14 · S-1
 Opposed Contest 5 · S-2 Hit Location / Location Source 28 · S-2 Non-Attack / Closure /
-Ruling 10 · S-3 Effects 10 · Synthesized Universe / Universal Roadmap 5 · Other 2.
-**Total 93 (92 `.md`, 1 `.docx`).**
+Ruling 10 · S-3 Effects 11 · Synthesized Universe / Universal Roadmap 5 · Other 3.
+**Total 95 (93 `.md`, 1 `.docx`, 1 `.pdf`).**
 
 ### 2.1 Canonical Rules (6)
 
@@ -199,7 +199,7 @@ Ruling 10 · S-3 Effects 10 · Synthesized Universe / Universal Roadmap 5 · Oth
 | Tiwas___S2_Non_Attack_Location_Source-CLOSURE_RECORD-v1_2.md | v1.2 | **Closure Record** | **binding (non-canonical) ruling** | supersedes Starter Brief v1.1 |
 | Tiwas_S2_Next_Design_Question_NonAttack_Location_Source_v1.docx | v1.0 | Starter Brief (.docx) | source brief in Word format; recovered from Recycle Bin | Word-format counterpart of the `.md` v1.0 |
 
-### 2.7 S-3 Effects (10)
+### 2.7 S-3 Effects (11)
 
 | Filename | Version | Status | Subject | Duplicates |
 |---|---|---|---|---|
@@ -213,6 +213,7 @@ Ruling 10 · S-3 Effects 10 · Synthesized Universe / Universal Roadmap 5 · Oth
 | Tiwas___S3_Effects_Round2_Effect_Identity-v1_2.md | v1.2 | Investigation (R2) | cleanup pass | supersedes v1.1 |
 | Tiwas___S3_Effects_Round2_Effect_Identity-v1_3.md | v1.3 | Investigation (R2) | attribution correction | superseded by v1.4 |
 | Tiwas___S3_Effects_Round2_Effect_Identity-v1_4.md | v1.4 | Investigation (R2) | later round; recovered from Recycle Bin | latest R2 |
+| Tiwas___S3_Handoff_Context-for_new_chat.md | — | Session handoff/context record | S-3 Outcome Effects investigation handoff (methodology source for S-3 Round 1, cited by all R1 files); byte-identical copy present in Downloads | unique |
 
 ### 2.8 Synthesized Universe / Universal Roadmap (5)
 
@@ -224,14 +225,15 @@ Ruling 10 · S-3 Effects 10 · Synthesized Universe / Universal Roadmap 5 · Oth
 | TTTRPG-grok4-5-syn1.md | — | Comparative synthesis | Grok synthesis | unique |
 | perplexityai-tiwas_ttrpg-compare-existing1.md | — | Comparative analysis | Perplexity lean-toward | unique |
 
-### 2.9 Other — external audit + original source (2)
+### 2.9 Other — external audit + original source (3)
 
 | Filename | Version | Status | Subject | Duplicates |
 |---|---|---|---|---|
 | perplexityai-Phase One_ Reverse Engineering and Initial Audit.md | — | External audit | d100 engine audit | unique |
 | Tiwas RPG Project Documentation.md | v1 | Original rules document | original v1 rules text | unique |
+| Tiwas RPG Project Documentation v1.pdf | v1 | Original rules document (.pdf) | PDF export of the original v1 rules text; counterpart of the `.md` row above; no byte comparison possible across formats | unique |
 
-*Note:* the explore-agent extraction reported an S-2 `Tiwas_S2_Experiment_ChatGPT_Response_v1-claude_2.md` alt export not present in the original copy list; it is retained here as recorded during extraction and should be reconciled against the actual staged file set at the archive step.
+*Note:* the explore-agent extraction reported an S-2 `Tiwas_S2_Experiment_ChatGPT_Response_v1-claude_2.md` alt export not present in the original copy list. **Reconciled 2026-08-30:** the file exists in `C:\Users\Tiwa Pene\Downloads\` and is **byte-identical** (SHA256 `A44B4811…C28A5B00`, 25,531 bytes) to the staged `Tiwas_S2_Experiment_ChatGPT_Response_v1-claude.md` — an alt-export name for already-staged content, so it was **not** re-added, consistent with the owner's duplicate rule (§1.1). Not missing.
 
 ## 3. Likely duplicate / alternate-export groups (global)
 
@@ -295,6 +297,7 @@ outputs. Byte-identity vs. the download originals was verified via SHA256.
 
 | Filename | Bytes | SHA256 | Subject |
 |---|---|---|---|
+| Claude-DONE Non-attack location index source design-20260830-0152.md | 69,373 | `2A563EFB…F9DBA` | Full export of the Claude chat "DONE Non-attack location index source design" (link `https://claude.ai/chat/ec8eb948…`), created 8/25/2026, exported 8/30/2026 01:52; this chat produced the `Tiwas___S3_Handoff_Context-for_new_chat.md` download (see §2.7) |
 | Claude-DONE S2 next design nonattack-20260830-0826.md | 54,289 | `32C4C52F…49F5B3` | Full export of the Claude chat "DONE S2 next design nonattack" (link `https://claude.ai/chat/819d984b…`), created 8/23/2026, exported 8/30/2026 08:26 |
 
 ### 7.2 Chat outputs (merged correction-pass files) — lineage note
@@ -370,3 +373,39 @@ file below is a **transcription** from the share, recorded as such, not an origi
 **Status scope:** both files are non-canonical LLM-produced assessment/working material —
 **source evidence only**, not a designer ruling. The live position on the S-2 Non-Attack
 investigation remains the designer deferral ruling in Proposals/WIP v1.4.3 §2.5A.
+
+## 8. Session/decision records recovered from Downloads (2026-08-30)
+
+The reconciliation pass (2026-08-30) located the previously-missing `..._claude_2.md`
+alt export in `C:\Users\Tiwa Pene\Downloads\` (§2.5 note), and — following the same
+location — found **nine project session/decision records** that the repository's
+governance/consolidation documents reference but that were absent from the repository.
+All nine were staged **verbatim** into `sources/incoming/` (byte-identity verified via
+SHA256):
+
+| Filename | Bytes | SHA256 | Subject / referenced from |
+|---|---|---|---|
+| opencode-handoff-report.md | 11,319 | `01B16A01…AFFA` | OpenCode handoff report governing the corpus staging (cited `recovered-corpus-inventory.md` §1) |
+| session-decision-log-2026-08-29-part2.md | 8,902 | `D7ED0718…D6BD` | Continuation-session decision log (cited §1) |
+| tiwas-consolidation-priority5-canonical-placement-confirmation-2026-08-29.md | 5,658 | `5C522DF6…15D0` | Human confirmation of the D1 → `canonical/` placement (cited `consolidation-plan.md`) |
+| tiwas-consolidation-priority7-repository-hygiene-decisions-2026-08-29.md | 7,630 | `809975BF…E7A8` | Priority 7 hygiene decisions: C5 permanent limitation + mandatory second-model audit (cited `consolidation-plan.md`, `conflict-register.md` C5) |
+| tiwas-s3-documentarian-handoff-report-2026-08-29.md | 7,748 | `AC8B88FC…1A94` | Post-handoff confirmation of Q-S3-3a / DEC-030 (cited `tiwas-s3-designer-rulings-and-handoff-2026-08-29.md`) |
+| tiwas-s3-documentarian-handoff-report-dec025-2026-08-29.md | 8,831 | `BEDC61BD…08D4` | Per-decision handoff closing Q-S3-2a / DEC-025 (cited `decision-register.md` §D) |
+| tiwas-s3-documentarian-handoff-report-dec026-2026-08-29.md | 9,149 | `393D4408…E364` | Per-decision handoff closing Q-S3-2b / DEC-026 |
+| tiwas-s3-documentarian-handoff-report-dec027-2026-08-29.md | 8,740 | `A8A2F7DC…C70` | Per-decision handoff closing Q-S3-5 / DEC-027 |
+| tiwas-s3-documentarian-handoff-report-final-2026-08-29.md | 12,091 | `182C8276…F6E` | Final consolidated documentarian handoff report (same day) |
+
+**Status scope:** all nine are non-canonical session/working records — **source evidence
+only**. Their recovery confirms (and now makes verifiable) the cross-references the
+documents above already record; it does **not** change any document's authority or
+provenance (original authorship remains as stated within each record).
+
+Two further Downloads files were **not** re-staged because byte-identical copies are
+already staged: `Tiwas RPG Project Documentation v1.pdf` and
+`Tiwas___S3_Handoff_Context-for_new_chat.md` (see §2.9 and §2.7). Distinct Downloads
+PDFs without a matching staged file (`Tiwas RPG Project Documentation.pdf`,
+`..._merge.pdf`) were also **not** staged.
+
+**Still outstanding (unchanged):** the mandatory independent second-model assessment
+record reserved under `audits/` (Priority 7, blocking) and the recommended S-4 opening
+brief; neither is a recoverable file — each is a to-be-performed action.
