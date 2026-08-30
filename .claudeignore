@@ -1,0 +1,17 @@
+# Claude Code ignore file.
+# Stops Claude from loading files that are archived, raw source material, or
+# machine tooling — reducing GitHub project space usage.
+
+# Raw, unmodified source corpus (the original "TTTRPG-merge" material and LLM
+# chat exports). Read-only evidence already consolidated into canonical/,
+# proposals/, roadmap/, investigations/, governance/ and _consolidation/.
+# Claude does not need to re-read these for active design work.
+sources/
+
+# Historical / superseded material. Currently near-empty (README only) and
+# destined to hold superseded content that Claude should not process.
+archive/
+
+# Local machine tooling installed into the repo (Mimocode agent files).
+# Not part of the documentation corpus.
+.mimocode/
