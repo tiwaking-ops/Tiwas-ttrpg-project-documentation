@@ -1,0 +1,529 @@
+# Tiwas-TTRPG — Task-Scoped Consolidated Snapshot for Advisory Session (2026-09-02)
+
+---
+document:
+  title: "Task-Scoped Consolidated Snapshot — Advisory Design Session"
+  version: "1.0"
+  status: "Dated task-scoped working snapshot (NOT the authoritative corpus; NOT a standing merge artifact)"
+  scope: "Single decision-making session. Consumed cold by an advisory design assistant with no repo access. Curated per task; superseded by the live repository at all times."
+provenance:
+  author_llm: {name: "opencode", version: "big-pickle"}
+  assessor_llm: []
+  last_modified_by_llm: {name: "opencode", version: "big-pickle"}
+  created_date: "2026-09-02"
+  last_modified_date: "2026-09-02"
+---
+
+## Standing-prohibition overrule (one-line log entry)
+
+Tiwa has **explicitly and consciously** overridden the standing "do not create another single merged file" prohibition (`sources/incoming/opencode-handoff-report.md` §6), **for this one working session only.** This snapshot is a **dated, task-scoped exception** — NOT a reinstatement of `TTTRPG-merge-v2.md` as a standing artifact. Future agents must NOT assume the prohibition is lifted generally.
+
+---
+
+# 1. Purpose and Usage
+
+You are reading this **cold** at the start of a decision-making work session, with no prior memory and no repository access. Tiwa is moving away from giving advisory LLMs broad/standing corpus access (GitHub Project integration, periodically-regenerated full merge file) because both produced stale, bloated, or unverifiable context, and because standing access let contamination from other LLMs' unrelated-game assumptions go unchallenged.
+
+**How this works:** Tiwa will relay to you, separately, the specific open design decisions to advise on. You will give advisory opinions. Tiwa will verify them with OpenCode (live repo access) before anything is recorded.
+
+This snapshot gives you:
+1. Every **currently Open** decision in the register, each with its full upstream **Ruled/Locked dependency chain**.
+2. The **governance framework** you need to interpret status vocabulary, authority, and provenance correctly.
+3. The **current formal-reporting/provenance standard** for any document you produce this session — sourced **verbatim**, not reconstructed.
+
+**This file is NOT the authoritative corpus.** It is a curated, dated snapshot. Anything downstream must treat the live repository as ground truth. Flag any discrepancy you cannot resolve from this file rather than guessing.
+
+### Constraints binding your advice
+
+- You may **inspect, compare, explain, identify contradictions, present evidence and possible interpretations, and recommend**.
+- You may **not** resolve any Open decision, promote anything to Canonical, or reclassify any document — authority changes only through the project's formal 8-step Promotion Rule (§2.6) and a human ruling.
+- Evidence is recorded with scope and limitations (evidence-class discipline, §2.4). An empirical finding is not a designer ruling; a design direction is not a rule; a proposal is not canonical merely because it is detailed.
+- Hash-indexed / raw evidence files are **pointer-referenced, not reproduced inline** (§5). Do not treat them as rules; do not treat a pointer as a copy of the content.
+
+---
+
+# 2. Governance Framework
+
+## 2.1 Authority hierarchy (verbatim from `governance/authority.md`)
+
+```
+CANONICAL RULES  (canonical/rules/tiwas-canonical-rules-and-changelog-v1.3.md = "D1")
+      ↓
+PROPOSALS / WIP  (proposals/tiwas-proposals-wip-and-design-direction-v1.4.3.md = "D3")
+      ↓
+IMPLEMENTATION ROADMAP  (roadmap/tiwas-implementation-roadmap-and-project-governance-v1.4.3.md = "D2")
+```
+
+- **D1** is the sole source of locked game mechanics. Per its own §0.1, D3 and D2 "cannot override" this document.
+- **D3** is "Non-Canonical Design Repository... Design exploration only." Contains real designer rulings (see register §B, §D) but those rule *candidate, non-canonical* material, not the Canonical ruleset, until the 8-step Promotion Rule is completed.
+- **D2** explicitly disclaims rule authority ("Rule Authority: None — this document does not create game mechanics"). Governs sequencing, dependencies, simulation gates, regression requirements, LLM/process rules.
+- **`investigations/`** (D4/D5 evidence and analysis) is **never self-executing** — require designer/human ruling before anything they contain affects even the non-canonical Proposals/WIP layer, and never claim any effect on Canonical Rules.
+
+No document in the corpus attempts to claim authority over another in a way that contradicts this hierarchy (checked: `_consolidation/conflict-register.md`).
+
+## 2.2 Status vocabulary (verbatim from `governance/status-model.md`)
+
+**D1's own header statuses:**
+- **Canonical / Locked** — authoritative, current, must not be contradicted by downstream design/implementation.
+- **Reserved** — a known required subsystem with no settled implementation yet.
+- **Historical / Superseded** — retained for understanding, no longer current.
+
+**D3 §0 expanded vocabulary (none of these is a locked rule):**
+
+| Status | Meaning |
+|---|---|
+| Proposed | A candidate rule under active consideration |
+| WIP | Currently being developed or reviewed |
+| Experimental | Tested/invented for exploration but explicitly excluded from the ruleset |
+| Design Direction | An architectural/philosophical preference, not necessarily a mechanic |
+| Reserved | Known required subsystem with no settled implementation |
+| Superseded | Historical material retained for understanding but no longer current |
+
+**None of Proposed / WIP / Experimental / Design Direction / Reserved / an "observation" is a locked rule (D3 §0 explicit instruction).**
+
+## 2.3 Status lifecycle (D2 §23.1)
+
+```
+Idea → Proposal → WIP → Independent Review → Simulation/Analysis → Designer Ruling → Accepted → Locked/Canonical
+```
+
+An item may return to WIP if evidence exposes a substantive problem.
+
+## 2.4 Evidence classes (verbatim from `governance/status-model.md`)
+
+- **Mechanical fact** — directly follows from existing locked rules.
+- **Empirical finding** — supported by simulation, playtesting, or other explicit evidence (e.g., the E9 usability playtest, the Named-Outcome 21/21 trial).
+- **Designer ruling** — a deliberate choice not mathematically forced by the system.
+- **Recommendation** — a proposed preference not yet accepted.
+- **Architectural constraint** — governs how systems interact, not what a mechanic numerically does.
+
+An empirical finding does not itself establish a designer ruling. An architectural constraint does not establish a numerical mechanic. This project's source material is unusually careful about labeling which evidence class a given statement belongs to (see e.g. D1 §14.5 vs §14.6; D3 §2.6 vs §2.8) — that discipline should be preserved in all future additions.
+
+## 2.5 Promotion Rule — the only path from non-canonical to canonical (D3 §21 / REQ-021)
+
+1. The design question is explicitly identified.
+2. Competing alternatives have been considered where appropriate.
+3. Relevant simulation/analysis has been completed.
+4. The human designer has accepted the ruling.
+5. The mechanic is documented as a formal rule.
+6. The Canonical Rules & Changelog document is updated.
+7. The former proposal is marked Superseded or Locked in its source document.
+8. Implementation documentation is updated.
+
+**No item currently in `proposals/` or `investigations/` has completed this process.** A detailed proposal is not a rule merely because it is detailed (D3 §21).
+
+## 2.6 LLM Governance Rules (D2 §24 — binding on any LLM working in this repository)
+
+1. Treat Canonical Rules as authoritative.
+2. Treat Proposals/WIP as non-canonical.
+3. Treat Roadmap recommendations as implementation guidance.
+4. Never promote a proposal because it appears repeatedly in documentation.
+5. Never infer a numerical threshold from an example unless explicitly locked.
+6. Never silently resolve an open designer fork.
+7. Identify contradictions between current and historical documents.
+8. Prefer the current locked ruling over superseded source wording.
+9. Preserve the distinction between empirical evidence and designer judgement.
+10. State clearly when an answer depends on a proposal rather than a Canonical rule.
+11. Never create a parallel Core resolution engine merely to implement a subsystem.
+12. Never create a new primary resource or progression currency without explicit designer approval.
+13. Treat an interface prototype as non-canonical unless a formal ruling says otherwise.
+14. When a subsystem is locked, update the Canonical document and its changelog.
+15. When a proposal is superseded, retain its historical significance but mark it Superseded.
+16. If new evidence materially challenges a locked rule, recommend reopening it rather than silently changing it.
+
+---
+
+# 3. Formal Reporting / Provenance Standard
+
+**Any document produced by an LLM during this session MUST conform to this standard on first attempt.**
+
+## 3.1 Mandatory metadata block (verbatim from `governance/provenance.md`)
+
+Every document created by an LLM in this repository must open with a metadata block identifying `author_llm`, `assessor_llm`, and `last_modified_by_llm` (each with `name` and `version`), plus `created_date` and `last_modified_date`. Use `unknown` or `not established` rather than inventing a value. `assessor_llm` may be a **list** when more than one assessment pass has been performed; each entry represents one assessment, earliest first.
+
+**YAML schema:**
+
+```yaml
+---
+document:
+  title: "Document Title"
+  version: "1.0"
+  status: "Status string (use the project's own status vocabulary)"
+provenance:
+  author_llm: {name: "Model Name", version: "model-id"}
+  assessor_llm:
+    - {name: "Model Name", version: "model-id"}
+  last_modified_by_llm: {name: "Model Name", version: "model-id"}
+  created_date: "YYYY-MM-DD"
+  last_modified_date: "YYYY-MM-DD"
+---
+```
+
+## 3.2 Role distinction (verbatim from `governance/provenance.md`)
+
+- **author_llm** — the original creator. Never overwritten by later editors, even if they substantially rewrite the document.
+- **assessor_llm** — reviews for factual/documentary consistency, canonical-status accuracy, provenance, or structure. An assessment is not a human decision and does not confer authority. Where an additional independent assessment is later performed, the independent assessor is **appended** to this field as another entry — the original assessor record is preserved, not overwritten.
+- **last_modified_by_llm** — the most recent substantive editor. Updated on material changes; formatting-only changes may be handled per future project policy.
+
+## 3.3 Provenance template for documents produced this session
+
+For an advisory model producing a document during this session, the metadata block would typically look like:
+
+```yaml
+---
+document:
+  title: "Advisory Session [Topic] Report"
+  version: "1.0"
+  status: "Advisory working document (not canonical)"
+provenance:
+  author_llm: {name: "[Your Model Name]", version: "[your-model-id]"}
+  assessor_llm: []
+  last_modified_by_llm: {name: "[Your Model Name]", version: "[your-model-id]"}
+  created_date: "2026-09-02"
+  last_modified_date: "2026-09-02"
+---
+```
+
+Set `assessor_llm` to `[]` if no independent second-model assessment has been performed. If one is performed later, append it as a list entry (do not overwrite the author).
+
+## 3.4 Decision register column structure (verbatim from `_consolidation/decision-register.md`)
+
+The live register uses this exact column structure:
+
+| Column | Content |
+|---|---|
+| **ID** | DEC-NNN (designer rulings) or OPEN-NNN (explicitly unresolved) |
+| **Subject** | Short description of the decision/question |
+| **Decision / State** | The ruling text, or "Unresolved" with what the corpus says |
+| **Evidence (source)** | Source document reference(s) — path + section, or in-session chat date |
+| **Authority** | Evidence class + source: "Non-canonical designer ruling", "Canonical / Locked", "Architectural constraint (assessment)", etc. |
+| **Status** | "Current", "Ruled", "Closed via DEC-XXX", "Inert / dormant", etc. |
+
+**Column mapping to evidence classes:**
+- "Canonical / Locked" = Mechanical fact from D1
+- "Non-canonical designer ruling" = Designer ruling on candidate material
+- "Architectural constraint (assessment)" = Architectural constraint assessment (not a numeric mechanic)
+
+---
+
+# 4. Decision Register — Full Current State
+
+All items from `_consolidation/decision-register.md` as of 2026-09-01 (last modified date). **Every OPEN item (OPEN-001 through OPEN-010) is now closed.** What remains are open design *threads* (content-enumeration, implementation-layer details) that survive the fork-level rulings — see §5.
+
+## 4.A. Canonical decisions (DEC-001 through DEC-016)
+
+These are locked game mechanics from D1. Status: **Current**. No advisory session may override these.
+
+| ID | Subject | Decision | Evidence | Authority | Status |
+|---|---|---|---|---|---|
+| DEC-001 | d100 core mechanic | Roll-under resolution on 1–100; `00` = 100; 100 always fails and always qualifies as a failed Double | D1 §2.1–§2.4 | Canonical / Locked | Current |
+| DEC-002 | Rounding | All fractional calculations floor, no exceptions | D1 §2.5 | Canonical / Locked | Current |
+| DEC-003 | Attribute matrix | 24 independently generated attributes (12 Body / 12 Mind), each 1d100 | D1 §3 | Canonical / Locked | Current |
+| DEC-004 | Derived statistics | HP, MP, Physical Energy, Speed, Energy Regen, MP Regen, Movement Speed formulas; live-recalculation rule | D1 §4 | Canonical / Locked | Current |
+| DEC-005 | Skill Tier/Cap/Starting Value | Cap = floored average of Tier attributes; Starting Value = floor(Cap/2) | D1 §5 | Canonical / Locked | Current |
+| DEC-006 | Core Test Transaction | Fixed 9-step transaction (roll → outcome → cost → overflow → failure XP → doubles → recovery); no subsystem may replace it | D1 §6, reinforced by D1 §16 invariants 17–18 and D2 §2 | Canonical / Locked | Current |
+| DEC-007 | Resource cost & Overflow | Cost = natural roll; insufficient resource → Overflow → direct HP damage; no second resource pool | D1 §7 | Canonical / Locked | Current |
+| DEC-007.A | Overflow-immutability clause | **AMENDMENT (designer-approved wording, 2026-09-01):** Overflow is a pure function of the natural roll and the resource pool at time of test. No Tag, Trait, Effect, Condition, or subsystem may reduce, redirect, absorb, or otherwise modify Overflow's magnitude or application to HP. Placement: amendment to DEC-007 per designer ruling. **Corollary:** Armor Tags never modify Overflow (Item B corollary). | Designer ruling 2026-09-01; `tiwas-s5-armor-advisory-session-handoff-2026-09-01.md` §4 Item A | Canonical / Locked (amendment makes explicit existing implication) | Current |
+| DEC-008 | Recovery | floor(Regen/2), clamped, always final step, unconditional | D1 §8 | Canonical / Locked | Current |
+| DEC-009 | Failure XP | max(0, Roll − Skill) | D1 §9 | Canonical / Locked | Current |
+| DEC-010 | Skill Roll Pool | Temporary, single-test-scoped; cascading increases while affordable; capped at Skill Cap; remainder → General XP | D1 §10 | Canonical / Locked | Current |
+| DEC-011 | General XP | May exceed Cap; cost of +1 = current value; no partial advancement | D1 §11 | Canonical / Locked | Current |
+| DEC-012 | Advanced Skills | Created only by a qualifying failed Double; Tier+1; full-formula Cap recompute; lineage-based resource domain | D1 §12 | Canonical / Locked | Current |
+| DEC-013 | S-1 Opposed Contest | Universal opposed-contest primitive; outcome matrix; Margin/Blackjack/Hybrid Quality measures; Failure/Failure repeat; exact-tie repeat | D1 §13, confirmed complete/locked at D2 §8 | Canonical / Locked | Current |
+| DEC-014 | S-2 Tier-1 Location Index provider (Zero-Step) | Deterministic tens/units-digit exchange on the natural attacking roll; no player choice; read-only post-process; does not alter Core Test consequences | D1 §14.1–§14.2 | Canonical / Locked — explicitly limited in scope (only the Tier-1 provider; not tier policy, anatomical mapping, or downstream interaction) | Current |
+| DEC-015 | Reserved Systems list | Everything not explicitly locked remains outside the locked Core | D1 §15 | Canonical (a locked scope statement, not a locked mechanic for those subsystems) | Current |
+| DEC-016 | Core Architectural Invariants | 18 invariants binding on all future subsystem work | D1 §16 | Canonical / Locked | Current |
+
+**Scope note on DEC-014:** D1 §14.3 is explicit that this locks *only* the Tier-1 Location Index provider — not whether/when a scene uses Tier 0/1/2, not anatomical mapping, not wound/armor/defense interaction, not whether any later rule may consume a Location Index.
+
+## 4.B. Non-canonical designer rulings (DEC-017 through DEC-077)
+
+All are genuine human/designer rulings on candidate/non-canonical material. None have completed the 8-step Promotion Rule. Status as of 2026-09-01:
+
+### S-2 Hit Location Architecture (DEC-017 through DEC-022)
+
+| ID | Subject | Decision | Status |
+|---|---|---|---|
+| DEC-017 | S-2 attack-side invocation/warrant policy | Four-state model + Named-Outcome Test accepted as "current non-canonical working direction" (attack-side only) | Current (accepted candidate, not locked) |
+| DEC-018 | Explicit-only objectives | GM does not infer unstated distinct objective from location/fictional context alone | Current, folded into DEC-017's policy |
+| DEC-019 | Structural Weak Points reclassified State 1 → State 2 | Anchored but not yet resolvable; zero State-1/Active cache entries currently exist | Current |
+| DEC-020 | S-2 non-attack Location Index source — categorical deferral | Non-attack physical resolutions generate no Tier-1 Location Index under current design | **Reopened** — S-4 met reopening condition; now able to produce Wounds via Effect, pending new Location Index generation rule |
+| DEC-021 | S-2 non-attack deferral — rejected alternative | "GM-authored hazard warrant" (Direction 1) rejected, not deleted | Current |
+| DEC-022 | H0 provenance rule and riders | Retained as inert candidate record for non-attack question if/when reopened — explicitly not validated as operative rule | Inert / dormant |
+
+### S-3 Outcome Effects (DEC-023 through DEC-031)
+
+| ID | Subject | Decision | Status |
+|---|---|---|---|
+| DEC-023 | S-3 Effect menu structure | Tiered Effect menu: base tier + five gated tiers (Position → Time/Action; Condition → Conditions; Equipment → Equipment; Defense → S-6; Location → S-2 invocation promotion) | Ruled; Disarm/Break Hold placement finalised via DEC-028 |
+| DEC-024 | S-3 Effect purchasing / multiplicity | Flat one-Effect-per-win. No Quality-based scaling. A second Effect requires a separate opposed roll — mechanism deferred | Ruled; mechanism deferred to new thread |
+| DEC-025 | S-3 Effect naming/identity gating | Pure declared intent (no Skill-side gating). Formal tag/category system on Advanced Skills rejected | Ruled |
+| DEC-026 | Second-Effect opposed-roll mechanism | Different Advanced Skill; defensive roll deferred to S-6 | Ruled |
+| DEC-027 | Effect application — auto vs contested | Auto-apply. Winning S-1 with declared Effect applies it directly. Contested application rejected as S-3 default | Ruled |
+| DEC-028 | State-3 Effect triggering — location+tag gating | Combined Location + Tag gating for Disarm/Break Hold, Equipment Damage, Armor Bypass. **Narrowed by DEC-041:** Skill-Tier ≥ 2 gate added | Ruled (narrowed by DEC-041) |
+| DEC-029 | S-3/S-4 boundary | Confirmed prototype-only; base-tier Injury is HP-only, no wound produced | Ruled; S-4 direction non-binding |
+| DEC-030 | Partial Tag/Location match | Fail-and-fall-back to Base Inflict Injury (HP-only) | Ruled |
+| DEC-031 | S-3 Quality's Role in Single-Effect Outcome Resolution | Quality gates eligible Effects (Option B). Higher Quality unlocks more severe Effects; floor rule; no scaling | Ruled |
+
+### S-4 Wound Activation/Severity (DEC-032 through DEC-039)
+
+| ID | Subject | Decision | Status |
+|---|---|---|---|
+| DEC-032 | S-4 Terminology: Injury vs. Wound | Injury = HP Damage; Wound = Localized, Lasting Numerical State | Ruled |
+| DEC-033 | S-4 Wound Trigger & Location Scope | Wounds exclusively triggered as selectable Effect from S-1 contest (Impose Condition: Wounded). Both Inflict Injury and Impose Condition: Wounded require Location Index. Overflow exempt. **Narrowed by DEC-041:** Skill-Tier ≥ 2 gate | Ruled (narrowed by DEC-041) |
+| DEC-034 | S-4 Track A/B Interaction | Both Track A (Overflow→HP) and Track B (Wound Effects) can apply from one hit, sequentially | Ruled |
+| DEC-035 | S-4 Wound Severity Definition | Severity comes from the S-3 gated Effect, not accumulated count. Wounds tracked individually with own numerical magnitude | Ruled (amended by DEC-035.A) |
+| DEC-035.A | S-4 Wound format, magnitude, tier, stacking & healing (**AMENDMENT to DEC-035**) | Wound recorded as `Location X Tier-Y Wound Z (Attribute or Skill)`. Tier = equal-or-less-than causing skill's Skill-Tier OR GM Fiat. Magnitude Z = Tier (−Y). Same-tier/same-location wounds stack (values add) but never raise tier. Healing requires skill tier ≥ wound tier. GM Fiat is universal (overrides all downstream tier-gated requirements). **Carried open:** DEC-031 (Quality) × Skill-Tier ceiling precedence | Ruled |
+| DEC-036 | S-4 DEC-020 Reopening | DEC-020 (non-attack deferral) reopened. Non-attack physical resolutions can produce Wounds via Effect | Ruled |
+| DEC-037 | S-2 / S-4 Non-Attack Location Index Generation | (1) Primary Provenance Rule: character's failed governing Core Test roll supplies digits for Zero-Step. (2) Hazard "Win": failure qualifies for S-3 Effect applied to location indicated by failed roll. (3) Systemic Exempt: global threats apply direct HP/Conditions. (4) Passive Fallback: numeric stub routed through Zero-Step | Ruled |
+| DEC-038 | OPEN-001A — H0 Rider B causal attribution | Single causal-attribution principle: whichever Core Test is causally responsible supplies the Location Index | Ruled |
+| DEC-039 | OPEN-001B — Extended Test governing roll for Location Index | Final roll in the sequence governs | Ruled |
+
+### S-2 Tier Policy & Anatomical Mapping (DEC-040 through DEC-042)
+
+| ID | Subject | Decision | Status |
+|---|---|---|---|
+| DEC-040 | OPEN-002 — Scene/campaign Location Tier default | Tier 0 is universal default; promotion is per-roll only; no scene-level "stays elevated" state. **Deferred:** which specific actions call for Tier 1 vs. Tier 2 promotion | Ruled (per-action promotion list deferred) |
+| DEC-041 | OPEN-003 — Anatomical mapping: Skill-Tier-gated granularity | Six-part rule: (1) Gate: Location Index only when roll promoted + Skill-Tier 2+ (Advanced). Base/untrained = Skill-Tier 1, never triggers location. (2) Tier 1 → coarse zones via anatomically-weighted ranges. (3) Left/right via digit-parity. (4) Tier 2 → granularity scales with Skill-Tier (**directional, not locked**). (5) Individual creature templates. (6) Universal scope. **Deferred:** exact tier-to-granularity assignments, numeric ranges | Ruled (granularity assignments deferred) |
+| DEC-042 | OPEN-004 — Tier-2 subdivision procedure and cost | Option B: secondary roll, no resource cost. Not a second Core Test. Location-mismatch → fail-and-fall-back per DEC-030 | Ruled |
+
+### S-8 Third-Party Adjudication (DEC-043)
+
+| ID | Subject | Decision | Status |
+|---|---|---|---|
+| DEC-043 | S-8 — Third-Party Adjudication of Mutual-Failure Opposed Contests (Q1–Q5) | All five sub-questions closed: same-skill default, full Core Test, binary outcome, inverted comparison, Double-eligible, generalized to all mutual-failure | Ruled |
+
+### S-6 Defense (DEC-044 through DEC-050, DEC-075)
+
+| ID | Subject | Decision | Status |
+|---|---|---|---|
+| DEC-044 | OPEN-005 S-6 Fork 3 — Defense architecture | Active Defense: defender makes genuine Core Test | Ruled |
+| DEC-045 | OPEN-005 S-6 Fork 4 — Who makes the Defense roll | The defender rolls | Ruled |
+| DEC-046 | OPEN-005 S-6 Fork 5 — Voluntary decline of Defense | Yes, defender may choose not to defend | Ruled |
+| DEC-047 | OPEN-005 S-6 Fork 7 — Defense roll ceiling | Uncapped. Deferred: fatigue/exhaustion from repeated rolls | Ruled |
+| DEC-048 | OPEN-005 S-6 Fork 2 — Defense timing vs. auto-apply | Model B: Effect auto-applies exactly as DEC-027; Defense acts as post-hoc mitigation, not a gate | Ruled |
+| DEC-049 | OPEN-005 S-6 Fork 6 — DEC-026 deferred defensive position | Separate mitigation per Effect; each auto-applied Effect gets independent Defense roll | Ruled |
+| DEC-050 | OPEN-005 S-6 Fork 1 — Defensible-Effect scope | Universal eligibility: any auto-applied Effect eligible. **Amendment (2026-09-01):** includes positive/beneficial Effects; invocation voluntary | Ruled (amended, resolves OPEN-009) |
+| DEC-075 | OPEN-010 — S-6 repeated-Defense fatigue/exhaustion | No fatigue/exhaustion penalty beyond existing Cost/Overflow. Future fatigue, if implemented, = Condition-tier Effect (DEC-060 precedent), not a subsystem | Ruled (closes OPEN-010) |
+
+### S-8 Stakes Gate (DEC-051)
+
+| ID | Subject | Decision | Status |
+|---|---|---|---|
+| DEC-051 | S-8 Stakes Gate rejection | Rejected. No pre-Core-Test "skip the roll" filter for stakes-based reasons | Ruled |
+
+### S-7 Incapacitation/Death (DEC-052 through DEC-057)
+
+| ID | Subject | Decision | Status |
+|---|---|---|---|
+| DEC-052 | S-7 Fork 1 — HP = 0 forced incapacitation | HP = 0 triggers forced incapacitation. No roll, no save | Ruled |
+| DEC-053 | S-7 Fork 2 — Wound/Incapacitation independence | Incapacitation is HP-driven only. Wound severity does not feed into incapacitation | Ruled |
+| DEC-054 | S-7 Fork 3 — Permanent character loss (death) | Two-branch: (a) incapacitated + all revival skill tests failed (unlimited attempts), OR (b) voluntary choice while incapacitated | Ruled |
+| DEC-055 | S-7 Fork 4 — Stabilization procedure | GM discretion, no formal procedure. Skill tests fixed by DEC-054; mechanics of attempts are GM discretion | Ruled |
+| DEC-056 | S-7 Fork 5 — S-11 boundary | No interaction with S-11 (Rest/Healing) | Ruled |
+| DEC-057 | S-7 Fork 6 — S-2 non-attack reopening trigger closure | Original flag superseded by DEC-053 (HP-only incapacitation); reopening pathway no longer exists | Ruled (session-level assessment) |
+
+### S-5 Armor (DEC-058 through DEC-062)
+
+| ID | Subject | Decision | Status |
+|---|---|---|---|
+| DEC-058 | S5-A — Armor architecture: Tags/Traits only | No numeric durability/soak pool. Tags/Traits system only. Never interacts with Overflow | Ruled |
+| DEC-059 | S5-B — Bypass definition | Relational property between specific Tag pairs + location match required. Inapplicable at Location Tier 0 | Ruled |
+| DEC-060 | S5-C — Sunder Effect | Addition model: adds "Sundered" Tag. Permanent. Resolved via ordinary Core Test. Selectable Effect at Condition tier | Ruled |
+| DEC-061 | S5-D — Armor resolution sequence vs. Active Defense | Armor resolves before Active Defense. Tier-0 location hits never forced to promote by Armor alone | Ruled |
+| DEC-062 | S5-E — Armor coverage location-bound + Zero-Step clause | Armor coverage location-bound; uses same fine-grained creature-template anatomy as DEC-041. Zero-Step clause: at Tier 0, struck location for Armor check derived via Zero-Step digit-exchange (read-only, no new roll, no promotion) | Ruled |
+
+### S-8 Difficulty/Adjudication (DEC-063 through DEC-066)
+
+| ID | Subject | Decision | Status |
+|---|---|---|---|
+| DEC-063 | S8-A — Difficulty grade structure | Named tiers with fixed additive Skill-side modifiers. Modifiers act on Skill side only — never on natural roll | Ruled |
+| DEC-064 | S8-B — Difficulty-modified Skill usage scope | Effective Skill used for all three: success/fail check, Failure XP calculation, and Skill Roll Pool cascade entry | Ruled |
+| DEC-065 | S8-C — Skill Roll Pool cascade cap | Effective Skill clamped at permanent Cap for cascade stopping condition. Preserves Invariant 10 exactly | Ruled |
+| DEC-066 | S8-D — Difficulty grade symmetry | Symmetric grades (bonuses and penalties) | Ruled |
+
+### S-9/S-10 Extended Tests (DEC-067 through DEC-070)
+
+| ID | Subject | Decision | Status |
+|---|---|---|---|
+| DEC-067 | S9-A — Extended Test progress method | Margin-accumulation: each successful interval's Margin adds to running total; failures contribute nothing; monotonically increasing | Ruled |
+| DEC-068 | S9-B — Extended Test failure behavior | Neutral: failed interval costs resources and generates Failure XP but does not reduce progress | Ruled |
+| DEC-069 | S9-C — Invariant-17 coherence assessment | No Invariant-17 violation (no income/expenditure dynamic) | Ruled (architectural constraint assessment) |
+| DEC-070 | S-9/S-10 Extended Test completion target | GM discretion, no formula | Ruled |
+
+### S-11 Rest/Healing (DEC-071 through DEC-074)
+
+| ID | Subject | Decision | Status |
+|---|---|---|---|
+| DEC-071 | S11-A — Rest/Healing resolution method | Explicit Skill Test required (full 9-step Core Test) | Ruled |
+| DEC-072 | S11-B — Wound magnitude healing penalty | Penalty on healer's effective Skill (same pattern as DEC-064 difficulty-on-Skill-side) | Ruled |
+| DEC-073 | S11-C — S-11 as literal Extended Test instance | S-11 healing IS an Extended Test instance: one Rest period = one interval; Margin-accumulation (DEC-067); failures neutral (DEC-068); GM discretion target (DEC-070) | Ruled |
+| DEC-074 | S-11 healing completion target | GM discretion, generally — no HP-deficit lock | Ruled |
+
+### S-12 Creature/Campaign (DEC-076 through DEC-077)
+
+| ID | Subject | Decision | Status |
+|---|---|---|---|
+| DEC-076 | S-12 Ruling A — Creature/NPC stat-generation & resolution-economy mode fork | Dual-mode: computerized = full 24-attribute + Core Test; tabletop = abbreviated stat-block, GM discretion default. Earlier "GM-facing shortcut layer" draft explicitly rejected by designer | Ruled |
+| DEC-077 | S-12 Ruling B — Creature/Campaign content authoring path | Content deferred to Tiwa's own playtesting. Not to be drafted by advisory models | Ruled (process/ownership ruling) |
+
+## 4.C. Previously Open items — now all closed
+
+| ID | Closed via | Date |
+|---|---|---|
+| OPEN-001 (H0 Rider B sub-options) | DEC-038 | 2026-08-31 |
+| OPEN-002 (Scene/campaign Tier selection) | DEC-040 | 2026-08-31 |
+| OPEN-003 (Anatomical mapping) | DEC-041 | 2026-08-31 |
+| OPEN-004 (Tier-2 procedure/cost) | DEC-042 | 2026-08-31 |
+| OPEN-005 (S-5–S-12 umbrella) | DEC-076/DEC-077 | 2026-09-01 |
+| OPEN-006 (Wound Severity thresholds) | DEC-035 (corrected) | 2026-08-30 |
+| OPEN-007 (Wound consequences) | Ruled (structure via DEC-035.A) | 2026-08-30 (structured 2026-09-02) |
+| OPEN-008 (Non-attack LI generation) | DEC-037 | 2026-08-30 |
+| OPEN-009 (S-6 positive-Effect defense) | DEC-050 amendment | 2026-09-01 |
+| OPEN-010 (S-6 repeated-Defense fatigue) | DEC-075 | 2026-09-01 |
+
+**No fork-level Open item remains in the register.**
+
+---
+
+# 5. Currently Open Design Threads (post-ruling, implementation-layer)
+
+Nothing in the decision register is marked "Open." What remains are **open design threads** — content-enumeration, implementation-detail, and deferred-scoping work that the fork-level rulings explicitly left for future sessions. These are the items an advisory session might be asked about.
+
+## 5.1 S-3 gated-tier Effect content enumeration (highest priority)
+
+**What's Ruled:** The S-3 Effect menu *structure* is locked (DEC-023): base tier (Inflict Injury HP-only + Open Retreat/Compel Yield) + five gated tiers (Position, Condition, Equipment, Defense, Location).
+
+**What's open:** The *specific Effects within each gated tier* are NOT enumerated. Conditions (darkness, grappled, frightened), position effects, equipment-damage effects, defense-tier effects, and location-tier effects are all unmade.
+
+**Why it matters:** Blocking combat fidelity. Referenced as Critical for the Blood Man encounter (grapple/hold, darkness/vision, fear, ongoing corrosive damage per time-step, tactical position, defense-mitigation interaction). Multiple reports disagree on whether it's a Critical blocker or a Design-Stage Dependency.
+
+**Relevant DEC rulings (upstream context):**
+- DEC-023 (menu structure) → DEC-028 (Tag+Location gating for three Effects) → DEC-041 (Skill-Tier gate universal)
+- DEC-024 (one-Effect-per-win; second Effect mechanism deferred)
+- DEC-026 (second-Effect uses different Advanced Skill; defensive roll deferred to S-6 — now locked DEC-044–050)
+- DEC-027 (auto-apply) → DEC-048 (Defense is post-hoc mitigation) → DEC-050 (universal defensible scope)
+- DEC-031 (Quality gates eligible Effects)
+- DEC-060 (Sunder addition-model precedent for Condition-tier Effect)
+- DEC-075 (future fatigue = Condition-tier Effect, not a subsystem)
+
+**Dependency:** S-6 Defense is fully Ruled (DEC-044–050) but its *interaction with specific Defense-tier Effects* is not defined until Defense-tier Effects are enumerated. S-3 §11 (Tags subsystem starter vocabulary) is Reserved / unbuilt.
+
+**Tracking note:** Explicitly flagged in DEC-050 amendment note ("the still-unenumerated S-3 gated-tier Effect content remains a separate tracking item") and the S-6/S-12 handoff §4 table.
+
+## 5.2 Wound consequence magnitudes (OPEN-007 — now structured via DEC-035.A, 2026-09-02)
+
+**Note (2026-09-02):** This section is updated to reflect the DEC-035.A amendment. The wound **format, tier framework, magnitude and healing gate** are now Ruled (see §4.B table). What remains open is only what the amendment itself carried forward.
+
+**What's Ruled (DEC-035.A, 2026-09-02):**
+- Wound record format: `Location X Tier-Y Wound Z (Attribute or Skill)`
+- Tier = equal-or-less-than causing skill's Skill-Tier OR GM Fiat (universal override)
+- Magnitude Z = Tier (−1 for Tier-1, −2 for Tier-2, etc.)
+- Stacking: same-tier/same-location wounds add; never raise tier
+- Healing: skill tier ≥ wound tier; GM Fiat can override
+- Wounds may now target Skills directly (scope expansion over DEC-032's attribute-only framing)
+
+**What's still open (carried forward by DEC-035.A):**
+- **DEC-031 (Quality) × Skill-Tier ceiling precedence** — when Quality and Skill-Tier would permit different available wound tiers, which applies. Not yet ruled.
+- The individual penalty magnitudes are now defined *by tier*; the "accumulation to game-over threshold" (how many/which stacked wound negatives trigger DEC-054 permanent loss) remains GM-discretion per DEC-055/DEC-070 precedent, with no default guidance.
+
+**Relevant DEC rulings:**
+- DEC-032 (Injury vs. Wound terminology)
+- DEC-033 (Wound trigger & Location Scope, narrowed by DEC-041)
+- DEC-035 + DEC-035.A (severity, format, tier, magnitude, stacking, healing)
+- DEC-037 (non-attack LI generation)
+- DEC-053 (Incapacitation HP-only, independent of Wounds)
+- DEC-071–074 (S-11 healing as Extended Test instance)
+
+**Options formerly flagged in readiness report:** (a) enumerate now, (b) GM-adjudicate for alpha, (c) defer until after combat integration — now largely superseded by DEC-035.A's ruling; the remaining open piece is the Quality × Skill-Tier precedence.
+
+## 5.3 S-2 residual architecture (anatomical mapping details, tier promotion triggers, GM-facing wording)
+
+**What's Ruled (forks closed):**
+- DEC-014: Zero-Step locked (Tier-1 LI provider)
+- DEC-020 (reopened by DEC-036): non-attack deferral reopened
+- DEC-037: Non-attack LI generation mechanism defined
+- DEC-038: Causal attribution principle
+- DEC-039: Extended Test governing roll
+- DEC-040: Tier 0 default, per-roll promotion
+- DEC-041: Skill-Tier-gated anatomical granularity (universal)
+- DEC-042: Tier-2 secondary roll, no cost
+
+**What's explicitly deferred (not closed, not Ruled):**
+- **DEC-040:** "Which specific actions call for Tier 1 vs. Tier 2 promotion is deferred to per-Effect/per-action design (not resolved here)." — This depends on the S-3 Effect content enumeration (§5.1).
+- **DEC-041:** "Exact tier-to-granularity assignments are directional, not locked." Numeric ranges/zone-weightings not finalized.
+- **DEC-042:** Tier-2 formal rule text and Invariant-18 scoping statement still needed.
+- **Proposals §2.5 / Roadmap §9:** "Final GM-facing wording for the simplified invocation procedure — drafted, not yet separately validated."
+
+**Dependency:** Anatomical mapping numeric ranges (DEC-041 deferred) are needed before creature templates (DEC-077, Tiwa's domain) can be built. Tier-1/Tier-2 promotion trigger list (DEC-040 deferred) depends on S-3 Effect enumeration (§5.1).
+
+## 5.4 S-12 creature/campaign content (architecture Ruled, content Open — Tiwa's domain only)
+
+**What's Ruled:** DEC-076 (dual-mode stat-generation fork) and DEC-077 (content authoring deferred to Tiwa's playtesting). No advisory model may draft creature templates.
+
+**What's open:** Actual creature templates (Goblin, Dragon, Ice Troll, Blood Man, etc.) do not exist yet. S-12's abbreviated stat-block format and automated-system tooling specifics are also not yet drafted (downstream implementation detail under DEC-076).
+
+**Constraint:** DEC-077 explicitly bars advisory models from drafting this content. An advisory session may only *support* Tiwa's playtesting process, not produce the templates.
+
+## 5.5 Reserved systems (DEC-015) — structural Rulings exist, systems unbuilt
+
+The canonical locked Core (DEC-015 Reserved Systems) leaves the entire non-locked universe as Reserved / unbuilt. The DEC decisions provide structural rulings for many of these, but the systems themselves are not designed:
+
+| System | Proposals section | Status |
+|---|---|---|
+| Conditions | §10 | Reserved |
+| Tags | §11 | Reserved |
+| Time/Action economy | §12 | Reserved |
+| Equipment | §13 | Reserved |
+| Hazards (environmental) | §14 | Reserved |
+| Magic/Special Abilities | §17 | Design Direction only |
+| Setting Interface | §19 | Not started |
+| Setting Integration | §20 | Not started |
+
+The S-3 Effect content enumeration (§5.1) would be the first concrete pass through several of these (Condition-tier Effects require a Conditions vocabulary; Equipment-tier Effects require an Equipment vocabulary; Location-tier Effects require the S-2 architecture to be finalized).
+
+---
+
+# 6. Evidence Pointers (not reproduced inline)
+
+Evidence files are referenced by path + one-line status. Do not treat pointers as content copies.
+
+| Pointer | Status |
+|---|---|
+| `investigations/tiwas-s3-designer-rulings-and-handoff-2026-08-29.md` | S-3 session rulings and handoff (rev. 1); source of DEC-023 through DEC-030 |
+| `investigations/tiwas-s3-effect-identity-and-multi-effect-opposition-investigation-v0.1-open.md` | S-3 Effect Identity investigation thread — **Closed**, no open forks remain |
+| `investigations/tiwas-s3-outcome-effects-investigation-v0.1-draft.md` | S-3 Outcome Effects investigation — draft, conclusions captured in DEC-023–031 |
+| `investigations/tiwas-s4-documentarian-handoff-report-2026-08-30.md` | S-4 cross-model session handoff; source of DEC-032–037, stress-test audit finding |
+| `investigations/tiwas-s4-dec035-original-wording-and-correction-2026-08-30.md` | Verbatim designer quote for DEC-035 correction |
+| `investigations/tiwas-s4-dec037-stress-test-rerun-2026-08-30.md` | DEC-037 stress-test re-run (14 scenarios); non-blocking flags: H0 Rider B, S-8 dependency |
+| `investigations/tiwas-s5-armor-advisory-session-handoff-2026-09-01.md` | S-5 Armor advisory session; source of DEC-058–062, DEC-007.A |
+| `investigations/tiwas-s6-defense-opening-brief-2026-08-31.md` | S-6 Defense opening brief; source of DEC-044–050 |
+| `investigations/tiwas-s7-s8-advisory-session-handoff-2026-09-01.md` | S-7/S-8 advisory session; source of DEC-043, DEC-051–057 |
+| `investigations/tiwas-s8-s9s10-s11-advisory-session-handoff-2026-09-01.md` | S-8/S-9/S-10/S-11 advisory session; source of DEC-063–074 |
+| `investigations/tiwas-s6-s12-session-handoff-2026-09-01.md` | S-6/S-12 session; source of DEC-075–077 |
+| `investigations/tiwas-s8-third-party-adjudication-mutual-failure-candidate-v1.md` | S-8 Third-Party Adjudication candidate; source of DEC-043 |
+| `investigations/tiwas-s2-hit-location-investigation-v5-synthesis.md` | S-2 Design Investigation v5 synthesis (Correction Pass); source of DEC-017–019 |
+| `investigations/tiwas-s2-non-attack-location-source-closure-record-v1.2.md` | S-2 Non-Attack closure record; 14-scenario stress-test set; source of DEC-020–022 |
+| `investigations/tiwas-s3-documentarian-handoff-report-dec028-2026-08-30.md` | S-3 DEC-028 handoff; Quality's role investigation |
+| `investigations/llm-quality-s3-reports-2026-08-30.md` | 8-model LLM blind survey on Quality's role (5/8 Option B) |
+| `sources/incoming/tiwas-s3-documentarian-handoff-report-2026-08-29.md` | S-3 documentarian handoff (per-decision reports: dec025, dec026, dec027) |
+| `sources/incoming/tiwas-s3-documentarian-handoff-report-dec025-2026-08-29.md` | DEC-025 handoff report |
+| `sources/incoming/tiwas-s3-documentarian-handoff-report-dec026-2026-08-29.md` | DEC-026 handoff report |
+| `sources/incoming/tiwas-s3-documentarian-handoff-report-dec027-2026-08-29.md` | DEC-027 handoff report |
+| `canonical/rules/tiwas-canonical-rules-and-changelog-v1.3.md` | D1 — Canonical Rules & Changelog (sole source of locked mechanics) |
+| `proposals/tiwas-proposals-wip-and-design-direction-v1.4.3.md` | D3 — Proposals, WIP & Design Direction (non-canonical design repository) |
+| `roadmap/tiwas-implementation-roadmap-and-project-governance-v1.4.3.md` | D2 — Implementation Roadmap & Project Governance (rule authority: none) |
+
+---
+
+# 7. Conflict Register Summary
+
+No unresolved substantive rules conflict exists in the corpus. The single evidence-gap item (C5, missing prior-version source text) is closed as an **accepted permanent limitation** by human ruling (2026-08-29); recovery is no longer required. See `_consolidation/conflict-register.md` for full detail.
+
+---
+
+# 8. Snapshot Label
+
+This is a **dated, task-scoped snapshot** compiled by OpenCode (documentarian, live repo access) on 2026-09-02, for a single advisory design session. It is NOT the authoritative corpus, NOT a standing merge artifact, and NOT current beyond this session. The live repository (`_consolidation/decision-register.md` and all files it references) is ground truth at all times.
+
+All design material in this file is **non-canonical** unless explicitly labelled Canonical/Locked. Nothing in this snapshot promotes, demotes, or reclassifies any document in the repository.
