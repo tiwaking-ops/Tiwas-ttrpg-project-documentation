@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tiwas TTRPG — Development Readiness Report</title>
+<style>
+  :root {
+    --canonical: #1a7f37;
+    --ruled: #0969da;
+    --open: #cf222e;
+    --ready: #1a7f37;
+    --adapt: #9a6700;
+    --design: #bf8700;
+    --missing: #cf222e;
+    --content: #57606a;
+    --bg: #ffffff;
+    --fg: #1f2328;
+    --muted: #57606a;
+    --line: #d0d7de;
+    --panel: #f6f8fa;
+    --heading: #1f2328;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    color: var(--fg);
+    background: var(--bg);
+    line-height: 1.6;
+  }
+  header.hero {
+    background: linear-gradient(135deg, #0d1117 0%, #1a2332 100%);
+    color: #fff;
+    padding: 2.5rem 2rem;
+    border-bottom: 4px solid #2f81f7;
+  }
+  header.hero .wrap { max-width: 1000px; margin: 0 auto; }
+  header.hero .badge {
+    display: inline-block;
+    background: #f85149;
+    color: #fff;
+    font-weight: 700;
+    font-size: .75rem;
+    letter-spacing: .5px;
+    padding: .25rem .6rem;
+    border-radius: 4px;
+    text-transform: uppercase;
+    margin-bottom: .75rem;
+  }
+  header.hero h1 { margin: 0 0 .35rem; font-size: 1.7rem; line-height: 1.25; }
+  header.hero p.sub { margin: 0; color: #c9d1d9; font-size: .95rem; }
+  .meta {
+    max-width: 1000px; margin: 1.5rem auto 0; padding: 0 1rem;
+    display: flex; flex-wrap: wrap; gap: .5rem;
+  }
+  .meta span {
+    background: var(--panel); border: 1px solid var(--line);
+    padding: .3rem .6rem; border-radius: 5px; font-size: .78rem; color: var(--muted);
+  }
+  main { max-width: 1000px; margin: 0 auto; padding: 1.5rem 1rem 4rem; }
+  nav.toc {
+    background: var(--panel); border: 1px solid var(--line); border-radius: 8px;
+    padding: 1.25rem 1.5rem; margin-bottom: 2rem;
+  }
+  nav.toc h2 { margin: 0 0 .75rem; font-size: 1.05rem; }
+  nav.toc ul { margin: 0; padding-left: 1.25rem; columns: 2; column-gap: 2rem; }
+  nav.toc a { color: #0969da; text-decoration: none; }
+  nav.toc a:hover { text-decoration: underline; }
+  h2.section {
+    margin-top: 2.75rem; padding-bottom: .4rem; font-size: 1.45rem;
+    border-bottom: 2px solid var(--line);
+  }
+  h3 { margin-top: 1.75rem; font-size: 1.15rem; }
+  h4 { margin-top: 1.25rem; font-size: 1rem; }
+  .subsystem {
+    border: 1px solid var(--line); border-radius: 8px;
+    padding: 1.25rem 1.5rem; margin: 1.25rem 0; background: var(--panel);
+  }
+  .subsystem h4 { margin-top: 0; display: flex; align-items: center; gap: .5rem; flex-wrap: wrap; }
+  details {
+    border: 1px solid var(--line); border-radius: 6px; margin: .5rem 0;
+    background: var(--bg);
+  }
+  details summary {
+    cursor: pointer; padding: .6rem .9rem; font-weight: 600; background: var(--panel);
+    border-radius: 6px;
+  }
+  details[open] summary { border-bottom: 1px solid var(--line); border-radius: 6px 6px 0 0; }
+  details .body { padding: .9rem 1.1rem; }
+  table { width: 100%; border-collapse: collapse; margin: .9rem 0; font-size: .9rem; }
+  th, td { border: 1px solid var(--line); padding: .55rem .7rem; text-align: left; vertical-align: top; }
+  th { background: var(--panel); font-weight: 600; }
+  .tag { display: inline-block; font-size: .72rem; font-weight: 700; padding: .15rem .5rem; border-radius: 10px; color: #fff; white-space: nowrap; }
+  .tag.canonical, .tag.ready, .tag.playtestable { background: var(--canonical); }
+  .tag.ruled, .tag.adapt, .tag.adaptation { background: var(--adapt); }
+  .tag.design, .tag.draft { background: var(--design); }
+  .tag.open, .tag.missing { background: var(--open); }
+  .tag.content { background: var(--content); }
+  pre, .diagram {
+    background: #0d1117; color: #e6edf3; padding: 1rem 1.25rem; border-radius: 8px;
+    overflow-x: auto; font-size: .85rem; line-height: 1.5; margin: .9rem 0;
+  }
+  pre .deco { color: #8b949e; }
+  blockquote {
+    border-left: 3px solid #2f81f7; margin: .75rem 0; padding: .3rem .9rem;
+    color: var(--muted); font-style: italic;
+  }
+  .note {
+    border-left: 4px solid #d29922; background: #fff8c5; padding: .6rem .9rem;
+    border-radius: 0 6px 6px 0; margin: .75rem 0; font-size: .88rem;
+  }
+  .pill { display: inline-block; font-size: .72rem; font-weight: 600; padding: .15rem .5rem; border-radius: 10px; margin-right: .25rem; }
+  .pill.critical { background: #f85149; color: #fff; }
+  .pill.high { background: #db6d28; color: #fff; }
+  .pill.medium { background: #d29922; color: #1f2328; }
+  .pill.low { background: #2da44e; color: #fff; }
+  .pill.optional { background: #0969da; color: #fff; }
+  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+  @media (max-width: 700px) {
+    nav.toc ul { columns: 1; }
+    .grid2 { grid-template-columns: 1fr; }
+  }
+  footer {
+    max-width: 1000px; margin: 0 auto 3rem; padding: 0 1rem;
+    border-top: 1px solid var(--line); padding-top: 1.5rem;
+    color: var(--muted); font-size: .9rem;
+  }
+  .kicker { color: var(--muted); font-size: .85rem; font-weight: 600; text-transform: uppercase; letter-spacing: .5px; margin: 1.25rem 0 .25rem; }
+  .kicker.b { border-top: 3px solid var(--line); padding-top: 1.25rem; }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <span class="badge">Non-Canonical · Advisory Only</span>
+    <h1>Tiwas TTRPG — Development Readiness Report</h1>
+    <p class="sub">Beyond the Vale of Madness Benchmark &amp; Missing System Design Decisions</p>
+  </div>
+</header>
+
+<div class="meta">
+  <span>Version 1.0</span>
+  <span>Created 2026-09-02</span>
+  <span>Author LLM: Muse Spark 1.1 (self-reported)</span>
+  <span>Compiler: Inkling (Arena.ai Agent Mode)</span>
+  <span>Base: 25-report meta-analysis</span>
+</div>
+
+<main>
+  <details open>
+    <summary>Standing-Prohibition Overrule — Required Log Entry</summary>
+    <div class="body">
+      <p>This file is a <strong>dated, one-off, scoped exception</strong> (2026-09-02) for internal development planning.
+      It is <strong>NOT</strong> a reinstatement of any standing merge artifact, is <strong>NOT</strong> to be periodically regenerated,
+      and future agents must <strong>NOT</strong> assume the prohibition against unscoped single-file compilation is generally lifted.
+      The developer (Tiwa) explicitly authorized this one compilation for identifying missing systems and deciding how to design them,
+      based on the 25-report meta-analysis compiled 2026-09-02.</p>
+    </div>
+  </details>
+
+  <nav class="toc">
+    <h2>Table of Contents</h2>
+    <ul>
+      <li><a href="#part-a">Part A — Executive Summary &amp; Governance Boundary</a></li>
+      <li><a href="#part-b">Part B — Collated System Readiness Assessment</a></li>
+      <li><a href="#part-c">Part C — Named Disagreement Register (D1–D10)</a></li>
+      <li><a href="#part-d">Part D — Development Priority Framework</a></li>
+      <li><a href="#part-e">Part E — Playtest Readiness Verdict</a></li>
+      <li><a href="#part-f">Part F — Source Register &amp; Evidence Discipline</a></li>
+      <li><a href="#part-g">Part G — Explicit Guesses &amp; Assumptions</a></li>
+    </ul>
+  </nav>
+
+  <!-- ===================== PART A ===================== -->
+  <h2 class="section" id="part-a">Part A — Executive Summary &amp; Governance Boundary</h2>
+
+  <h3>A.1 What this file is and is not</h3>
+  <div class="grid2">
+    <div>
+      <p><strong>What it is:</strong> A single-file, advisory development-planning compilation assembled from the 25-LLM meta-analysis and the Tiwas Alpha-Playtest Corpus. It identifies which subsystems are ready, which are missing, which require adaptation mapping, and what design decisions unblock full playtesting of <em>Beyond the Vale of Madness — GURPS</em>.</p>
+    </div>
+    <div>
+      <p><strong>What it is NOT:</strong> A ruling. It does not resolve, merge, or clean up any open fork. It does not promote or demote anything. It does not invent mechanics. It does not treat agreement among 25 reports as authority.</p>
+    </div>
+  </div>
+
+  <h4>A.2 Authority vocabulary</h4>
+  <details>
+    <summary>Status labels and their meaning (expand)</summary>
+    <div class="body">
+      <table>
+        <tr><th>Label</th><th>Meaning</th></tr>
+        <tr><td><span class="tag canonical">Canonical / Locked</span></td><td>Authoritative, current, must not be contradicted.</td></tr>
+        <tr><td><span class="tag ruled">Non-canonical designer ruling</span></td><td>Real designer decision about candidate material; not Canonical.</td></tr>
+        <tr><td><span class="tag draft">Draft pending Tiwa reconfirmation</span></td><td>Source handoff is a draft; DEC entry in the live register is operative.</td></tr>
+        <tr><td><span class="tag open">Open</span></td><td>No settled decision. Not table-ready.</td></tr>
+        <tr><td><span class="tag content">Confirmed-closed</span></td><td>Resolved via named DEC; listed so it is neither reopened nor omitted.</td></tr>
+        <tr><td><span class="tag playtestable">Playtestable Now</span></td><td>Can be exercised in an alpha session without inventing new mechanics.</td></tr>
+        <tr><td><span class="tag adaptation">Adaptation Mapping Required</span></td><td>Mechanism exists but must be mapped to the adventure's content. Not a system gap.</td></tr>
+        <tr><td><span class="tag design">Design-Stage Dependency</span></td><td>Direction ruled but concrete executable content/rules missing.</td></tr>
+        <tr><td><span class="tag missing">Missing Subsystem</span></td><td>No adequate mechanism currently exists (Reserved or absent).</td></tr>
+        <tr><td><span class="tag content">Adventure Content Only</span></td><td>Not a mechanical gap.</td></tr>
+      </table>
+    </div>
+  </details>
+
+  <h4>A.3 Source boundary</h4>
+  <div class="note">⚠️ <strong>Missing source access:</strong> The original <code>Beyond-the-Vale-of-Madness-GURPS.pdf</code> was <strong>not directly accessible</strong>. Every adventure reference is derived from the 25 reports' parsed extractions, not direct inspection. Discrepancies are preserved as a source-boundary limitation, not corrected.</div>
+
+  <!-- ===================== PART B ===================== -->
+  <h2 class="section" id="part-b">Part B — Collated System Readiness Assessment</h2>
+
+  <div class="subsystem">
+    <h4><span class="tag playtestable">Playtestable Now</span> B.1 — Core Transaction (DEC-001–DEC-012)</h4>
+    <p><strong>Tiwas baseline:</strong> <span class="tag canonical">Canonical / Locked</span></p>
+    <p><strong>25-report convergence:</strong> Universal agreement — <span class="tag playtestable">Playtestable Now</span>. No disagreement recorded.</p>
+    <blockquote>"The Core is not the problem… A large proportion of the adventure's tests reduce cleanly to ordinary Tiwas Core Tests." — ChatGPT 5.6-1</blockquote>
+    <p><strong>Blocking significance:</strong> <span class="pill low">None</span> for exploration checks.</p>
+    <p><strong>Development decision needed:</strong> None at mechanism level; content = author skill mappings.</p>
+    <p class="kicker">Flag</p>
+    <p>DEC-007.A forbids any Tag/Trait/Effect from modifying <strong>Overflow</strong> damage — a structural boundary preserved in B.5/B.6 designs.</p>
+  </div>
+
+  <div class="subsystem">
+    <h4><span class="tag playtestable">Playtestable Now</span> B.2 — 24-Attribute Matrix &amp; Derived Stats (DEC-003/DEC-004)</h4>
+    <p><strong>Tiwas baseline:</strong> <span class="tag canonical">Canonical / Locked</span></p>
+    <p><strong>Convergence:</strong> Universal — mapping GURPS ST/DX/IQ/HT to Tiwas' 24 attributes is <em>content</em>, not a system gap.</p>
+    <p><strong>Decision:</strong> Author the GURPS→Tiwas attribute mapping table.</p>
+  </div>
+
+  <div class="subsystem">
+    <h4><span class="tag playtestable">Playtestable Now</span> B.3 — S-1 Universal Opposed Contest (DEC-013)</h4>
+    <p><strong>Tiwas baseline:</strong> <span class="tag canonical">Canonical / Locked</span> (DEC-013); <span class="tag ruled">Non-canonical Ruled</span> (DEC-031 Quality gate).</p>
+    <p><strong>Convergence:</strong> Universal — the adventure's Stealth vs Perception 12 (#44) is a direct S-1 test case.</p>
+    <blockquote>"The adventure contains a genuine opposed contest: Stealth vs Perception. That maps directly into S-1 without requiring a new contest engine." — ChatGPT 5.6-1</blockquote>
+    <p><strong>Blocking significance:</strong> <span class="pill low">Low</span> for the stealth branch; blocker = NPC Skill value not authored (B.13).</p>
+  </div>
+
+  <div class="subsystem">
+    <h4><span class="tag adaptation">Adaptation Required</span> B.4 — S-2 Location Index / Zero-Step (DEC-014, 037, 039, 041, 042)</h4>
+    <p><strong>Tiwas baseline:</strong> DEC-014 <span class="tag canonical">Canonical / Locked</span>; others <span class="tag ruled">Non-canonical Ruled</span>.</p>
+    <p><strong>Convergence:</strong> Universal that Zero-Step works; divergence on whether full anatomical mapping is playable (D8).</p>
+    <p><strong>Blocking significance:</strong> <span class="pill medium">Medium</span> for combat — requires authored armor tags (B.5) and creature anatomy (B.13).</p>
+    <p><strong>Key ruling:</strong> DEC-041 gate — only Skills at Tier 2+ trigger Location Index; base/untrained (Tier 1) never do.</p>
+  </div>
+
+  <div class="subsystem">
+    <h4><span class="tag design">Design-Stage</span> B.5 — S-3 Effect Menu &amp; Gating (DEC-023–DEC-030)</h4>
+    <p><strong>Tiwas baseline:</strong> <span class="tag ruled">All Ruled</span>. Structure is Ruled; <strong>gated-tier contents are NOT enumerated</strong> (open tracking item).</p>
+    <p><strong>Convergence:</strong> Universal on architecture; divergence on blocking severity (D2).</p>
+    <blockquote>"S-3 base-tier Inflict Injury says 'HP-only' but does not specify how much HP damage is dealt." — Kimi K3</blockquote>
+    <p><strong>Blocking significance:</strong> <span class="pill critical">Critical</span> for Blood Man (#38) — needs grapple, darkness, fear, ongoing corrosive damage.</p>
+    <p><strong>Design decisions needed:</strong> Damage magnitude procedure; Condition-tier contents; Position-tier contents; time/action interaction.</p>
+  </div>
+
+  <div class="subsystem">
+    <h4><span class="tag design">Design-Stage</span> B.6 — S-4 Wound / Injury (DEC-032–042; OPEN-007)</h4>
+    <p><strong>Tiwas baseline:</strong> <span class="tag ruled">Ruled</span>; <span class="tag open">OPEN-007</span> consequences Ruled in principle but <strong>not table-ready</strong>.</p>
+    <p><strong>Convergence:</strong> Universal on architecture; divergence on practical readiness (D1).</p>
+    <blockquote>"Wound consequence magnitudes… architecture locked but contents not table-ready." — Kimi K3</blockquote>
+    <p><strong>Blocking significance:</strong> <span class="pill high">Medium/High</span> — the wound state is required before the Blood Man can be grappled.</p>
+    <p><strong>Key correction:</strong> DEC-035 — wound severity derives from the S-3 gated Effect, not an accumulated count.</p>
+  </div>
+
+  <div class="subsystem">
+    <h4><span class="tag design">Design-Stage</span> B.7 — S-5 Armor (Tags/Traits Only; DEC-058–062)</h4>
+    <p><strong>Tiwas baseline:</strong> <span class="tag ruled">Ruled</span> — Tags/Traits only; <strong>no numeric soak; never modifies Overflow</strong> (DEC-007.A corollary).</p>
+    <p><strong>Convergence:</strong> Universal on architecture; divergence on blocking (D3).</p>
+    <blockquote>"Armor is Tags/Traits only. No numeric durability/soak pool." — Claude 5 Sonnet</blockquote>
+    <p><strong>Blocking significance:</strong> <span class="pill high">High</span> for combat fidelity — Ice Troll DR 2 cold-only, Blood Man DR 1 need Tag representation.</p>
+    <p><strong>Decisions:</strong> Author starter Armor Tag vocabulary; confirm DEC-062 Zero-Step clause.</p>
+  </div>
+
+  <div class="subsystem">
+    <h4><span class="tag playtestable">Playtestable Now</span> B.8 — S-6 Active Defense (DEC-044–050)</h4>
+    <p><strong>Tiwas baseline:</strong> <span class="tag ruled">Ruled</span>.</p>
+    <p><strong>Convergence:</strong> Universal on architecture (post-hoc mitigation); divergence on practical combat readiness (D4).</p>
+    <blockquote>"S-6 architecture is complete, but which skill or attribute the defender rolls is not specified." — Kimi K3</blockquote>
+    <p><strong>Blocking significance:</strong> <span class="pill low">Subsystem ready</span> / <span class="pill medium">integrated combat needs B.5/B.6/B.13</span>.</p>
+    <p><strong>Key rules:</strong> DEC-048 Model B (never blocks application), DEC-049 (separate roll per Effect), DEC-050 (voluntary, universal eligibility incl. positive Effects).</p>
+  </div>
+
+  <div class="subsystem">
+    <h4><span class="tag playtestable">Playtestable Now</span> B.9 — S-7 Incapacitation / Death (DEC-052–057)</h4>
+    <p><strong>Tiwas baseline:</strong> <span class="tag ruled">Ruled</span> (register-operative; source handoff draft).</p>
+    <p><strong>Convergence:</strong> Universal — HP = 0 forces incapacitation, no roll.</p>
+    <blockquote>"HP = 0 forced incapacitation, no roll… Readiness: Playtestable Now." — ChatGPT 5.5-high</blockquote>
+    <p><strong>Decisions:</strong> Confirm DEC-054 branch selection (narrative vs mechanical death); DEC-055 GM discretion over revival attempts.</p>
+  </div>
+
+  <div class="subsystem">
+    <h4><span class="tag adaptation">Adaptation Required</span> B.10 — S-8 Difficulty (DEC-063–066, 043, 051)</h4>
+    <p><strong>Tiwas baseline:</strong> <span class="tag ruled">Ruled</span>; <span class="tag open">numeric tier values not supplied</span> (content gap).</p>
+    <p><strong>Convergence:</strong> Universal on architecture; divergence on practical readiness (D7).</p>
+    <blockquote>"What remains is the actual Tiwas difficulty-grade numerical table needed to translate the adventure's explicit GURPS modifiers." — ChatGPT 5.6-1</blockquote>
+    <p><strong>Blocking significance:</strong> <span class="pill medium">Medium</span> (full playtest) / <span class="pill low">Low</span> (partial, raw Skill).</p>
+    <p><strong>Key:</strong> DEC-051 <em>rejected</em> the Stakes Gate; every meaningful roll is a Core Test.</p>
+    <p><strong>Proposal (not a ruling):</strong> Trivial +10 · Easy +5 · Standard 0 · Hard −5 · Extreme −10.</p>
+  </div>
+
+  <div class="subsystem">
+    <h4><span class="tag playtestable">Playtestable Now</span> B.11 — S-9/S-10 Extended Tests (DEC-067–070)</h4>
+    <p><strong>Tiwas baseline:</strong> <span class="tag ruled">Ruled</span>.</p>
+    <p><strong>Convergence:</strong> Universal — not deeply required by the adventure; usable for digging/healing.</p>
+    <p><strong>Key:</strong> Margin accumulates monotonically (DEC-067); neutral failures (DEC-068); target set by GM (DEC-070).</p>
+  </div>
+
+  <div class="subsystem">
+    <h4><span class="tag adaptation">Adaptation Required</span> B.12 — S-11 Rest / Healing (DEC-071–074)</h4>
+    <p><strong>Tiwas baseline:</strong> <span class="tag ruled">Ruled</span>.</p>
+    <p><strong>Convergence:</strong> Universal — healing IS an Extended Test; the adventure's immediate "<code>restore 1d-3 HP</code>" does not map directly.</p>
+    <blockquote>"The GURPS 'restore 1d-3 HP / minimum 1' procedure itself should not be imported." — ChatGPT 5.6-1</blockquote>
+    <p><strong>Decisions:</strong> Convert to full S-11 Extended Tests, or use simplified single-roll alpha healing.</p>
+  </div>
+
+  <div class="subsystem">
+    <h4><span class="tag missing">Missing Content</span> B.13 — S-12 Creatures / NPC (DEC-076/077)</h4>
+    <p><strong>Tiwas baseline:</strong> Architecture <span class="tag ruled">Ruled</span>; actual templates <span class="tag open">NOT authored</span>.</p>
+    <p><strong>Convergence:</strong> Universal that content is missing; divergence on type (content task vs subsystem) — D5.</p>
+    <blockquote>"No creature stat blocks/templates… Critical blocker." — ChatGPT 5.5-high</blockquote>
+    <p><strong>Blocking significance:</strong> <span class="pill critical">Critical</span> — Ice Troll (#17) and Blood Man (#38) need statted monsters.</p>
+    <p><strong>Ownership:</strong> DEC-077 — templates are <strong>Tiwa's own authoring task</strong>, not drafted by advisory models.</p>
+  </div>
+
+  <div class="subsystem">
+    <h4><span class="tag missing">Missing / Reserved</span> B.14 — DEC-015 Reserved Systems</h4>
+    <p><strong>Tiwas baseline:</strong> <span class="tag missing">Reserved</span> — no mechanism.</p>
+    <p><strong>Remaining Reserved / Missing:</strong></p>
+    <table>
+      <tr><th>System</th><th>Status</th><th>Why reserved/missing</th></tr>
+      <tr><td>Equipment / Weapons / Tools</td><td><span class="tag missing">Reserved / Missing</span></td><td>No item stats, weight, encumbrance, ranged combat, light sources</td></tr>
+      <tr><td>Magic / Special Abilities</td><td><span class="tag missing">Reserved / Missing</span></td><td>No spell framework; direction = Advanced Skills</td></tr>
+      <tr><td>Environmental Hazards (cold)</td><td><span class="tag open">Reserved / Partial</span></td><td>Systemic exemption exists (DEC-037); no attritional mechanism</td></tr>
+      <tr><td>Fatigue / Exhaustion</td><td><span class="tag missing">Reserved</span></td><td>PE (DEC-004) is the resource; no GURPS FP economy</td></tr>
+      <tr><td>Tactical Combat / Time/Action</td><td><span class="tag missing">Reserved / Missing</span></td><td>No turn structure, movement, or initiative model</td></tr>
+      <tr><td>Economy / Treasure</td><td><span class="tag content">Adventure Content</span></td><td>No currency model; narrative treasure tracking</td></tr>
+      <tr><td>Social Interaction</td><td><span class="tag content">Non-blocking</span></td><td>Not invoked in adventure branches</td></tr>
+    </table>
+  </div>
+
+  <!-- ===================== PART C ===================== -->
+  <h2 class="section" id="part-c">Part C — Named Disagreement Register (D1–D10)</h2>
+  <p>All ten disagreements remain <strong>live and unresolved</strong>. They are preserved without silent reconciliation; the developer is not asked to resolve them here.</p>
+
+  <details>
+    <summary>D1 — S-4 Wounds: sufficient for playtesting?</summary>
+    <div class="body"><p><strong>Position A (higher blocker):</strong> ChatGPT 5.2, 5.5-high, Gemini, Claude — OPEN-007 consequences not table-ready; combat can't be fully validated.</p>
+    <p><strong>Position B (lower blocker):</strong> ChatGPT 5.6, Copilot, Copilot 365, DeepSeek, Mimo, Perplexity, glm — architecture sufficient for alpha; OPEN-007 deferrable.</p>
+    <p><em>Status: Unresolved — advisory.</em></p></div>
+  </details>
+
+  <details>
+    <summary>D2 — S-3 gated effects: block playtest?</summary>
+    <div class="body"><p><strong>Position A (Critical):</strong> ChatGPT 5.2/5.6, DeepSeek, Mimo, Perplexity, Mistral, glm.</p>
+    <p><strong>Position B (Playtestable):</strong> ChatGPT 5.5-high, Gemini, Claude, Grok, Kimi, Muse — base-tier sufficient for alpha.</p>
+    <p><em>Status: Unresolved — either scope permitted.</em></p></div>
+  </details>
+
+  <details>
+    <summary>D3 — S-5 Armor: tag system sufficient?</summary>
+    <div class="body"><p><strong>Position A (Sufficient):</strong> ChatGPT 5.6, Gemini, Grok, Kimi — gap is Tag vocabulary content.</p>
+    <p><strong>Position B (Requires design):</strong> ChatGPT 5.2, DeepSeek, Muse, RecallAI — GURPS DR can't be imported.</p>
+    <p><em>Status: Unresolved. Any design must respect DEC-058 (no Overflow modification).</em></p></div>
+  </details>
+
+  <details>
+    <summary>D4 — S-6 Defense: playtestable or design-stage?</summary>
+    <div class="body"><p><strong>Position A (Design-stage):</strong> Kimi, ChatGPT 5.5-high/5.6, Grok, Muse, Mimo, Perplexity — which Skill powers defense is unspecified.</p>
+    <p><strong>Position B (Playtestable):</strong> Copilot, Copilot 365, RecallAI, DeepSeek, Laguna, Gemini, Claude — architecture complete.</p>
+    <p><em>Status: Unresolved.</em></p></div>
+  </details>
+
+  <details>
+    <summary>D5 — S-12 creatures: hard blocker or content work?</summary>
+    <div class="body"><p><strong>Position A (Critical/Missing):</strong> ChatGPT, Copilot 365, DeepSeek, Grok, Muse, Mimo, Perplexity, Mistral.</p>
+    <p><strong>Position B (Content-only):</strong> Copilot, RecallAI, Kimi, Claude — DEC-076 tabletop mode permits provisional blocks.</p>
+    <p><strong>Position C (Partial split):</strong> Laguna, Mistral, Copilot families.</p>
+    <p><em>Status: Unresolved.</em></p></div>
+  </details>
+
+  <details>
+    <summary>D6 — Magic: in-scope or avoidable?</summary>
+    <div class="body"><p><strong>Position A (Required if using pregen):</strong> ChatGPT 5.6, Mimo 2.5, Perplexity, glm, DeepSeek.</p>
+    <p><strong>Position B (Avoidable):</strong> ChatGPT 5.5-high/5.2, Claude, Gemini, Muse — use non-magical pregen.</p>
+    <p><strong>Position C (Effect framework):</strong> Grok, Kimi, RecallAI, Laguna, Mistral.</p>
+    <p><em>Status: Unresolved — excluding magic from initial scope is recommended.</em></p></div>
+  </details>
+
+  <details>
+    <summary>D7 — S-8 Difficulty: ready for environmental/cold challenges?</summary>
+    <div class="body"><p><strong>Position A (Playtestable):</strong> ChatGPT 5.5-high, Claude, Gemini, Grok, Muse.</p>
+    <p><strong>Position B (Incomplete):</strong> ChatGPT 5.2/5.6, Copilot, Copilot 365, Perplexity 2 — no modifier values + no Condition effects.</p>
+    <p><em>Status: Unresolved — provisional values OK for alpha.</em></p></div>
+  </details>
+
+  <details>
+    <summary>D8 — S-2 Location Index: settled for called shots?</summary>
+    <div class="body"><p><strong>Position A (Settled):</strong> Claude, ChatGPT 5.5-high, Gemini — DEC-014/041/062 sufficient.</p>
+    <p><strong>Position B (Open):</strong> ChatGPT 5.2, DeepSeek, Mimo, Perplexity — anatomical mapping + Tier-2 subdivision need confirmation.</p>
+    <p><em>Status: Unresolved. Note: no player-choice targeting mechanism exists (DEC-014 §14.2).</em></p></div>
+  </details>
+
+  <details>
+    <summary>D9 — Fear/Terror: Condition Effect or S-8 adjudication?</summary>
+    <div class="body"><p><strong>Position A (Condition-tier):</strong> ChatGPT 5.2/5.6, Claude, Gemini 2 — graded Fright needs a Condition mechanism.</p>
+    <p><strong>Position B (S-8 + Core Test):</strong> ChatGPT 5.5-high, Grok, Muse, Kimi, RecallAI — binary + difficulty approximates Fright Checks.</p>
+    <p><em>Status: Unresolved.</em></p></div>
+  </details>
+
+  <details>
+    <summary>D10 — Combat maneuvers: Effect translation or dedicated rules?</summary>
+    <div class="body"><p><strong>Position A (Effect translation):</strong> ChatGPT 5.6, Gemini 2, Grok, Claude — maneuvers express via S-3 Effects.</p>
+    <p><strong>Position B (Dedicated rules):</strong> Copilot, Copilot 365, Perplexity 2, DeepSeek — some maneuvers need procedural rules.</p>
+    <p><em>Status: Unresolved.</em></p></div>
+  </details>
+
+  <!-- ===================== PART D ===================== -->
+  <h2 class="section" id="part-d">Part D — Development Priority Framework</h2>
+  <p>Advisory sequencing derived from the 25 reports' blocker convergence. The developer retains full sequencing authority.</p>
+
+  <div class="note">The dependency chain below is the structure exposed by this benchmark — <strong>not</strong> a proposal to change Tiwas architecture.</div>
+
+  <div class="diagram"><pre>Core Transaction (DEC-001–012) — READY
+    │
+    ├── Ordinary Tests (DEC-006) — READY
+    ├── S-1 Opposed (DEC-013) — READY
+    ├── Difficulty (DEC-063–066) — READY (table missing)
+    │
+    └── <span class="deco">COMBAT INTEGRATION (Critical Path)</span>
+             │
+        ┌─────┼─────────┐
+        ▼     ▼         ▼
+     Effects  Defense  Damage / Wounds
+     (B.5)    (B.8)    (B.6 / B.5)
+        │       │          │
+        └───────┼──────────┘
+                ▼
+           Grapple / Conditions
+           (B.5 — gated contents open)
+                │
+                ▼
+           Time / Action Economy
+           (B.11 — Extended Tests / Time)
+                │
+         ┌──────┼──────────┐
+         ▼      ▼          ▼
+    Equipment  Magic     NPC/Creature
+    (Reserved) (Reserved) (B.13 — content open)
+         │       │          │
+         └───────┼──────────┘
+                 ▼
+         Full Adventure Playtest
+         (Blocked until above complete)</pre></div>
+
+  <div class="subsystem">
+    <h4><span class="pill critical">Priority 1</span> Combat Payload &amp; Damage Magnitude</h4>
+    <p><strong>DEC:</strong> DEC-023–030, 032–042, 044–050, 041. <strong>Consensus:</strong> combat is the dominant blocker (D2 preserved).</p>
+    <p><strong>Decisions:</strong> How does base "Inflict Injury" translate to HP magnitude? Which gated Effects exist for this adventure? Is the Blood Man compound loop expressible without new mechanics?</p>
+    <p><strong>Type:</strong> Mechanism design (magnitude) + content (Effects) + integration.</p>
+  </div>
+
+  <div class="subsystem">
+    <h4><span class="pill critical">Priority 2</span> Creature / NPC Content</h4>
+    <p><strong>DEC:</strong> DEC-076/077, 041. <strong>Consensus:</strong> content universally missing (D5 preserved).</p>
+    <p><strong>Decisions:</strong> Confirm DEC-076 mode; author Ice Troll + Blood Man via DEC-041 individual templates. <strong>Ownership = Tiwa (DEC-077).</strong></p>
+    <p><strong>Type:</strong> Content authoring.</p>
+  </div>
+
+  <div class="subsystem">
+    <h4><span class="pill high">Priority 3</span> Equipment, Weapons, Armor Tags, Encumbrance</h4>
+    <p><strong>DEC:</strong> DEC-015 Reserved / DEC-058–062; DEC-007.A.</p>
+    <p><strong>Decisions:</strong> Author starter Tag vocabulary; decide encumbrance model; express weapon prerequisites (ST 12) as Tag/Skill-cap/narrative.</p>
+    <p><strong>Type:</strong> Mechanism (encumbrance) + content (Tags).</p>
+  </div>
+
+  <div class="subsystem">
+    <h4><span class="pill high">Priority 4</span> Environmental Hazards &amp; Fatigue</h4>
+    <p><strong>DEC:</strong> DEC-037, 015, 052, 007.A.</p>
+    <p><strong>Decisions:</strong> How does cold exposure resolve (PE depletion, direct HP, Condition, or GM)? How does the adventure's <code>FP = 0 → collapse</code> map to DEC-052?</p>
+    <p><strong>Type:</strong> Mechanism (hazards, exhaustion) + content.</p>
+  </div>
+
+  <div class="subsystem">
+    <h4><span class="pill medium">Priority 5</span> Difficulty Modifier Numeric Table</h4>
+    <p><strong>DEC:</strong> DEC-063–066. <strong>Consensus:</strong> architecture ruled; table missing (D7 preserved).</p>
+    <p><strong>Decisions:</strong> Confirm symmetry, cascade-cap spill, DEC-051 rejection, untrained/default policy. Example proposal: +10/+5/0/−5/−10.</p>
+    <p><strong>Type:</strong> Content.</p>
+  </div>
+
+  <div class="subsystem">
+    <h4><span class="pill medium">Priority 6</span> Healing &amp; First Aid Mapping</h4>
+    <p><strong>DEC:</strong> DEC-071–074, 067–070.</p>
+    <p><strong>Decisions:</strong> Are all First Aid checks full S-11 Extended Tests, or simplified single-roll alpha healing? Confirm DEC-072 (wound magnitude penalizes healer Skill).</p>
+    <p><strong>Type:</strong> Confirmation + content/convention.</p>
+  </div>
+
+  <div class="subsystem">
+    <h4><span class="pill critical">Priority 7</span> Conditions (Darkness, Fear, Grappled, Wounded, Hypo, Corrosive)</h4>
+    <p><strong>DEC:</strong> DEC-023 (gated tier — contents NOT enumerated), 035, 041, 050.</p>
+    <p><strong>Critical note:</strong> Not a mechanism gap — a <em>content-enumeration</em> gap. Min set: Darkness, Grappled/Held, Wounded, Frightened, Exhausted/Cold, Corrosive/Ongoing, Ambushed, Rescued.</p>
+    <p><strong>Type:</strong> Content enumeration + mechanism confirmation.</p>
+  </div>
+
+  <div class="subsystem">
+    <h4><span class="pill optional">Priority 8</span> Magic / Special Abilities / Traits</h4>
+    <p><strong>DEC:</strong> DEC-015 Reserved, 005, 012, 025, 028.</p>
+    <p><strong>Decisions:</strong> Minimal magic framework, exclude magic from initial scope, or GM-adjudicated narrative. Recommend exclusion (King Coppertong pregen).</p>
+    <p><strong>Type:</strong> Mechanism design, or exclusion — recommended.</p>
+  </div>
+
+  <div class="subsystem">
+    <h4><span class="pill low">Priority 9</span> Economy / Loot / Advancement Conversion</h4>
+    <p><strong>DEC:</strong> DEC-011 (General XP), 015, 063.</p>
+    <p><strong>Decisions:</strong> Confirm conversion <code>1 GURPS char point = X General XP</code>; minimal economy vs abstract ratings vs exclude.</p>
+    <p><strong>Type:</strong> Content/convention.</p>
+  </div>
+
+  <!-- ===================== PART E ===================== -->
+  <h2 class="section" id="part-e">Part E — Playtest Readiness Verdict</h2>
+
+  <h3>E.1 Overall readiness</h3>
+  <div class="note">Not Ready for a full mechanically-complete playtest.</div>
+  <table>
+    <tr><th>Blocker</th><th>DEC</th><th>Why it blocks</th><th>Priority</th></tr>
+    <tr><td>Combat integration</td><td>023–030 / 032–042</td><td>Ice Troll + Blood Man can't resolve without damage magnitude, wounds, compound effects</td><td>1</td></tr>
+    <tr><td>Creature stat blocks</td><td>076/077, 041</td><td>No authored templates / anatomy</td><td>2</td></tr>
+    <tr><td>Equipment/weapons/armor/encumbrance</td><td>015, 058–062</td><td>Nearly every path needs meaningful equipment</td><td>3</td></tr>
+    <tr><td>Environmental hazards / cold / fatigue</td><td>037, 015, 052</td><td>Survival theme lacks a resolution framework</td><td>4</td></tr>
+    <tr><td>Difficulty modifier table</td><td>063–066</td><td>Adventure is modifier-heavy; no executable values</td><td>5</td></tr>
+    <tr><td>Healing / First Aid mapping</td><td>071–074</td><td>Immediate restoration vs Extended Test mismatch</td><td>6</td></tr>
+    <tr><td>Condition tier contents</td><td>023, 052, 051</td><td>Blood Man needs compound conditions</td><td>7</td></tr>
+    <tr><td>Magic / traits (optional)</td><td>015, 025, 012</td><td>Enfys/traits unsupported; excludable</td><td>8</td></tr>
+    <tr><td>Economy / advancement</td><td>011, 015</td><td>Needed for full resolution, not survival benchmark</td><td>9</td></tr>
+  </table>
+
+  <h3>E.2 Partial diagnostic readiness</h3>
+  <p><strong>Systems playable now (without invention):</strong> Core Test (DEC-001–012); S-1 Opposed (DEC-013); S-7 Incap/Death (DEC-052–057); Difficulty architecture (DEC-063–066); Extended Tests (DEC-067–070); S-8 adjudication.</p>
+  <p><strong>Recommended alpha approach:</strong></p>
+  <ul>
+    <li>Use the Core Test for all exploration / non-combat checks.</li>
+    <li>Treat combat as GM-adjudicated narrative outcome for initial sessions.</li>
+    <li>Provisional difficulty modifiers (e.g., Hard −5, Extreme −10).</li>
+    <li>Minimal creature blocks (DEC-076 tabletop mode) as content only.</li>
+    <li>Log observations against Alpha Corpus Part D.</li>
+  </ul>
+
+  <h3>E.3 Canonical vs Non-canonical readiness</h3>
+  <table>
+    <tr><th>Layer</th><th>Readiness</th></tr>
+    <tr><td><span class="tag canonical">Canonical Core</span> (DEC-001–012)</td><td>🟢 Strong — ready for task resolution</td></tr>
+    <tr><td><span class="tag ruled">Non-canonical subsystems</span> (DEC-013–077)</td><td>🟡 Partial — architecture ruled; content/integration incomplete</td></tr>
+    <tr><td><span class="tag missing">Open / Reserved</span> (DEC-015 exclusions)</td><td>🔴 Missing — mechanism or content absent</td></tr>
+  </table>
+
+  <!-- ===================== PART F ===================== -->
+  <h2 class="section" id="part-f">Part F — Source Register &amp; Evidence Discipline</h2>
+  <p><strong>Primary sources:</strong></p>
+  <table>
+    <tr><th>Source</th><th>Function</th><th>Access</th></tr>
+    <tr><td><code>tiwas-btvm-system-comparison-compiled1.md</code></td><td>25-report meta-analysis (attribution, D1–D10, findings, guesses, governance)</td><td>Direct — full text</td></tr>
+    <tr><td><code>Tiwas-Alpha-Playtest-Corpus-2026-09-01.md</code></td><td>DEC-001–077, status vocabulary, standing-prohibition</td><td>Direct — full text</td></tr>
+    <tr><td><code>Beyond-the-Vale-of-Madness-GURPS.pdf</code></td><td>Adventure benchmark</td><td><strong>Inferred only — not directly inspected</strong></td></tr>
+  </table>
+
+  <details>
+    <summary>Attribution manifest (25 reporting LLMs)</summary>
+    <div class="body">
+      <p>ChatGPT 5.2, 5.5-high, 5.6 (1&2); Copilot (1&2, repaired); Copilot 365 (1&2, repaired); Claude 5 Sonnet; DeepSeek-V3; Gemini 3.6 Flash (1&2); glm-4.5-air; Grok 4.6 (1&2); Kimi K3; Laguna S 2.1; Mimo 2.5 (1&2); Mistral; Muse Spark 1.1 (1&2); Perplexity (1&2); RecallAI.</p>
+      <div class="note">Some reports are summarized rather than fully quoted in the source; such classifications are derived from the meta-analysis summary, not direct inspection. Preserved as a source-boundary limitation (G.4).</div>
+    </div>
+  </details>
+
+  <!-- ===================== PART G ===================== -->
+  <h2 class="section" id="part-g">Part G — Explicit Guesses, Assumptions &amp; Interpretive Flags</h2>
+
+  <details>
+    <summary>G.1 — Section mapping (Part A–G) inferred, not instructed</summary>
+    <div class="body"><p>Formal structure mirrors Alpha Corpus + extended sections E/F/G derived from scope selection. Confidence: High.</p></div>
+  </details>
+  <details>
+    <summary>G.2 — Readiness classification thresholds (interpretive)</summary>
+    <div class="body"><p>A disagreement is recorded only when ≥2 reports differ materially (meta-analysis §2.5). D1–D10 preserved exactly.</p></div>
+  </details>
+  <details>
+    <summary>G.3 — Blocker significance classification (interpretive)</summary>
+    <div class="body"><p>Rankings reflect the meta-analysis's Playtestability Matrix / Development Priorities (§5.2, §9), not independent assessment. Priority 1 = dominant blocker; Priority 8 lower because magic is optional.</p></div>
+  </details>
+  <details>
+    <summary>G.4 — Missing source access (confirmed limitation)</summary>
+    <div class="body"><p>The PDF was listed as an attachment but <code>read_file</code> returned only the <code>.md</code> files. All adventure claims are second-hand via the 25 reports.</p></div>
+  </details>
+  <details>
+    <summary>G.5 — Mechanism-invention prohibition (confirmed compliance)</summary>
+    <div class="body"><p>No new mechanics. Every DEC referenced is Canonical, Ruled, or Reserved/Open. Design decisions are framed as questions/proposals only.</p></div>
+  </details>
+  <details>
+    <summary>G.6 — Author/assessor identity (from source attribution)</summary>
+    <div class="body"><p>Muse Spark 1.1 (self-reported) + Inkling session assistant. No independently verified platform metadata; <code>identity_established = self-reported</code>.</p></div>
+  </details>
+  <details>
+    <summary>G.7 — No authority from agreement (confirmed)</summary>
+    <div class="body"><p>Agreement is diagnostic convergence, not a ruling; conflicts preserved unresolved; no status changed.</p></div>
+  </details>
+  <details>
+    <summary>G.8 — Non-canonical advisory status (confirmed)</summary>
+    <div class="body"><p>Whole document marked NON-CANONICAL; no promotion/demotion; no open item silently closed; standing-prohibition overrule preserved.</p></div>
+  </details>
+
+  <!-- ===================== CLOSING ===================== -->
+  <h2 class="section">Closing Advisory Note</h2>
+  <p>This report is a <strong>dated, one-off, non-canonical advisory compilation</strong> for internal development planning by Tiwa (2026-09-02). It does not alter the status of any material, invent mechanics, treat LLM agreement as authority, or close open items. Any design decision remains subject to Tiwa's governance and must pass the 8-step Promotion Rule (REQ-021) before becoming Canonical.</p>
+  <p>The meta-analysis's most valuable finding: the adventure has moved development from <em>"Which subsystems haven't we designed?"</em> to <em>"Which real play situations still force a GM to invent a rule?"</em> — the remaining blockers are combat integration, time/action sequencing, equipment interaction, grappling/conditions, environmental hazards, and NPC content. The Core resolution architecture is validated as mature and ready.</p>
+  <p><em>No mechanism promoted. No mechanism invented. No open item silently resolved. This file confers no authority on any of its contents.</em></p>
+
+</main>
+
+<footer>
+  Non-Canonical · Advisory Only · Tiwas TTRPG — Development Readiness Report · 2026-09-02
+</footer>
+
+</body>
+</html>
