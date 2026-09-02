@@ -208,7 +208,7 @@ The live register uses this exact column structure:
 
 # 4. Decision Register — Full Current State
 
-All items from `_consolidation/decision-register.md` as of 2026-09-01 (last modified date). **Every OPEN item (OPEN-001 through OPEN-010) is now closed.** What remains are open design *threads* (content-enumeration, implementation-layer details) that survive the fork-level rulings — see §5.
+All items from `_consolidation/decision-register.md` as of 2026-09-02. **Every OPEN item (OPEN-001 through OPEN-010) is now closed.** What remains are open design *threads* (content-enumeration, implementation-layer details) that survive the fork-level rulings — see §5.
 
 ## 4.A. Canonical decisions (DEC-001 through DEC-016)
 
@@ -236,9 +236,9 @@ These are locked game mechanics from D1. Status: **Current**. No advisory sessio
 
 **Scope note on DEC-014:** D1 §14.3 is explicit that this locks *only* the Tier-1 Location Index provider — not whether/when a scene uses Tier 0/1/2, not anatomical mapping, not wound/armor/defense interaction, not whether any later rule may consume a Location Index.
 
-## 4.B. Non-canonical designer rulings (DEC-017 through DEC-077)
+## 4.B. Non-canonical designer rulings (DEC-017 through DEC-082)
 
-All are genuine human/designer rulings on candidate/non-canonical material. None have completed the 8-step Promotion Rule. Status as of 2026-09-01:
+All are genuine human/designer rulings on candidate/non-canonical material. None have completed the 8-step Promotion Rule. Status as of 2026-09-02:
 
 ### S-2 Hit Location Architecture (DEC-017 through DEC-022)
 
@@ -256,6 +256,7 @@ All are genuine human/designer rulings on candidate/non-canonical material. None
 | ID | Subject | Decision | Status |
 |---|---|---|---|
 | DEC-023 | S-3 Effect menu structure | Tiered Effect menu: base tier + five gated tiers (Position → Time/Action; Condition → Conditions; Equipment → Equipment; Defense → S-6; Location → S-2 invocation promotion) | Ruled; Disarm/Break Hold placement finalised via DEC-028 |
+| DEC-023.A | S-3 Gated-Tier Effect Content Enumeration (**AMENDMENT to DEC-023**) | **Package 1 Option A: Full alpha enumeration.** Content policy: no damage-over-time; Prone/Grappled/Restrained distinct; action-economy Effects → Skill-side or Movement penalty (Quality-scaled); beneficial Effects in scope. Locked alpha content by tier: *Base* — Inflict Injury, Open Retreat/Compel Yield. *Position* — Forced Movement, Knock Prone, Seize/Deny Ground, Pin/Hold Position, Open/Close Lane. *Condition* — Encumbered (DEC-078), Grappled, Restrained, Prone, Blinded, Deafened, Frightened, Slowed, Stunned/Incapacitated, Fatigued (DEC-075), Sunder-Condition (DEC-060), Poisoned/Sickened. *Equipment* — Disarm, Break/Sunder Item, Armor Bypass, Disable Device/Weapon, Steal/Take Item. *Defense* — Lower Defense, Deny Defense, Force Defense, Expose. *Location* — Impose Wound, Critical Location, Cripple Limb. **Prohibitions:** no DoT; no Advantage/Disadvantage language; no natural d100 modification (Invariant 6); no new pools (Invariant 17); one Effect per win (DEC-024) | Ruled; Condition-tier contents gated on Conditions subsystem (§10) |
 | DEC-024 | S-3 Effect purchasing / multiplicity | Flat one-Effect-per-win. No Quality-based scaling. A second Effect requires a separate opposed roll — mechanism deferred | Ruled; mechanism deferred to new thread |
 | DEC-025 | S-3 Effect naming/identity gating | Pure declared intent (no Skill-side gating). Formal tag/category system on Advanced Skills rejected | Ruled |
 | DEC-026 | Second-Effect opposed-roll mechanism | Different Advanced Skill; defensive roll deferred to S-6 | Ruled |
@@ -272,8 +273,9 @@ All are genuine human/designer rulings on candidate/non-canonical material. None
 | DEC-032 | S-4 Terminology: Injury vs. Wound | Injury = HP Damage; Wound = Localized, Lasting Numerical State | Ruled |
 | DEC-033 | S-4 Wound Trigger & Location Scope | Wounds exclusively triggered as selectable Effect from S-1 contest (Impose Condition: Wounded). Both Inflict Injury and Impose Condition: Wounded require Location Index. Overflow exempt. **Narrowed by DEC-041:** Skill-Tier ≥ 2 gate | Ruled (narrowed by DEC-041) |
 | DEC-034 | S-4 Track A/B Interaction | Both Track A (Overflow→HP) and Track B (Wound Effects) can apply from one hit, sequentially | Ruled |
-| DEC-035 | S-4 Wound Severity Definition | Severity comes from the S-3 gated Effect, not accumulated count. Wounds tracked individually with own numerical magnitude | Ruled (amended by DEC-035.A) |
-| DEC-035.A | S-4 Wound format, magnitude, tier, stacking & healing (**AMENDMENT to DEC-035**) | Wound recorded as `Location X Tier-Y Wound Z (Attribute or Skill)`. Tier = equal-or-less-than causing skill's Skill-Tier OR GM Fiat. Magnitude Z = Tier (−Y). Same-tier/same-location wounds stack (values add) but never raise tier. Healing requires skill tier ≥ wound tier. GM Fiat is universal (overrides all downstream tier-gated requirements). **Carried open:** DEC-031 (Quality) × Skill-Tier ceiling precedence | Ruled |
+| DEC-035 | S-4 Wound Severity Definition | Severity comes from the S-3 gated Effect, not accumulated count. Wounds tracked individually with own numerical magnitude | Ruled (amended by DEC-035.A / DEC-035.B) |
+| DEC-035.A | S-4 Wound format, magnitude, tier, stacking & healing (**AMENDMENT to DEC-035**) | Wound recorded as `Location X Tier-Y Wound Z (Attribute or Skill)`. Tier = equal-or-less-than causing skill's Skill-Tier OR GM Fiat (universal override). Magnitude Z = Tier (−Y). Same-tier/same-location wounds stack (values add) but never raise tier. Healing requires skill tier ≥ wound tier. GM Fiat overrides all downstream tier-gated requirements. **Clause 2 (Skill-Tier ceiling) refined/superseded by DEC-035.B** — Quality is the operative ceiling; Skill-Tier retains only production-gate function | Ruled; clause 2 refined by DEC-035.B |
+| DEC-035.B | Quality × Skill-Tier Ceiling Precedence (**AMENDMENT to DEC-035.A; closes OPEN-007 residual**) | Quality is the hard ceiling on wound tier (wound tier ≤ Quality-gated Effect tier, DEC-031). Skill-Tier functions only as production gate (Skill-Tier ≥ 2 required, DEC-041). GM Fiat remains universal. **Consequence:** OPEN-007 magnitude architecture closed; accumulation-to-permanent-loss threshold remains GM discretion (DEC-055/DEC-070) | Ruled |
 | DEC-036 | S-4 DEC-020 Reopening | DEC-020 (non-attack deferral) reopened. Non-attack physical resolutions can produce Wounds via Effect | Ruled |
 | DEC-037 | S-2 / S-4 Non-Attack Location Index Generation | (1) Primary Provenance Rule: character's failed governing Core Test roll supplies digits for Zero-Step. (2) Hazard "Win": failure qualifies for S-3 Effect applied to location indicated by failed roll. (3) Systemic Exempt: global threats apply direct HP/Conditions. (4) Passive Fallback: numeric stub routed through Zero-Step | Ruled |
 | DEC-038 | OPEN-001A — H0 Rider B causal attribution | Single causal-attribution principle: whichever Core Test is causally responsible supplies the Location Index | Ruled |
@@ -367,6 +369,21 @@ All are genuine human/designer rulings on candidate/non-canonical material. None
 | DEC-076 | S-12 Ruling A — Creature/NPC stat-generation & resolution-economy mode fork | Dual-mode: computerized = full 24-attribute + Core Test; tabletop = abbreviated stat-block, GM discretion default. Earlier "GM-facing shortcut layer" draft explicitly rejected by designer | Ruled |
 | DEC-077 | S-12 Ruling B — Creature/Campaign content authoring path | Content deferred to Tiwa's own playtesting. Not to be drafted by advisory models | Ruled (process/ownership ruling) |
 
+### P3 — Encumbrance (DEC-078)
+
+| ID | Subject | Decision | Status |
+|---|---|---|---|
+| DEC-078 | P3 — Encumbrance Model | **Option A: Load Thresholds/Penalties.** Sub-rulings: (A1) Capacity source: Body attribute — bpe/bee (Endurance-coded); (A2) Penalty application: Skill-side modifier only (DEC-063 / Invariant 6 compliant); (A3) Movement Speed interaction: untouched — locked `floor((bsp+bss)/15)` formula unchanged (DEC-004); (A4) Condition creation: yes — exceeding threshold imposes Condition Encumbered; (A5) Resource model: static thresholds + Skill-side penalty only; no secondary pool (Invariant-17-safe). **Hard dependency:** Conditions subsystem (Proposals §10, Reserved) — resolved by DEC-079. **Carried open:** exact capacity formula, threshold values, modifier magnitudes | Ruled (contents/values open) |
+
+### §5.5 Reserved Systems — Conditions, Tags, Equipment, Time/Action (DEC-079 through DEC-082)
+
+| ID | Subject | Decision | Status |
+|---|---|---|---|
+| DEC-079 | Conditions subsystem — format, magnitude, and alpha vocabulary | **Format:** `Tier-Y Condition Value Z` (global) or `Location X Tier-Y Condition Value Z` (localized), parallel to DEC-035.A Wound format. **Magnitude:** Value Z = −Y (identical to Wound). **Tier production:** Quality (hard ceiling) + Skill-Tier ≥ 2 (production gate). **Alpha vocabulary — 14 Conditions:** Encumbered (DEC-078), Grappled, Restrained, Prone, Blinded, Deafened, Frightened, Slowed, Stunned, Incapacitated, Fatigued (DEC-075), Sundered (DEC-060), Poisoned, Sickened. Each with mechanical effects, stacking rules, duration/removal. **Stacking:** most stack as "same-tier values add; higher replaces"; Stunned, Incapacitated, Prone, Grappled use "highest tier only." **Slowed + Encumbered:** do not stack — apply worse penalty. **Body-affecting scope:** all Skills using a Body Attribute. **Sundered:** Condition + Tag model (`state:sundered`), expanding DEC-060. **Resolves:** "hard dependency on Conditions subsystem" flagged in DEC-023.A, DEC-078 | Ruled (contents/values open) |
+| DEC-080 | Tags ontology model and alpha vocabulary | **Ontology:** open extensible namespace-based model. **Alpha list — 34 Tags:** Equipment (22): slot:main_hand, slot:off_hand, slot:two_hand, slot:body, slot:head, slot:shield, damage:bludgeoning, damage:slashing, damage:piercing, offense:melee, offense:ranged, offense:thrown, handling:light, handling:heavy, handling:reach, handling:finesse, defense:armor, defense:shield, state:held, state:worn, state:sheathed, state:stowed. Environment (6): env:hazard_physical, env:hazard_systemic, env:terrain_difficult, env:terrain_hazardous, env:darkness, env:weather_obscuring. Creature (6): creature:type_humanoid, creature:type_beast, creature:type_undead, creature:size_small, creature:size_medium, creature:size_large. **Resolves:** "Tags subsystem starter vocabulary" dependency referenced in DEC-028 | Ruled (vocabulary extensible) |
+| DEC-081 | Equipment state model | Equipment state fully expressed through Conditions + Tags. No independent state-tracker. Held items automatically receive the Location of the holding limb (consistent with DEC-062/DEC-041 anatomical mapping). | Ruled |
+| DEC-082 | Time/Action economy model | Skill-side / Movement-penalty model only. No discrete action budget or action points. Consistent with Invariant 17 (no new resource pools) and DEC-063/DEC-072 penalty-expression precedent. | Ruled |
+
 ## 4.C. Previously Open items — now all closed
 
 | ID | Closed via | Date |
@@ -377,7 +394,7 @@ All are genuine human/designer rulings on candidate/non-canonical material. None
 | OPEN-004 (Tier-2 procedure/cost) | DEC-042 | 2026-08-31 |
 | OPEN-005 (S-5–S-12 umbrella) | DEC-076/DEC-077 | 2026-09-01 |
 | OPEN-006 (Wound Severity thresholds) | DEC-035 (corrected) | 2026-08-30 |
-| OPEN-007 (Wound consequences) | Ruled (structure via DEC-035.A) | 2026-08-30 (structured 2026-09-02) |
+| OPEN-007 (Wound consequences) | Ruled (structure via DEC-035.A; Quality × Skill-Tier ceiling resolved by DEC-035.B) | 2026-08-30 (structured 2026-09-02; ceiling resolved 2026-09-02) |
 | OPEN-008 (Non-attack LI generation) | DEC-037 | 2026-08-30 |
 | OPEN-009 (S-6 positive-Effect defense) | DEC-050 amendment | 2026-09-01 |
 | OPEN-010 (S-6 repeated-Defense fatigue) | DEC-075 | 2026-09-01 |
@@ -392,28 +409,29 @@ Nothing in the decision register is marked "Open." What remains are **open desig
 
 ## 5.1 S-3 gated-tier Effect content enumeration (highest priority)
 
-**What's Ruled:** The S-3 Effect menu *structure* is locked (DEC-023): base tier (Inflict Injury HP-only + Open Retreat/Compel Yield) + five gated tiers (Position, Condition, Equipment, Defense, Location).
+**What's Ruled:** The S-3 Effect menu *structure* is locked (DEC-023), and the *specific Effects within each gated tier* are now **enumerated** (DEC-023.A, 2026-09-02): full alpha content by tier, content policy rulings (no DoT, no Advantage/Disadvantage language, no natural d100 modification, no new pools, beneficial Effects in scope), and explicit prohibitions. DEC-024 (one-Effect-per-win) remains in force.
 
-**What's open:** The *specific Effects within each gated tier* are NOT enumerated. Conditions (darkness, grappled, frightened), position effects, equipment-damage effects, defense-tier effects, and location-tier effects are all unmade.
+**What's still open:** The Condition-tier Effects are **gated on the Conditions subsystem** (Proposals §10, currently Reserved) — "Encumbered," "Grappled," "Restrained," etc. cannot be table-ready mechanics until that vocabulary exists. Equipment-tier Effects similarly require a Tags subsystem vocabulary (§11, Reserved). The S-2 anatomical mapping ranges (DEC-041 deferred) are needed for Location-tier Effects.
 
-**Why it matters:** Blocking combat fidelity. Referenced as Critical for the Blood Man encounter (grapple/hold, darkness/vision, fear, ongoing corrosive damage per time-step, tactical position, defense-mitigation interaction). Multiple reports disagree on whether it's a Critical blocker or a Design-Stage Dependency.
+**Why it matters:** Blocking combat fidelity. Referenced as Critical for the Blood Man encounter (grapple/hold, darkness/vision, fear, tactical position, defense-mitigation interaction).
 
 **Relevant DEC rulings (upstream context):**
-- DEC-023 (menu structure) → DEC-028 (Tag+Location gating for three Effects) → DEC-041 (Skill-Tier gate universal)
+- DEC-023 + DEC-023.A (menu structure + content enumeration) → DEC-028 (Tag+Location gating for three Effects) → DEC-041 (Skill-Tier gate universal)
 - DEC-024 (one-Effect-per-win; second Effect mechanism deferred)
 - DEC-026 (second-Effect uses different Advanced Skill; defensive roll deferred to S-6 — now locked DEC-044–050)
 - DEC-027 (auto-apply) → DEC-048 (Defense is post-hoc mitigation) → DEC-050 (universal defensible scope)
-- DEC-031 (Quality gates eligible Effects)
+- DEC-031 (Quality gates eligible Effects) → DEC-035.B (Quality is hard ceiling on wound tier)
 - DEC-060 (Sunder addition-model precedent for Condition-tier Effect)
 - DEC-075 (future fatigue = Condition-tier Effect, not a subsystem)
+- DEC-078 (Encumbered = Condition-tier Effect, routes through Conditions subsystem)
 
-**Dependency:** S-6 Defense is fully Ruled (DEC-044–050) but its *interaction with specific Defense-tier Effects* is not defined until Defense-tier Effects are enumerated. S-3 §11 (Tags subsystem starter vocabulary) is Reserved / unbuilt.
+**Dependency:** S-6 Defense is fully Ruled (DEC-044–050) but its *interaction with specific Defense-tier Effects* is not defined until Defense-tier Effects are enumerated (now done; locked in DEC-023.A). S-3 §11 (Tags subsystem starter vocabulary) is now resolved (DEC-080). All Condition-tier Effects now have a concrete vocabulary (DEC-079). The Conditions subsystem dependency flagged in §5.1 is **fully resolved**.
 
 **Tracking note:** Explicitly flagged in DEC-050 amendment note ("the still-unenumerated S-3 gated-tier Effect content remains a separate tracking item") and the S-6/S-12 handoff §4 table.
 
-## 5.2 Wound consequence magnitudes (OPEN-007 — now structured via DEC-035.A, 2026-09-02)
+## 5.2 Wound consequence magnitudes (OPEN-007 — now structured via DEC-035.A, Quality ceiling resolved via DEC-035.B, 2026-09-02)
 
-**Note (2026-09-02):** This section is updated to reflect the DEC-035.A amendment. The wound **format, tier framework, magnitude and healing gate** are now Ruled (see §4.B table). What remains open is only what the amendment itself carried forward.
+**Note (2026-09-02):** This section is updated to reflect the DEC-035.A amendment and DEC-035.B quality-ceiling ruling. The wound **format, tier framework, magnitude and healing gate** are now Ruled (see §4.B table), and the Quality × Skill-Tier ceiling precedence is now resolved (DEC-035.B).
 
 **What's Ruled (DEC-035.A, 2026-09-02):**
 - Wound record format: `Location X Tier-Y Wound Z (Attribute or Skill)`
@@ -423,19 +441,23 @@ Nothing in the decision register is marked "Open." What remains are **open desig
 - Healing: skill tier ≥ wound tier; GM Fiat can override
 - Wounds may now target Skills directly (scope expansion over DEC-032's attribute-only framing)
 
-**What's still open (carried forward by DEC-035.A):**
-- **DEC-031 (Quality) × Skill-Tier ceiling precedence** — when Quality and Skill-Tier would permit different available wound tiers, which applies. Not yet ruled.
+**What's Ruled (DEC-035.B, 2026-09-02 — resolves the OPEN-007 residual):**
+- Quality is the **hard ceiling** on wound tier (wound tier ≤ Quality-gated Effect tier, DEC-031)
+- Skill-Tier functions only as a **production gate** (Skill-Tier ≥ 2 required for any Location Index, DEC-041); does NOT raise or lower maximum wound magnitude
+- GM Fiat remains the universal override (DEC-035.A clause 6)
+- DEC-035.A clause 2 (Skill-Tier ceiling role) refined/superseded for ceiling purposes
+- OPEN-007 magnitude architecture is **closed**; accumulation-to-permanent-loss threshold remains GM discretion (DEC-055/DEC-070)
+
+**What's still open:**
 - The individual penalty magnitudes are now defined *by tier*; the "accumulation to game-over threshold" (how many/which stacked wound negatives trigger DEC-054 permanent loss) remains GM-discretion per DEC-055/DEC-070 precedent, with no default guidance.
 
 **Relevant DEC rulings:**
 - DEC-032 (Injury vs. Wound terminology)
 - DEC-033 (Wound trigger & Location Scope, narrowed by DEC-041)
-- DEC-035 + DEC-035.A (severity, format, tier, magnitude, stacking, healing)
+- DEC-035 + DEC-035.A + DEC-035.B (severity, format, tier, magnitude, stacking, healing, quality ceiling)
 - DEC-037 (non-attack LI generation)
 - DEC-053 (Incapacitation HP-only, independent of Wounds)
 - DEC-071–074 (S-11 healing as Extended Test instance)
-
-**Options formerly flagged in readiness report:** (a) enumerate now, (b) GM-adjudicate for alpha, (c) defer until after combat integration — now largely superseded by DEC-035.A's ruling; the remaining open piece is the Quality × Skill-Tier precedence.
 
 ## 5.3 S-2 residual architecture (anatomical mapping details, tier promotion triggers, GM-facing wording)
 
@@ -465,22 +487,22 @@ Nothing in the decision register is marked "Open." What remains are **open desig
 
 **Constraint:** DEC-077 explicitly bars advisory models from drafting this content. An advisory session may only *support* Tiwa's playtesting process, not produce the templates.
 
-## 5.5 Reserved systems (DEC-015) — structural Rulings exist, systems unbuilt
+## 5.5 Reserved systems (DEC-015) — structural Rulings exist, most now have concrete foundations
 
-The canonical locked Core (DEC-015 Reserved Systems) leaves the entire non-locked universe as Reserved / unbuilt. The DEC decisions provide structural rulings for many of these, but the systems themselves are not designed:
+The canonical locked Core (DEC-015 Reserved Systems) leaves the entire non-locked universe as Reserved / unbuilt. The DEC decisions provide structural rulings for many of these. As of 2026-09-02, four major subsystems now have concrete foundations (DEC-079–082); Hazards is partially addressed; Magic and Setting remain unbuilt.
 
 | System | Proposals section | Status |
 |---|---|---|
-| Conditions | §10 | Reserved |
-| Tags | §11 | Reserved |
-| Time/Action economy | §12 | Reserved |
-| Equipment | §13 | Reserved |
-| Hazards (environmental) | §14 | Reserved |
+| Conditions | §10 | **Ruled** — DEC-079: format, magnitude, alpha vocabulary (14 Conditions); DEC-078: Encumbered; DEC-075: Fatigued; DEC-060: Sundered |
+| Tags | §11 | **Ruled** — DEC-080: namespace ontology, 34-tag alpha vocabulary |
+| Time/Action economy | §12 | **Ruled** — DEC-082: Skill-side / Movement-penalty only, no discrete action budget |
+| Equipment | §13 | **Ruled** — DEC-081: expressed through Conditions + Tags; held items auto-receive holding limb Location |
+| Hazards (environmental) | §14 | Partially addressed — `env:hazard_physical` and `env:hazard_systemic` Tags defined (DEC-080); formalization still open |
 | Magic/Special Abilities | §17 | Design Direction only |
 | Setting Interface | §19 | Not started |
 | Setting Integration | §20 | Not started |
 
-The S-3 Effect content enumeration (§5.1) would be the first concrete pass through several of these (Condition-tier Effects require a Conditions vocabulary; Equipment-tier Effects require an Equipment vocabulary; Location-tier Effects require the S-2 architecture to be finalized).
+**Dependency note (2026-09-02):** The Conditions vocabulary (DEC-079) and Tags vocabulary (DEC-080) now resolve the blocking dependencies that prevented Condition-tier and Equipment-tier Effects from being table-ready. The Conditions subsystem dependency flagged in DEC-023.A, DEC-078, and §5.1 is fully resolved. The Tags subsystem dependency flagged in DEC-028 is resolved. Remaining open work: Hazards formalization, Position-tier Effect magnitudes, Magic/Special Abilities, and Setting Interface/Integration.
 
 ---
 
@@ -501,6 +523,8 @@ Evidence files are referenced by path + one-line status. Do not treat pointers a
 | `investigations/tiwas-s7-s8-advisory-session-handoff-2026-09-01.md` | S-7/S-8 advisory session; source of DEC-043, DEC-051–057 |
 | `investigations/tiwas-s8-s9s10-s11-advisory-session-handoff-2026-09-01.md` | S-8/S-9/S-10/S-11 advisory session; source of DEC-063–074 |
 | `investigations/tiwas-s6-s12-session-handoff-2026-09-01.md` | S-6/S-12 session; source of DEC-075–077 |
+| `investigations/tiwas-grok-advisory-session-decision-report-s3-content-encumbrance-wound-precedence-2026-09-02.md` | Grok 4.5 advisory session report; source of DEC-023.A, DEC-035.B, DEC-078 |
+| `investigations/tiwas-grok-advisory-session-reserved-systems-5-5-conditions-tags-equipment-timeaction-2026-09-02.md` | Grok 4.5 advisory session report; source of DEC-079, DEC-080, DEC-081, DEC-082 |
 | `investigations/tiwas-s8-third-party-adjudication-mutual-failure-candidate-v1.md` | S-8 Third-Party Adjudication candidate; source of DEC-043 |
 | `investigations/tiwas-s2-hit-location-investigation-v5-synthesis.md` | S-2 Design Investigation v5 synthesis (Correction Pass); source of DEC-017–019 |
 | `investigations/tiwas-s2-non-attack-location-source-closure-record-v1.2.md` | S-2 Non-Attack closure record; 14-scenario stress-test set; source of DEC-020–022 |
