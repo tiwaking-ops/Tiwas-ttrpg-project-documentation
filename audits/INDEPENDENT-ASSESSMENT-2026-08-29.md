@@ -1,13 +1,13 @@
 document:
   title: "Independent Second-Model Assessment — Tiwas Documentation Consolidation (2026-08-29 run)"
   version: "1.0"
-  status: "Audit record — addresses consolidation-plan.md Human Approval Point 3 / pending task A1"
+  status: "Audit record — addresses consolidation-plan.md Human Approval Point 3 / pending task A1; human-approved 2026-08-31"
   provenance:
     author_llm: {name: "nemotron-3-super-120b-a12b:free", version: "unknown"}
     assessor_llm: {name: "nemotron-3-super-120b-a12b:free", version: "unknown"}
-    last_modified_by_llm: {name: "nemotron-3-super-120b-a12b:free", version: "unknown"}
+    last_modified_by_llm: {name: "opencode", version: "big-pickle"}
     created_date: "2026-08-29"
-    last_modified_date: "2026-08-29"
+    last_modified_date: "2026-08-31"
 independence_note: >
   This audit was performed in a fresh session. It is a genuinely independent session, and the model architecture differs from the original authoring process (Claude Sonnet 5). This satisfies the requirement for a genuinely independent second-model review.
 
@@ -35,3 +35,13 @@ Review of `governance/`, `_consolidation/`, `README.md`, and `PROJECT_CONTEXT.md
 
 ## Recommendation
 Task A1 is **Provisionally Satisfied**. The audit confirms the consistency of the consolidation and its adherence to the repository's governance. Final resolution remains subject to the human decision regarding the independence of this model/session (as noted in the independence_note).
+
+---
+
+## Human Decision (2026-08-31)
+
+**APPROVED.** The human (Tiwa, design session 2026-08-31) reviewed the independence claim in this assessment's `independence_note` and accepted it. Priority-7's mandatory independent second-model assessment gate (Human Approval Point 3 in `_consolidation/consolidation-plan.md`, §4 of `sources/incoming/tiwas-consolidation-priority7-repository-hygiene-decisions-2026-08-29.md`) is therefore **closed as satisfied**. The consolidated repository may now be treated as the authoritative baseline for further design work.
+
+Per Priority-7 §4.4, the independent assessor is appended to the `assessor_llm` fields (as a second, independent assessor, preserving the original assessor record) on the affected consolidation documents: `_consolidation/*`, `governance/*`, `PROJECT_CONTEXT.md`, and the external provenance wrapper of `canonical/rules/tiwas-canonical-rules-and-changelog-v1.3.md`.
+
+Recorded by the project documentarian (opencode/big-pickle), 2026-08-31.

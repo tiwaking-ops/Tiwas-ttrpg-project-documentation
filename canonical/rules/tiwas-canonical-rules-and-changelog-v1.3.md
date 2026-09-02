@@ -5,7 +5,9 @@ document:
   status: "Canonical / Locked (self-declared; corroborated across D2/D3/D4/D5 — see governance/authority.md)"
 provenance:
   author_llm: {name: "not established", version: "not established"}
-  assessor_llm: {name: "Claude Sonnet 5", version: "claude-sonnet-5"}
+  assessor_llm:
+    - {name: "Claude Sonnet 5", version: "claude-sonnet-5"}
+    - {name: "nemotron-3-super-120b-a12b:free", version: "unknown"}
   last_modified_by_llm: {name: "not established", version: "not established"}
   created_date: "not established (source document undated)"
   last_modified_date: "not established (source document undated)"
@@ -18,7 +20,12 @@ consolidation_note: >
   status (see governance/authority.md) and was not independently re-decided
   by the consolidating LLM. Flagged in _consolidation/consolidation-plan.md
   as a checkpoint for explicit human confirmation, since promoting content
-  into canonical/ is a consequential repository action.
+  into canonical/ is a consequential repository action. On 2026-08-31 the
+  independent second-model assessment
+  (audits/INDEPENDENT-ASSESSMENT-2026-08-29.md, nemotron-3-super-120b)
+  verified this placement and the byte-identity of the substantive body; the
+  independent assessor was appended to assessor_llm per Priority-7 §4.4. The
+  placement remains as confirmed by the human 2026-08-29.
 ---
 
 # Tiwas — Canonical Rules & Changelog

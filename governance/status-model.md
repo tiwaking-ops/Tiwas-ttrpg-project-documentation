@@ -5,10 +5,12 @@ document:
   status: "Governance — reconstructed from source corpus"
 provenance:
   author_llm: {name: "Claude Sonnet 5", version: "claude-sonnet-5"}
-  assessor_llm: {name: "Claude Sonnet 5", version: "claude-sonnet-5"}
-  last_modified_by_llm: {name: "Claude Sonnet 5", version: "claude-sonnet-5"}
+  assessor_llm:
+    - {name: "Claude Sonnet 5", version: "claude-sonnet-5"}
+    - {name: "nemotron-3-super-120b-a12b:free", version: "unknown"}
+  last_modified_by_llm: {name: "opencode", version: "big-pickle"}
   created_date: "2026-08-29"
-  last_modified_date: "2026-08-29"
+  last_modified_date: "2026-08-31"
 ---
 
 # Document Status Model

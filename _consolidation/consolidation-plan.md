@@ -5,10 +5,12 @@ document:
   status: "Consolidation-control record"
 provenance:
   author_llm: {name: "Claude Sonnet 5", version: "claude-sonnet-5"}
-  assessor_llm: {name: "Claude Sonnet 5", version: "claude-sonnet-5"}
+  assessor_llm:
+    - {name: "Claude Sonnet 5", version: "claude-sonnet-5"}
+    - {name: "nemotron-3-super-120b-a12b:free", version: "unknown"}
   last_modified_by_llm: {name: "opencode", version: "big-pickle"}
   created_date: "2026-08-29"
-  last_modified_date: "2026-08-29"
+  last_modified_date: "2026-08-31"
 ---
 
 # Consolidation Plan and Report
@@ -81,7 +83,7 @@ Claude Sonnet 5 (`claude-sonnet-5`), single session, 2026-08-29. No other LLM is
 
 - Splitting `canonical/rules/` into per-system files (recommended in `canonical/systems/README.md`) — not performed; recommendation only.
 - Any archival of prior-version material — cannot be performed without the missing source text; not required after Priority 7 (2026-08-29) closed C5 as a permanent limitation and made recovery optional only via a new designer ruling.
-- Independent (second-model) assessment of this consolidation's own output — **required (mandatory) as of Priority 7 (2026-08-29)**; recommended in `governance/provenance.md`. Reserved under `audits/`; the assessment itself is a separate-session action and not performed here.
+- Independent (second-model) assessment of this consolidation's own output — **required (mandatory) as of Priority 7 (2026-08-29)**; recommended in `governance/provenance.md`. Reserved under `audits/`; the assessment itself is a separate-session action and not performed here. — **COMPLETED 2026-08-29, APPROVED by human 2026-08-31.** See `audits/INDEPENDENT-ASSESSMENT-2026-08-29.md`; no longer a pending action.
 - Any Git commit or push — no Git repository is in use in this working environment; N/A, noted for completeness per the specification's Git-integrity checklist.
 
 ## Significant classification decisions
@@ -99,7 +101,7 @@ Directory structure created; five source documents extracted verbatim and copied
 
 1. **Confirm or override the D1 → `canonical/` placement** (see above — this is the only placement judged to cross into canonicalization territory). — **CONFIRMED by the human (2026-08-29)**, per `tiwas-consolidation-priority5-canonical-placement-confirmation-2026-08-29.md` (human statement: "this was the canonical document from previous development before project file consolidation"). The D1 placement under `canonical/rules/` is treated as **settled**; no further relocation or provisional marking is required. This closing is purely structural — it does not promote any non-canonical mechanic, and the 8-step Promotion Rule is not implicated.
 2. **Decide whether to pursue the missing prior-version documents** for `archive/`, or accept the current evidentiary gap (C5) as a permanent limitation of this repository's history. — **RESOLVED 2026-08-29: C5 accepted as a permanent limitation** (Priority 7). Recovery of prior-version text is no longer required; `archive/` remains intentionally empty. Void/`archive` population only if a future designer ruling explicitly reverses this.
-3. **Decide whether a second model/session should independently assess** this consolidation before it is relied upon for further project work. — **REQUIRED 2026-08-29 (mandatory, blocking)** (Priority 7). An independent second-model/second-session assessment **must** be completed and recorded under `audits/` before the consolidated repository may be treated as the authoritative baseline for further design work. Until that record exists, the consolidation remains under **provisional** governance status for reliance. (Reserved `audits/` placeholder; the assessment itself is a separate-session action, not performed here.)
+3. **Decide whether a second model/session should independently assess** this consolidation before it is relied upon for further project work. — **REQUIRED 2026-08-29 (mandatory, blocking)** (Priority 7). An independent second-model/second-session assessment **must** be completed and recorded under `audits/` before the consolidated repository may be treated as the authoritative baseline for further design work. Until that record exists, the consolidation remains under **provisional** governance status for reliance. (Reserved `audits/` placeholder; the assessment itself is a separate-session action, not performed here.) — **CLOSED 2026-08-31 (human approval).** The independent assessment (`audits/INDEPENDENT-ASSESSMENT-2026-08-29.md`, nemotron-3-super-120b, fresh session) was **APPROVED by the human on 2026-08-31** as satisfying Priority-7's independence requirement. The gate is closed; the consolidated repository may be treated as the authoritative baseline for further design work. Per §4.4, the independent assessor is appended to `assessor_llm` on the affected consolidation documents.
 
 > **Confirmation record (2026-08-29):** The human confirmed the D1 → `canonical/rules/`
 > placement as prior-development Canonical. Added by the project documentarian
@@ -114,6 +116,15 @@ Directory structure created; five source documents extracted verbatim and copied
 > Filed by the project documentarian (opencode/big-pickle) on 2026-08-29. The second-model
 > assessment itself is a separate-session action and was **not** performed here.
 
+> **Independent-assessment approval record (2026-08-31):** The human **APPROVED**
+> `audits/INDEPENDENT-ASSESSMENT-2026-08-29.md` (nemotron-3-super-120b-a12b:free, fresh
+> session) as satisfying Priority-7's mandatory independent second-model assessment gate.
+> The gate is closed and the consolidated repository may be treated as the authoritative
+> baseline for further design work. Per Priority-7 §4.4 the independent assessor is
+> appended to `assessor_llm` on the affected consolidation documents. Structural/governance
+> only — no mechanic promoted; 8-step Promotion Rule not implicated. Filed by the project
+> documentarian (opencode/big-pickle) on 2026-08-31.
+
 No other action in this repository requires approval before use — `roadmap/`, `proposals/`, and `investigations/` placements simply restate what those documents already say about themselves, and nothing was archived, deleted, or rewritten.
 
 ## Recommended future maintenance process
@@ -121,5 +132,5 @@ No other action in this repository requires approval before use — `roadmap/`, 
 1. Any new locked mechanic goes through the 8-step Promotion Rule (`governance/status-model.md`) and is appended to `canonical/rules/...` §17's changelog, not written into a new file.
 2. Any new non-canonical proposal or investigation is added to `proposals/` or `investigations/` respectively, with the same provenance-metadata discipline used here.
 3. The missing prior-version documents are **not** recovered: C5 was closed as a permanent limitation (Priority 7, 2026-08-29). `archive/` stays intentionally empty unless a future designer ruling explicitly reverses that decision (in which case follow the process in `archive/README.md`).
-4. The **independent second-model assessment** (Priority 7) must be completed and its record filed under `audits/` before this consolidated repository is treated as the authoritative baseline for further design work; until then it is provisional for reliance.
+4. The **independent second-model assessment** (Priority 7) must be completed and its record filed under `audits/` before this consolidated repository is treated as the authoritative baseline for further design work; until then it is provisional for reliance. — **DONE: assessment completed 2026-08-29 and approved by the human 2026-08-31** (`audits/INDEPENDENT-ASSESSMENT-2026-08-29.md`). The provisional-for-reliance status is lifted.
 5. Future sessions should treat this repository — not prior conversational context — as the source of truth about project state, per the governing specification's "Repository as persistent project memory" principle.
