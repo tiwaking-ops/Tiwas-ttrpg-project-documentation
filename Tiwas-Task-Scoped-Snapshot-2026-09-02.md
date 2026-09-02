@@ -367,7 +367,8 @@ All are genuine human/designer rulings on candidate/non-canonical material. None
 | ID | Subject | Decision | Status |
 |---|---|---|---|
 | DEC-076 | S-12 Ruling A — Creature/NPC stat-generation & resolution-economy mode fork | Dual-mode: computerized = full 24-attribute + Core Test; tabletop = abbreviated stat-block, GM discretion default. Earlier "GM-facing shortcut layer" draft explicitly rejected by designer | Ruled |
-| DEC-077 | S-12 Ruling B — Creature/Campaign content authoring path | Content deferred to Tiwa's own playtesting. Not to be drafted by advisory models | Ruled (process/ownership ruling) |
+| DEC-077 | S-12 Ruling B — Creature/Campaign content authoring path | Content deferred to Tiwa's own playtesting. Not to be drafted by advisory models. **AMENDED by DEC-077.A:** advisory models may convert GURPS creatures to Tiwas working stat blocks for the BToV-Madness playtest (provisional, Tiwa rules each) | Ruled (amended by DEC-077.A) |
+| DEC-077.A | BToV-Madness GURPS-to-Tiwas creature stat-block conversion (**AMENDMENT to DEC-077**) | Advisory models may convert GURPS source creatures to Tiwas working stat blocks for the BToV-Madness playtest; Tiwa rules on each; provisional unless affirmed. Rationale: Tiwa does not know GURPS, cannot author the conversion. Scope: BToV-Madness only, abbreviated stat-block (DEC-076) + individual-template (DEC-041) methods. Tiwa retains final ownership. Bar otherwise stands | Ruled (conversion workflow; provisional) |
 
 ### P3 — Encumbrance (DEC-078)
 
@@ -479,13 +480,13 @@ Nothing in the decision register is marked "Open." What remains are **open desig
 
 **Dependency:** Anatomical mapping numeric ranges (DEC-041 deferred) are needed before creature templates (DEC-077, Tiwa's domain) can be built. Tier-1/Tier-2 promotion trigger list (DEC-040 deferred) depends on S-3 Effect enumeration (§5.1).
 
-## 5.4 S-12 creature/campaign content (architecture Ruled, content Open — Tiwa's domain only)
+## 5.4 S-12 creature/campaign content (architecture Ruled, content conversion-workflow Open)
 
-**What's Ruled:** DEC-076 (dual-mode stat-generation fork) and DEC-077 (content authoring deferred to Tiwa's playtesting). No advisory model may draft creature templates.
+**What's Ruled:** DEC-076 (dual-mode stat-generation fork) and DEC-077 (content authoring owned by Tiwa's playtesting). **Amendment DEC-077.A (2026-09-02):** for the BToV-Madness playtest, advisory models may convert GURPS source creatures to Tiwas working stat blocks, each pending Tiwa's ruling and provisional unless affirmed — because Tiwa does not know the GURPS system. This is scoped to BToV-Madness conversion work only; the DEC-077 bar against advisory-model authoring of definitive templates otherwise stands.
 
-**What's open:** Actual creature templates (Goblin, Dragon, Ice Troll, Blood Man, etc.) do not exist yet. S-12's abbreviated stat-block format and automated-system tooling specifics are also not yet drafted (downstream implementation detail under DEC-076).
+**What's open:** Actual creature templates (Goblin, Dragon, Ice Troll, Blood Man, etc.) do not exist yet — the BToV-Madness GURPS creature conversions are in progress under DEC-077.A. S-12's abbreviated stat-block format and automated-system tooling specifics are also not yet drafted (downstream implementation detail under DEC-076).
 
-**Constraint:** DEC-077 explicitly bars advisory models from drafting this content. An advisory session may only *support* Tiwa's playtesting process, not produce the templates.
+**Constraint:** DEC-077 bars advisory models from drafting *definitive* creature templates outside the DEC-077.A conversion workflow for BToV-Madness. Advisory models may propose GURPS-to-Tiwas working conversions for the playtest; Tiwa rules on each. The conversions are provisional playtest material, not finished or authoritative content.
 
 ## 5.5 Reserved systems (DEC-015) — structural Rulings exist, most now have concrete foundations
 
