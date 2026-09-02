@@ -136,7 +136,7 @@ These are **decision dependencies**, not a mandatory calendar or implementation 
 | U-01 | Opposed Contest | Universal contests | S-1 |
 | U-02 | Contest Outcome | Converts test results into contest result | S-1 |
 | U-03 | Difficulty | Universal task difficulty | S-8 |
-| U-04 | Stakes Gate | Determines when testing is meaningful | S-8 |
+| U-04 | Stakes Gate | Determines when testing is meaningful | S-8 — **REJECTED (DEC-051), no pre-Core-Test skip-the-roll filter; scope removed** |
 | U-05 | Outcome Effects | Converts success into state change | S-3 |
 | U-06 | Quality/Advantage Interface | Controls additional Effects | S-3 |
 | U-07 | Two-Track Harm | Resources/HP plus wounds | S-3/S-4 |
@@ -255,7 +255,7 @@ Implementation-relevant consequences:
 
 - Any hazard/fall/collapse resolution path — including one that already routes through an ordinary Core Test (e.g., a Reflexes test to dodge, an Agility test to catch a ledge) — must not call the Location Provider (U-09). This is a categorical exclusion, not conditional on GM narration or declared stakes.
 - The H0 provenance candidate (governing-Core-Test-roll-or-none) and its two riders (no cross-character roll sharing; tie-break for multi-test causal chains) remain documented as an inert candidate design for future reference, but must not be implemented as active logic. Implementing H0 now would generate Location Index output the ruling explicitly forbids.
-- This deferral is explicitly tied to reopening triggers, not a permanent exclusion: revisit when S-4 (Wound activation/severity), S-7 (Incapacitation/death), or S-8 (Difficulty/Stakes Gate) reaches a design stage that makes hazard-location relevant. S-8 is flagged as the most likely natural trigger. Implementation should not pre-build hazard-location hooks in anticipation of this — per Roadmap §24 Rule 6, do not silently resolve an open designer fork, and this fork (whether/how non-attack location eventually works) is explicitly still open, just not currently active.
+- This deferral is explicitly tied to reopening triggers, not a permanent exclusion: revisit when S-4 (Wound activation/severity), S-7 (Incapacitation/death), or S-8 (Difficulty) reaches a design stage that makes hazard-location relevant. **(Updated 2026-09-01:** the S-8/Stakes Gate pathway is removed by DEC-051 — the Stakes Gate is rejected; the S-2 non-attack deferral is no longer tied to the Stakes Gate as a reopening trigger. The S-4/S-7 reopening-trigger pathways remain.) Implementation should not pre-build hazard-location hooks in anticipation of this — per Roadmap §24 Rule 6, do not silently resolve an open designer fork, and this fork (whether/how non-attack location eventually works) is explicitly still open, just not currently active.
 
 **Acceptance tests:**
 
@@ -350,9 +350,9 @@ The permanent character-loss rate must be measured. No proposed death threshold 
 
 # 13. Phase 6 — Difficulty and Task Adjudication
 
-Implement difficulty grades, Skill-side modification, Stakes Gate, meaningful-uncertainty test, Skill selection, and opposed/unopposed selection. Verify interaction with Cost, Failure XP, 100-Fumble, Doubles, and Advanced Skills. Difficulty must not alter the natural die face.
+Implement difficulty grades, Skill-side modification, Skill selection, and opposed/unopposed selection. Verify interaction with Cost, Failure XP, 100-Fumble, Doubles, and Advanced Skills. Difficulty must not alter the natural die face.
 
-**Note (v1.4.3):** this phase (specifically the Stakes Gate) is flagged as the **most likely** reopening trigger for the S-2 non-attack Location Index deferral (Proposals/WIP §2.5A). When Stakes Gate design work reaches a stage where hazard-stakes framing is formally defined, that should be raised as an explicit reopening of the S-2 non-attack question, not silently assumed or folded in as a side effect of Stakes Gate's own design.
+**Note (v1.4.3, updated 2026-09-01):** the Stakes Gate is **REJECTED (DEC-051)** — no pre-Core-Test "skip the roll" filter exists for stakes-based reasons. Stakes Gate is struck from Phase 6 scope. The S-2 non-attack Location Index deferral reopening pathway previously flagged on the Stakes Gate is thereby removed. (The §13 heading retains "Task Adjudication" for S-8's remaining difficulty-grade and Skill-side-modification scope; the DEC-043 third-party adjudication ruling is unaffected.)
 
 ---
 

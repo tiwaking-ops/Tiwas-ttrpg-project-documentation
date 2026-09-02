@@ -536,26 +536,24 @@ The final model must be evaluated for:
 
 # 7. S-7 — Incapacitation and Death
 
-**Status: Reserved**
+**Status: Ruled (non-canonical designer rulings DEC-052 through DEC-057, 2026-09-01)**
 
 The current direction favours heroic resilience.
 
-Important current design constraints:
+Ruled design decisions:
 
-- HP = 0 should not automatically mean death.
-- Incapacitation should be mechanically distinct from ordinary resource depletion.
-- Serious localized injury may matter where locations are active.
-- Permanent character loss should remain comparatively uncommon.
-
-Possible major-vital/death-check concepts remain proposals only.
-
-No final death threshold is locked.
+- **HP = 0 triggers forced incapacitation.** No roll, no save/check. (DEC-052)
+- **Incapacitation is HP-driven only.** Wound severity (DEC-035) does not feed into incapacitation. Wounds and incapacitation are fully independent systems. (DEC-053)
+- **Permanent character loss (death)** occurs when EITHER: (a) character is incapacitated AND all attempts to revive via skill tests have failed (unlimited attempts; no cap), OR (b) player voluntarily chooses permanent loss while incapacitated. (DEC-054)
+- **Stabilization procedure: GM discretion, no formal procedure.** GM decides which skill, how many attempts, pacing — but NOT whether skill tests are used at all (that is fixed by the permanent-loss ruling above). (DEC-055)
+- **No interaction with S-11 (Rest/Healing).** Incapacitation does not affect healing/recovery mechanics. (DEC-056)
+- **S-2 non-attack reopening trigger assessed as removed.** The original §7 line "serious localized injury may matter where locations are active" is superseded by the Wound/Incapacitation independence ruling. (DEC-057, session-level assessment)
 
 ---
 
 # 8. S-8 — Difficulty, Task Adjudication and Stakes
 
-**Status: Reserved / WIP Direction**
+**Status: Reserved / WIP Direction — Stakes Gate Rejected (DEC-051, 2026-09-01)**
 
 A universal difficulty system is required.
 
@@ -568,15 +566,11 @@ The natural roll must remain the natural roll because it determines:
 - Double status;
 - Recovery interaction.
 
-A **Stakes Gate** is also proposed:
+~~**Stakes Gate** is also proposed:~~ **SUPERSEDED — REJECTED (DEC-051, 2026-09-01).** No pre-Core-Test "skip the roll" filter will exist for stakes-based reasons. Rationale: rolls are intended to be meaningful and to carry risk/reward; a Stakes Gate reduces roll frequency at the cost of player opportunities for risk and reward the system is designed to preserve. This rejection also removes the S-2 non-attack deferral reopening pathway previously flagged on the Stakes Gate.
 
-> Not every action needs a test. A test should occur where meaningful uncertainty and meaningful consequences exist.
+Routine actions without meaningful stakes should not be turned into repetitive resource expenditure merely because a Skill exists. *(Original Stakes Gate clause — superseded by DEC-051)*
 
-Routine actions without meaningful stakes should not be turned into repetitive resource expenditure merely because a Skill exists.
-
-Exact difficulty grades and Failure XP interaction remain unresolved.
-
-**Note (v1.4.3):** the closed S-2 Non-Attack Location Index Source ruling (§2.5A) flags S-8 as its most likely reopening trigger, since Stakes Gate is the natural home for deciding when a hazard resolution carries enough mechanical weight to warrant location-level detail. This is a cross-reference only; it does not narrow or predetermine S-8's own design.
+Exact difficulty grades, Skill-side modification mechanics, and Failure XP interaction remain unresolved.
 
 ---
 
