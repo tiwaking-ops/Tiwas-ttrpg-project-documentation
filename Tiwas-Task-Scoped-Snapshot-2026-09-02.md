@@ -236,7 +236,7 @@ These are locked game mechanics from D1. Status: **Current**. No advisory sessio
 
 **Scope note on DEC-014:** D1 §14.3 is explicit that this locks *only* the Tier-1 Location Index provider — not whether/when a scene uses Tier 0/1/2, not anatomical mapping, not wound/armor/defense interaction, not whether any later rule may consume a Location Index.
 
-## 4.B. Non-canonical designer rulings (DEC-017 through DEC-088)
+## 4.B. Non-canonical designer rulings (DEC-017 through DEC-093)
 
 All are genuine human/designer rulings on candidate/non-canonical material. None have completed the 8-step Promotion Rule. Status as of 2026-09-03:
 
@@ -396,6 +396,16 @@ All are genuine human/designer rulings on candidate/non-canonical material. None
 | DEC-087 | Pre-authored Tier-2 creature skills | **Creature/NPC templates MAY pre-author ready-made Tier-2 (Advanced) skills at creation.** DEC-012's failed-Double origin rule applies to PC skill advancement, NOT creature/NPC template authoring. Preserves DEC-041 Tier-2 Wound gate and DEC-085 item (4) non-universal Tier-2. Resolves Claude v0.2 §4.7 | Ruled (pre-authored Tier-2 permitted) |
 | DEC-088 | Environment-conditional Trait/Tag binding + `env:freezing` Tag | **Conditional-Trait Binding grammar (Condition Clause `Active only while [env:X] is present`) + new `env:freezing` scene-state Tag (7th entry in DEC-080 Environment namespace).** Read-only, stateless, GM-declared presence/absence; bound Trait/Effect treated as absent when Tag not present. Extends DEC-059's pattern; Invariant 17/6/7/DEC-007.A compliant. Resolves DEC-085's conditional freezing DR item. Applies to Ice Troll (Regeneration/Regrowth/DR all gated on `env:freezing`). **Open:** graded temperature (binary only now), scene-state tracking mechanism | Ruled (binding + Tag; graded temp & scene-tracking open) |
 
+### S-14 5.5 Systemic Hazard Resolution Cadence (DEC-089 through DEC-093)
+
+| ID | Subject | Decision | Status |
+|---|---|---|---|
+| DEC-089 | Systemic hazard cadence (H1-A) | Systemic hazard = ongoing progress toward surviving, not isolated damage events; uses existing Core Test machinery; NO new resource economy (Invariant 17; DEC-037/076) | Ruled |
+| DEC-090 | Scope to S-3 Effect interface (H2-A) | Scoped to the S-3 systemic-hazard Effect interface; S-3 does NOT own the full hazard engine (Core Test / S-8 / DEC-037 / Cost / Overflow / XP / recovery remain distinct) | Ruled |
+| DEC-091 | Terrain hazard coverage + `env:terrain_*` descriptive-only (H3-A) | Terrain hazards resolve via existing failed Core Test → DEC-037/Zero-Step → S-3 pipeline; `env:terrain_difficult`/`env:terrain_hazardous` are DESCRIPTIVE-ONLY (no independent mechanical trigger); difficulty from GM-graded DEC-063. Distinct from DEC-088's `env:freezing` activation Tag | Ruled |
+| DEC-092 | Hazard difficulty as Skill-side penalty (H4-A) | Difficulty grade = fixed additive Skill-side modifier to Effective Skill (DEC-063); never modifies natural roll/Cost/Overflow/XP/recovery | Ruled |
+| DEC-093 | Graded intensity as lookup key only (H5-B) | Intensity = lookup key into predefined hazard parameters only; no independent dice/resource/Effect/Overflow/transaction | Ruled |
+
 ## 4.C. Previously Open items — now all closed
 
 | ID | Closed via | Date |
@@ -501,7 +511,7 @@ Nothing in the decision register is marked "Open." What remains are **open desig
 
 ## 5.5 Reserved systems (DEC-015) — structural Rulings exist, most now have concrete foundations
 
-The canonical locked Core (DEC-015 Reserved Systems) leaves the entire non-locked universe as Reserved / unbuilt. The DEC decisions provide structural rulings for many of these. As of 2026-09-02, four major subsystems now have concrete foundations (DEC-079–082); Hazards is partially addressed; Magic and Setting remain unbuilt.
+The canonical locked Core (DEC-015 Reserved Systems) leaves the entire non-locked universe as Reserved / unbuilt. The DEC decisions provide structural rulings for many of these. As of 2026-09-03, six major subsystems now have concrete foundations (DEC-079–082 Conditions/Tags/Equipment/Time-Action; DEC-088 env-conditional binding; DEC-089–093 hazard resolution cadence); Magic and Setting remain unbuilt.
 
 | System | Proposals section | Status |
 |---|---|---|
@@ -509,12 +519,12 @@ The canonical locked Core (DEC-015 Reserved Systems) leaves the entire non-locke
 | Tags | §11 | **Ruled** — DEC-080: namespace ontology, 34-tag alpha vocabulary |
 | Time/Action economy | §12 | **Ruled** — DEC-082: Skill-side / Movement-penalty only, no discrete action budget |
 | Equipment | §13 | **Ruled** — DEC-081: expressed through Conditions + Tags; held items auto-receive holding limb Location |
-| Hazards (environmental) | §14 | Partially addressed — `env:hazard_physical` and `env:hazard_systemic` Tags defined (DEC-080); formalization still open |
+| Hazards (environmental) | §14 | Partially addressed — `env:hazard_physical` and `env:hazard_systemic` Tags defined (DEC-080); resolution cadence/difficulty/intensity scoped (DEC-089–093); formalization still open |
 | Magic/Special Abilities | §17 | Design Direction only |
 | Setting Interface | §19 | Not started |
 | Setting Integration | §20 | Not started |
 
-**Dependency note (2026-09-02):** The Conditions vocabulary (DEC-079) and Tags vocabulary (DEC-080) now resolve the blocking dependencies that prevented Condition-tier and Equipment-tier Effects from being table-ready. The Conditions subsystem dependency flagged in DEC-023.A, DEC-078, and §5.1 is fully resolved. The Tags subsystem dependency flagged in DEC-028 is resolved. Remaining open work: Hazards formalization, Position-tier Effect magnitudes, Magic/Special Abilities, and Setting Interface/Integration.
+**Dependency note (2026-09-02, updated 2026-09-03):** The Conditions vocabulary (DEC-079) and Tags vocabulary (DEC-080) now resolve the blocking dependencies that prevented Condition-tier and Equipment-tier Effects from being table-ready. The Conditions subsystem dependency flagged in DEC-023.A, DEC-078, and §5.1 is fully resolved. The Tags subsystem dependency flagged in DEC-028 is resolved. Hazard resolution cadence/difficulty/intensity is now scoped (DEC-089–093), and env-conditional Trait binding is ruled (DEC-088). Remaining open work: remaining Hazards formalization content (`env:hazard_physical` vs `env:hazard_systemic` detail), Position-tier Effect magnitudes, Magic/Special Abilities, and Setting Interface/Integration.
 
 ---
 
@@ -542,6 +552,7 @@ Evidence files are referenced by path + one-line status. Do not treat pointers a
 | `investigations/tiwas-btv-madness-ice-troll-combat-pipeline-gpt-5.6-luna-2026-09-03.md` | GPT-5.6 Luna Ice Troll combat-pipeline report; source of DEC-085 baseline & F-01→F-08 findings |
 | `investigations/tiwas-perplexity-creature-conversion-framework-playtest-2026-09-03.md` | Perplexity creature-creation transcript (framework + Ice Troll/Blood Man/Goblin/Dragon); source for DEC-084 classification |
 | `investigations/tiwas-env-conditional-trait-tag-advisory-handoff-2026-09-03.md` | Claude Sonnet 5 advisory draft — Environment-Conditional Trait/Tag Binding (Option A); source of DEC-088 (Condition Clause grammar + `env:freezing` Tag; 7th env entry) |
+| `investigations/tiwas-reserved-systems-hazard-cadence-confirmation-gpt5.6-luna-2026-09-03.md` | GPT-5.6 Luna advisory confirmation report — 5.5 Systemic Hazard Resolution Cadence (H1-A–H5-B); source of DEC-089–093 |
 | `investigations/tiwas-s8-third-party-adjudication-mutual-failure-candidate-v1.md` | S-8 Third-Party Adjudication candidate; source of DEC-043 |
 | `investigations/tiwas-s2-hit-location-investigation-v5-synthesis.md` | S-2 Design Investigation v5 synthesis (Correction Pass); source of DEC-017–019 |
 | `investigations/tiwas-s2-non-attack-location-source-closure-record-v1.2.md` | S-2 Non-Attack closure record; 14-scenario stress-test set; source of DEC-020–022 |
