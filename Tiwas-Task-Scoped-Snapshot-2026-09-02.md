@@ -1,4 +1,4 @@
-# Tiwas-TTRPG — Task-Scoped Consolidated Snapshot for Advisory Session (2026-09-02)
+# Tiwas-TTRPG — Task-Scoped Consolidated Snapshot for Advisory Session (2026-09-03)
 
 ---
 document:
@@ -11,7 +11,7 @@ provenance:
   assessor_llm: []
   last_modified_by_llm: {name: "opencode", version: "big-pickle"}
   created_date: "2026-09-02"
-  last_modified_date: "2026-09-02"
+  last_modified_date: "2026-09-03"
 ---
 
 ## Standing-prohibition overrule (one-line log entry)
@@ -208,7 +208,7 @@ The live register uses this exact column structure:
 
 # 4. Decision Register — Full Current State
 
-All items from `_consolidation/decision-register.md` as of 2026-09-02. **Every OPEN item (OPEN-001 through OPEN-010) is now closed.** What remains are open design *threads* (content-enumeration, implementation-layer details) that survive the fork-level rulings — see §5.
+All items from `_consolidation/decision-register.md` as of 2026-09-03. **Every OPEN item (OPEN-001 through OPEN-010) is now closed.** What remains are open design *threads* (content-enumeration, implementation-layer details) that survive the fork-level rulings — see §5.
 
 ## 4.A. Canonical decisions (DEC-001 through DEC-016)
 
@@ -236,9 +236,9 @@ These are locked game mechanics from D1. Status: **Current**. No advisory sessio
 
 **Scope note on DEC-014:** D1 §14.3 is explicit that this locks *only* the Tier-1 Location Index provider — not whether/when a scene uses Tier 0/1/2, not anatomical mapping, not wound/armor/defense interaction, not whether any later rule may consume a Location Index.
 
-## 4.B. Non-canonical designer rulings (DEC-017 through DEC-085)
+## 4.B. Non-canonical designer rulings (DEC-017 through DEC-087)
 
-All are genuine human/designer rulings on candidate/non-canonical material. None have completed the 8-step Promotion Rule. Status as of 2026-09-02:
+All are genuine human/designer rulings on candidate/non-canonical material. None have completed the 8-step Promotion Rule. Status as of 2026-09-03:
 
 ### S-2 Hit Location Architecture (DEC-017 through DEC-022)
 
@@ -385,13 +385,15 @@ All are genuine human/designer rulings on candidate/non-canonical material. None
 | DEC-081 | Equipment state model | Equipment state fully expressed through Conditions + Tags. No independent state-tracker. Held items automatically receive the Location of the holding limb (consistent with DEC-062/DEC-041 anatomical mapping). | Ruled |
 | DEC-082 | Time/Action economy model | Skill-side / Movement-penalty model only. No discrete action budget or action points. Consistent with Invariant 17 (no new resource pools) and DEC-063/DEC-072 penalty-expression precedent. | Ruled |
 
-### S-12 BToV-Madness Creature Conversion & Playtest (DEC-083 through DEC-085)
+### S-12 BToV-Madness Creature Conversion & Playtest (DEC-083 through DEC-087)
 
 | ID | Subject | Decision | Status |
 |---|---|---|---|
 | DEC-083 | Blood Man Blood Seep vs no-DoT policy | **Single-application Effect on a grapple win; NO ongoing DoT.** GURPS per-second corrosive DoT not ported (violates DEC-023.A no-DoT). Represented as one-shot Impose-Condition/Inflict-Injury on a Grapple-Contest win (per DEC-024 one-Effect-per-win) or narrative/GM-Fiat. Resolves the conflict flagged by Claude (§4.5) and Perplexity. Applies to Blood Man working stat block | Ruled |
 | DEC-084 | Perplexity Goblin/Dragon scope | **Kept as Tiwa-authored NEW-Content creatures, NOT GURPS conversions.** No GURPS stat block exists for them in the source PDF; Perplexity invented standard templates. They are outside DEC-077.A conversion scope but may be developed as original Tiwas creatures. Ice Troll/Blood Man remain the only genuine conversions under DEC-077.A | Ruled (new-content classification) |
 | DEC-085 | Playtest creature working baseline & method | **Adopt rule-faithful GPT-5.6 Luna baseline.** Derived stats via DEC-004/005; no GURPS dice/Dodge/Parry/DR numbers; Tier-2 signature attacks for Wound-capable creatures (not a universal rule); attack roll = attacker resource cost NOT target damage (DEC-007); test via Wound pathway first. **Open:** target-HP `Inflict Injury` magnitude, conditional freezing DR, Regeneration/Regrowth/Fright vocabularies | Ruled (method; Injury magnitude open) |
+| DEC-086 | Creature signature-skill Starting Value | **Full-Cap "veteran" for creature signature (signature-attack) skills, NOT `floor(Cap/2)`.** Even for full 24-attribute Fork A creatures, signature attack skills start at Cap by content-authoring design (Wound-capable creatures must have functioning Tier-2 attack skills). General (non-signature) skills still use standard `floor(Cap/2)` or Fork B GM value. Applies to all future creature templates. Resolves Claude v0.2 §4.6 Fork A/B tension | Ruled (signature skills full-Cap veteran) |
+| DEC-087 | Pre-authored Tier-2 creature skills | **Creature/NPC templates MAY pre-author ready-made Tier-2 (Advanced) skills at creation.** DEC-012's failed-Double origin rule applies to PC skill advancement, NOT creature/NPC template authoring. Preserves DEC-041 Tier-2 Wound gate and DEC-085 item (4) non-universal Tier-2. Resolves Claude v0.2 §4.7 | Ruled (pre-authored Tier-2 permitted) |
 
 ## 4.C. Previously Open items — now all closed
 
@@ -494,7 +496,7 @@ Nothing in the decision register is marked "Open." What remains are **open desig
 
 **What's open:** Actual creature templates (Goblin, Dragon, Ice Troll, Blood Man, etc.) do not exist yet — the BToV-Madness GURPS creature conversions are in progress under DEC-077.A. S-12's abbreviated stat-block format and automated-system tooling specifics are also not yet drafted (downstream implementation detail under DEC-076).
 
-**Constraint:** DEC-077 bars advisory models from drafting *definitive* creature templates outside the DEC-077.A conversion workflow for BToV-Madness. Advisory models may propose GURPS-to-Tiwas working conversions for the playtest; Tiwa rules on each. The conversions are provisional playtest material, not finished or authoritative content. **Scope clarified by DEC-084 (2026-09-03):** only the Ice Troll and Blood Man are genuine GURPS conversions under DEC-077.A; Perplexity's Goblin/Dragon are **new-content creatures** (Tiwa-authored), not conversions. **Working method clarified by DEC-085 (2026-09-03):** adopt the rule-faithful GPT-5.6 Luna baseline — derived stats via DEC-004/005, no GURPS dice/Dodge/Parry/DR numbers, Tier-2 signature attacks for Wound-capable creatures, attack roll = attacker resource cost (not target damage), test via the Wound pathway first. Blood Seep resolved as single-application on grapple win (DEC-083).
+**Constraint:** DEC-077 bars advisory models from drafting *definitive* creature templates outside the DEC-077.A conversion workflow for BToV-Madness. Advisory models may propose GURPS-to-Tiwas working conversions for the playtest; Tiwa rules on each. The conversions are provisional playtest material, not finished or authoritative content. **Scope clarified by DEC-084 (2026-09-03):** only the Ice Troll and Blood Man are genuine GURPS conversions under DEC-077.A; Perplexity's Goblin/Dragon are **new-content creatures** (Tiwa-authored), not conversions. **Working method clarified by DEC-085 (2026-09-03):** adopt the rule-faithful GPT-5.6 Luna baseline — derived stats via DEC-004/005, no GURPS dice/Dodge/Parry/DR numbers, Tier-2 signature attacks for Wound-capable creatures, attack roll = attacker resource cost (not target damage), test via the Wound pathway first. Blood Seep resolved as single-application on grapple win (DEC-083). **Creature-skill conventions ruled by DEC-086/087 (2026-09-03):** creature signature attack skills are pre-built at full Cap as veteran content (not `floor(Cap/2)`), and creature/NPC templates may pre-author Tier-2 Advanced skills at creation (DEC-012's failed-Double origin applies to PC advancement, not creature authoring).
 
 ## 5.5 Reserved systems (DEC-015) — structural Rulings exist, most now have concrete foundations
 
@@ -534,7 +536,8 @@ Evidence files are referenced by path + one-line status. Do not treat pointers a
 | `investigations/tiwas-s6-s12-session-handoff-2026-09-01.md` | S-6/S-12 session; source of DEC-075–077 |
 | `investigations/tiwas-grok-advisory-session-decision-report-s3-content-encumbrance-wound-precedence-2026-09-02.md` | Grok 4.5 advisory session report; source of DEC-023.A, DEC-035.B, DEC-078 |
 | `investigations/tiwas-grok-advisory-session-reserved-systems-5-5-conditions-tags-equipment-timeaction-2026-09-02.md` | Grok 4.5 advisory session report; source of DEC-079, DEC-080, DEC-081, DEC-082 |
-| `investigations/tiwas-gurps-creature-conversion-scratch-ice-troll-blood-man-2026-09-03.md` | Claude Sonnet 5 GURPS→Tiwas conversion scratch (Ice Troll, Blood Man); source for DEC-083 flags; corrected per DEC-085/F-04 |
+| `investigations/tiwas-gurps-creature-conversion-scratch-ice-troll-blood-man-2026-09-03.md` | Claude Sonnet 5 GURPS→Tiwas conversion scratch v0.1 (Ice Troll, Blood Man); correct appendix appended per DEC-085/F-04 — superseded by v0.2 |
+| `investigations/tiwas-gurps-creature-conversion-scratch-ice-troll-blood-man-v0.2-2026-09-03.md` | Claude Sonnet 5 GURPS→Tiwas conversion scratch v0.2 (GPT-5.6 Luna assessed); §4.1 Injury-magnitude flag, §4.6/§4.7 governance flags (source of DEC-086/087); Blood Seep flag resolved by DEC-083 |
 | `investigations/tiwas-btv-madness-ice-troll-combat-pipeline-gpt-5.6-luna-2026-09-03.md` | GPT-5.6 Luna Ice Troll combat-pipeline report; source of DEC-085 baseline & F-01→F-08 findings |
 | `investigations/tiwas-perplexity-creature-conversion-framework-playtest-2026-09-03.md` | Perplexity creature-creation transcript (framework + Ice Troll/Blood Man/Goblin/Dragon); source for DEC-084 classification |
 | `investigations/tiwas-s8-third-party-adjudication-mutual-failure-candidate-v1.md` | S-8 Third-Party Adjudication candidate; source of DEC-043 |
