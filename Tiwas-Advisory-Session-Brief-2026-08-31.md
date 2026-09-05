@@ -129,7 +129,7 @@ decision-register.md`) is the live source of truth for current status**; the roa
 
 | ID | Subject | Decision (abridged) | Status |
 |---|---|---|---|
-| DEC-017 | S-2 attack-side invocation/warrant policy | Candidate four-state model + Named-Outcome Test, "accepted... for further development/testing" (attack-side only) | Current (accepted candidate, not locked) |
+| DEC-017 | S-2 attack-side invocation/warrant policy | Candidate four-state model + Named-Outcome Test, "accepted... for further development/testing" (attack-side only) | **Promoted to Canonical §14.7 (2026-09-05)** |
 | DEC-018 | Explicit-only objectives | Only stated objectives are Warrant-eligible; GM does not infer unstated objectives | Current, folded into DEC-017 |
 | DEC-019 | Structural Weak Points | Reclassified State 1 → State 2 (anchored, not yet resolvable); no Location Index→component mapping yet | Current |
 | DEC-020 | S-2 non-attack deferral | Non-attack resolutions generate **no** Tier-1 Location Index currently (deferral, not impossibility) | **Reopened** by DEC-036 |

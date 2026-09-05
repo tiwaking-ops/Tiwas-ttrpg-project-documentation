@@ -2,24 +2,32 @@
 document:
   title: "Tiwas S-2 Design Investigation v5 — Non-Canonical Synthesis (Correction Pass)"
   version: "v5 (correction pass)"
-  status: "Non-canonical (self-declared: \"S-2 Candidate Policy — Accepted by designer ruling for further development/testing. NON-CANONICAL.\")"
+  status: "Non-canonical (self-declared: \"S-2 Candidate Policy — Accepted by designer ruling for further development/testing. NON-CANONICAL.\"). **[Promoted to Canonical §14.7 (attack-side invocation) 2026-09-05; §5A wording finalized; synthesis otherwise retained as historical investigation record.]**"
 provenance:
   author_llm: {name: "not established", version: "not established"}
   assessor_llm: {name: "Claude Sonnet 5", version: "claude-sonnet-5"}
-  last_modified_by_llm: {name: "not established", version: "not established"}
+  last_modified_by_llm: {name: "opencode", version: "big-pickle"}
   created_date: "not established (source document undated)"
-  last_modified_date: "not established (source document undated)"
+  last_modified_date: "2026-09-05"
 consolidation_note: >
   Placed in investigations/ during initial consolidation (2026-08-29). Content
-  below the header is UNMODIFIED from sources/tiwas-s2-hit-location-investigation-v5-synthesis.md.
-  Its findings are summarized as the accepted non-canonical S-2 invocation
-  policy in proposals/tiwas-proposals-wip-and-design-direction-v1.4.3.md §2.1A,
-  but that summary does not supersede this fuller evidentiary record.
+  below the header is UNMODIFIED from sources/tiwas-s2-hit-location-investigation-v5-synthesis.md
+  except the annotations marked (2026-09-05, opencode/big-pickle): the §5A
+  GM-facing wording light-review/finalization record, the §8 status annotations,
+  and the status-header annotation. The verbatim source copy in sources/ is left
+  unmodified. Its findings are summarized as the accepted non-canonical S-2
+  invocation policy in proposals/tiwas-proposals-wip-and-design-direction-v1.4.3.md
+  §2.1A, but that summary does not supersede this fuller evidentiary record.
+  Authority unchanged by these annotations; promotion proceeds only via the
+  8-step Promotion Rule (see
+  investigations/tiwas-dec017-s2-invocation-promotion-package-2026-09-05.md).
 ---
 
 # Tiwas S-2 Design Investigation v5 — Non-Canonical Synthesis (Correction Pass)
 
 **Status: S-2 Candidate Policy — Accepted by designer ruling for further development/testing. NON-CANONICAL. S-2 remains unlocked per Canonical §14.3. Cannot modify Canonical Rules under any circumstance; may inform Proposals/WIP and Roadmap updates per §11 (added below).**
+
+**[Annotation (2026-09-05, opencode/big-pickle):** the §5A GM-facing wording below was light-reviewed and adopted provisionally (no new blind test, per its own §5A note and §8 item 3), and a DEC-017 promotion package was drafted (`investigations/tiwas-dec017-s2-invocation-promotion-package-2026-09-05.md`). **No authority changed** within this document: it remains non-canonical and is retained as a historical investigation record. **[Promotion completed 2026-09-05:** DEC-017 passed the 8-step Promotion Rule with human stop-and-confirm; attack-side invocation is now Canonical §14.7 (Canonical Rules & Changelog v1.4). §5A wording finalized (DEC-A1 Option C). S-2's remaining architecture (tier selection, mapping, Tier-2) remains unlocked.]**]**
 
 **Correction pass (this revision, supersedes the uploaded v5 synthesis):** Three wording/evidence-labeling corrections applied after independent external review and independent re-verification against this document's own citations. **No classification, ruling, or open/closed status changed** — only overclaiming basis text was reworded. Each fix is marked inline with a `[Corrected this revision]` tag at point of change.
 
@@ -113,7 +121,7 @@ This closes both confirmed cross-round instabilities (the armor-gap divergence a
 
 > **Generate a Location Index only when the player has explicitly stated a distinct outcome beyond ordinary damage, that outcome's location-dependence is already established under current Tiwas design (not merely plausible or anticipated), and current rules can actually resolve it.**
 
-Conceptual Anchor (§4) does real work in *determining* whether a given category's location-dependence counts as "already established," but a GM applying the rule in play is not asked to separately classify something as "State 3" — that classification work is front-loaded into which entries the W3 cache (§6) is allowed to contain. This keeps the table-facing rule to a single test while preserving the more careful internal distinctions that produced it. **This wording is a draft implementing the designer's stated direction, not yet separately validated at the table** — worth a light review pass before being treated as final phrasing, though it does not require another blind test to adopt provisionally.
+Conceptual Anchor (§4) does real work in *determining* whether a given category's location-dependence counts as "already established," but a GM applying the rule in play is not asked to separately classify something as "State 3" — that classification work is front-loaded into which entries the W3 cache (§6) is allowed to contain. This keeps the table-facing rule to a single test while preserving the more careful internal distinctions that produced it. **[Finalization record (2026-09-05, opencode/big-pickle):** this wording was light-reviewed and adopted provisionally, per the option recorded in §8 item 3 — no additional blind test required. The light review checked internal consistency with the four-state model (the "established" clause covers States 1/2; the "can actually resolve it" clause covers State 1 only), consistency with the Named-Outcome Test, preservation of the explicit-only boundary, and exploitability; no changes to the validated text were required. One terminology observation was recorded (see promotion package §C): the word "player" could read PC-specific for an attack-side rule, and a generalization to "the actor" is proposed in the promotion package pending designer confirmation — not applied here. The blockquote wording itself is unchanged; this paragraph is the operative finalized-wording record.]**
 
 ---
 
@@ -151,8 +159,8 @@ Conceptual Anchor (§4) does real work in *determining* whether a given category
 | # | Decision | Status |
 |---|---|---|
 | 1 | Explicit-only vs. inferred objectives | **RULED — Explicit-only** (this revision) |
-| 2 | Whether this synthesis is accepted as the current S-2 candidate | **RULED — Accepted, non-canonical, S-2 remains unlocked** (this revision) |
-| 3 | GM-facing presentation of the four-state model | **Directionally ruled — retain four states internally, simplify to one operational question for the table (§5A).** Exact wording in §5A is a draft implementing that direction, not yet separately validated; a light review pass is worth doing before treating the phrasing as final, but this does not block adoption or require another blind test |
+| 2 | Whether this synthesis is accepted as the current S-2 candidate | **RULED — Accepted; attack-side invocation promoted to Canonical §14.7 2026-09-05; S-2's remaining architecture (tier selection, mapping, Tier-2) remains unlocked** (this revision). **[Annotation (2026-09-05):** promotion of the attack-side invocation policy to Canonical completed via the 8-step Promotion Rule with human stop-and-confirm; package at `investigations/tiwas-dec017-s2-invocation-promotion-package-2026-09-05.md`; Canonical Rules & Changelog v1.4.] |
+| 3 | GM-facing presentation of the four-state model | **Directionally ruled — retain four states internally, simplify to one operational question for the table (§5A).** **[Finalization record (2026-09-05):** exact §5A wording light-reviewed and adopted provisionally — no additional blind test required (consistent with this item's own note). See §5A annotation and promotion package §C.] |
 | 4 | Whose roll supplies a Location Index for non-attack physical resolutions (§7) | **Open** — flagged by both parties as a separate, narrower rules-architecture question, not a playtest question |
 | 5 | Whether/when State-3 entries (Disarm, Equipment, Impairment, Armor Bypass, Incapacitation) should be revisited | **Open**, dependent on S-3/S-5/S-7/S-10 locking a *location-specific* mechanism, not merely locking numbers |
 | 6 | Multi-GM usability validation beyond the current single-evaluator record (two trials, 35 scenario-responses) | **Open, optional** — not required to understand what the rule means, per the investigation's own established framing; may be pursued later if desired |

@@ -236,15 +236,15 @@ These are locked game mechanics from D1. Status: **Current**. No advisory sessio
 
 **Scope note on DEC-014:** D1 §14.3 is explicit that this locks *only* the Tier-1 Location Index provider — not whether/when a scene uses Tier 0/1/2, not anatomical mapping, not wound/armor/defense interaction, not whether any later rule may consume a Location Index.
 
-## 4.B. Non-canonical designer rulings (DEC-017 through DEC-093)
+## 4.B. Non-canonical designer rulings (DEC-018 through DEC-093; DEC-017 promoted to Canonical)
 
-All are genuine human/designer rulings on candidate/non-canonical material. None have completed the 8-step Promotion Rule. Status as of 2026-09-03:
+All are genuine human/designer rulings on candidate/non-canonical material. None have completed the 8-step Promotion Rule, except DEC-017 which was promoted to Canonical §14.7 on 2026-09-05 (see §4.A reference). Status as of 2026-09-03:
 
 ### S-2 Hit Location Architecture (DEC-017 through DEC-022)
 
 | ID | Subject | Decision | Status |
 |---|---|---|---|
-| DEC-017 | S-2 attack-side invocation/warrant policy | Four-state model + Named-Outcome Test accepted as "current non-canonical working direction" (attack-side only) | Current (accepted candidate, not locked) |
+| DEC-017 | S-2 attack-side invocation/warrant policy | Four-state model + Named-Outcome Test accepted as "current non-canonical working direction" (attack-side only) | **Promoted to Canonical §14.7 (2026-09-05)** |
 | DEC-018 | Explicit-only objectives | GM does not infer unstated distinct objective from location/fictional context alone | Current, folded into DEC-017's policy |
 | DEC-019 | Structural Weak Points reclassified State 1 → State 2 | Anchored but not yet resolvable; zero State-1/Active cache entries currently exist | Current |
 | DEC-020 | S-2 non-attack Location Index source — categorical deferral | Non-attack physical resolutions generate no Tier-1 Location Index under current design | **Reopened** — S-4 met reopening condition; now able to produce Wounds via Effect, pending new Location Index generation rule |
@@ -554,7 +554,7 @@ Evidence files are referenced by path + one-line status. Do not treat pointers a
 | `investigations/tiwas-env-conditional-trait-tag-advisory-handoff-2026-09-03.md` | Claude Sonnet 5 advisory draft — Environment-Conditional Trait/Tag Binding (Option A); source of DEC-088 (Condition Clause grammar + `env:freezing` Tag; 7th env entry) |
 | `investigations/tiwas-reserved-systems-hazard-cadence-confirmation-gpt5.6-luna-2026-09-03.md` | GPT-5.6 Luna advisory confirmation report — 5.5 Systemic Hazard Resolution Cadence (H1-A–H5-B); source of DEC-089–093 |
 | `investigations/tiwas-s8-third-party-adjudication-mutual-failure-candidate-v1.md` | S-8 Third-Party Adjudication candidate; source of DEC-043 |
-| `investigations/tiwas-s2-hit-location-investigation-v5-synthesis.md` | S-2 Design Investigation v5 synthesis (Correction Pass); source of DEC-017–019 |
+| `investigations/tiwas-s2-hit-location-investigation-v5-synthesis.md` | S-2 Design Investigation v5 synthesis (Correction Pass); source of DEC-017–019. **DEC-017 promoted to Canonical §14.7 (2026-09-05); synthesis retained as historical evidence record.** |
 | `investigations/tiwas-s2-non-attack-location-source-closure-record-v1.2.md` | S-2 Non-Attack closure record; 14-scenario stress-test set; source of DEC-020–022 |
 | `investigations/tiwas-s3-documentarian-handoff-report-dec028-2026-08-30.md` | S-3 DEC-028 handoff; Quality's role investigation |
 | `investigations/llm-quality-s3-reports-2026-08-30.md` | 8-model LLM blind survey on Quality's role (5/8 Option B) |

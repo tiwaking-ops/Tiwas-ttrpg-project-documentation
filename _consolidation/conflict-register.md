@@ -10,7 +10,7 @@ provenance:
     - {name: "nemotron-3-super-120b-a12b:free", version: "unknown"}
   last_modified_by_llm: {name: "opencode", version: "big-pickle"}
   created_date: "2026-08-29"
-  last_modified_date: "2026-08-31"
+  last_modified_date: "2026-09-05"
 ---
 
 # Phase 2 — Conflict Register
@@ -39,7 +39,7 @@ The corpus is unusually self-consistent (it appears to already be a governed doc
 - **Documents containing them:** D5 §2 (timeline), §3 (resolved-vs-inert table); D3 §2.5A investigation-record table.
 - **Relevant decision:** DEC-020, DEC-021.
 - **Resolution:** Resolved by explicit designer ruling — "Option 2" (categorical exclusion) per D5 §2's timeline row "Designer ruling." Direction 1 is recorded as rejected-not-deleted (DEC-021); Direction 2 was withdrawn pre-ruling by the investigators themselves, before the designer decision was even requested, and is explicitly distinguished from the final ruling in D5 §3's own notes ("Distinct from... the final ruling's categorical exclusion, which is a deferral by designer choice, not a four-state classification outcome").
-- **Status:** Resolved (non-canonical), with reopening conditions attached (see DEC-020, D5 §4).
+- **Status:** Resolved (non-canonical), with reopening conditions attached (see DEC-020, D5 §4). **Update (2026-09-05):** DEC-020's reopening conditions were met and discharged — reopened by DEC-036, replacement mechanism defined by DEC-037 (governing failed-roll provenance + systemic exemptions + passive-stub fallback), and residual flags closed via DEC-038/039/051/057. The C3 conflict itself (Direction 1 vs. Direction 2 vs. adopted categorical exclusion) remains recorded as resolved history; DEC-020 is formally closed in `decision-register.md`.
 
 ## C4 — Does the S-2 invocation policy narrow the Tier-selection question?
 

@@ -113,7 +113,7 @@ All implementation decisions should preserve the current priority order:
 | Priority | ID | Decision | Current status | Decision dependency |
 |---:|---|---|---|---|
 | 1 | S-1 | Opposed Quality | **Locked** | Core |
-| 2 | S-2 | Hit-location architecture | **Tier-1 provider: Locked (Zero-Step). Attack-side invocation/warrant policy: Candidate accepted, non-canonical (S-2 Design Investigation v1–v5). Non-attack Location Index generation: RULED — REOPENED by S-4 ruling DEC-036, mechanism now defined by DEC-037 (governing failed-roll provenance + passive-stub fallback; closes OPEN-008). Tier policy (which tier a scene/campaign uses), anatomical mapping, and Tier 2 procedure: all still fully Open.** | S-1 |
+| 2 | S-2 | Hit-location architecture | **Tier-1 provider: Locked (Zero-Step). Attack-side invocation/warrant policy: LOCKED (Canonical §14.7, DEC-017, promoted 2026-09-05). Non-attack Location Index generation: RULED — REOPENED by S-4 ruling DEC-036, mechanism now defined by DEC-037 (governing failed-roll provenance + passive-stub fallback; closes OPEN-008). Tier policy (which tier a scene/campaign uses), anatomical mapping, and Tier 2 procedure: all still fully Open.** | S-1 |
 | 3 | S-3 | Outcome Effects | Open | S-1 |
 | 4 | S-4 | Wound activation/severity | **Ruled (DEC-032–DEC-037; DEC-035 corrected): terminology lock (Injury=HP, Wound=numerical localized state); trigger = selectable Effect only (Wound realized as "Wounded" Condition via Impose Condition); Overflow never causes Wounds; Track A/B both apply sequentially; severity from the S-3 gated Effect (not accumulated count); wound consequences = individual mechanical attribute penalties; DEC-020 reopened and LI mechanism defined (DEC-037). OPEN-006 closed via DEC-035; OPEN-007 ruled; OPEN-008 closed.** | S-2 and S-3 |
 | 5 | S-5 | Armor | Open | S-3 and S-4 |
@@ -231,13 +231,13 @@ No further S-1 development is planned unless new evidence triggers formal reopen
 
 # 9. Phase 2 — S-2 Hit Locations
 
-**Status: Tier-1 provider locked (Zero-Step, evidence-backed) / Attack-side invocation policy: candidate accepted, non-canonical / Non-attack Location Index generation: RULED — deferred / Tier 0/2 policy and broader architecture: WIP**
+**Status: Tier-1 provider locked (Zero-Step, evidence-backed) / Attack-side invocation policy: LOCKED (Canonical §14.7, DEC-017, 2026-09-05) / Non-attack Location Index generation: RULED — mechanism defined by DEC-037, else deferred / Tier 0/2 policy and broader architecture: WIP**
 
 Unchanged: the Tier-1 Location Index provider (Zero-Step) remains complete and locked as previously documented.
 
-**Invocation/Warrant Policy — Attack-Side (Candidate, Non-Canonical):**
+**Invocation/Warrant Policy — Attack-Side (Locked — Canonical §14.7):**
 
-The S-2 Design Investigation (v1–v5) produced a candidate policy for when a Location Index is generated at all, summarized in Proposals/WIP §2.1A. Implementation-relevant summary:
+The S-2 Design Investigation (v1–v5) produced a candidate policy for when a Location Index is generated at all, summarized in Proposals/WIP §2.1A. **That policy was formally promoted to Canonical as §14.7 on 2026-09-05 (DEC-017, 8-step Promotion Rule, human stop-and-confirm; Canonical Rules & Changelog v1.4).** Implementation-relevant summary:
 
 - Location Index generation requires an explicitly stated, distinct outcome beyond ordinary damage, whose location-dependence is already established under current design (not merely anticipated), and which current rules can resolve.
 - A four-state internal classification (Established & Resolvable / Established, Not Yet Resolvable / Outcome Plausible but Location-Dependence Unresolved / No Distinct Consequence) underlies this test but is not intended as a GM-facing procedure — implementation should expose the single collapsed question, not the four states, at the point of play.
@@ -281,12 +281,12 @@ The comparative derivation-cost residual is recorded separately from E9: across 
 **Remaining implementation and design work:**
 
 - Tier 0 and Tier-2 interface — open.
-- Scene/campaign tier policy — **partially informed by the candidate invocation policy, but still open.** The candidate policy determines when a location result is warranted for a given resolution; it does not determine whether a scene or campaign uses Tier 0, Tier 1, or Tier 2 in the first place. That selection question remains unresolved and is not narrowed to "Tier 2 only" by this policy.
+- Scene/campaign tier policy — **partially informed by the now-Canonical attack-side invocation policy (§14.7), but still open.** That policy determines when a location result is warranted for a given resolution; it does not determine whether a scene or campaign uses Tier 0, Tier 1, or Tier 2 in the first place. That selection question remains unresolved and is not narrowed to "Tier 2 only" by this policy.
 - Anatomical mapping from Location Index to zone — open, untouched. Structural Weak Points is classified **State 2** (Established, Not Yet Resolvable), precisely because this mapping doesn't exist yet: location-dependence is anchored, but no Location Index currently generates for this category in play until the mapping is built.
 - Downstream interfaces for Effects, Wounds, Armor, and Defence — open; directly informed by the investigation's State-3 findings, which flag that Disarm, Equipment Damage, Function Impairment, Armor Bypass, and Incapacitation are not currently anchored to location as a mechanism, and that S-3/S-5/S-7/S-10 each contain at least one plausible design path (Margin/Tag-gated triggering) that would not require location at all. Future subsystem design work should treat this as an open fork, not a settled assumption in either direction.
 - **Non-attack Location Index source — RESOLVED AS A DEFERRAL (v1.4.3).** No longer an open implementation question in the "undecided mechanism" sense; the mechanism question (H0 and riders) is on record but inactive, and the category is categorically off until S-4/S-7/S-8 reopens it.
 
-The broader tier policy, anatomical mapping, and downstream interaction remain open and require their own design and validation gates. Do not treat the completed Tier-1 provider decision, the candidate invocation policy, or the non-attack deferral ruling as closure of S-2 as a whole.
+The broader tier policy, anatomical mapping, and downstream interaction remain open and require their own design and validation gates. Do not treat the completed Tier-1 provider decision, the promoted attack-side invocation policy (§14.7), or the non-attack ruling as closure of S-2 as a whole.
 
 ---
 

@@ -103,9 +103,45 @@ A follow-on investigation (S-2 Non-Attack Location Index Source, starter brief v
 
 Unchanged from v1.4.2 — Zero-Step remains the locked Tier-1 provider per Canonical Rules §14.1–§14.2. Not reopened by this update.
 
-## 2.1A S-2 Candidate Invocation Policy (Non-Canonical)
+## 2.1A S-2 Candidate Invocation Policy (Superseded by Canonical §14.7 — attack-side invocation locked 2026-09-05; remaining items below unchanged as historical record)
 
 Unchanged from v1.4.2. This policy governs attack-side invocation only. See §2.5A for the separate, now-closed, non-attack question.
+
+**Formal rule text (documented per Promotion Step 5, accepted ruling DEC-017, 2026-09-05; **superseded-in-place by Canonical §14.7 as of Promotion Step 6 completion 2026-09-05** — derived from `investigations/tiwas-dec017-s2-invocation-promotion-package-2026-09-05.md` §E). The canonical text in `canonical/rules/tiwas-canonical-rules-and-changelog-v1.3.md` §14.7 (v1.4) is authoritative; this block is retained as the formal-rule record within the proposal.**
+
+### §14.7 Attack-side invocation — when a Location Index is warranted
+
+**Status: Canonical / Locked — attack-side invocation policy.**
+
+For an attack-side resolution, a Tier-1 Location Index is generated **only when all three gates are satisfied** for one declared attack objective:
+
+| Gate | Requirement |
+|---|---|
+| W1 — Explicit Objective | The actor explicitly states a distinct consequence beyond ordinary damage |
+| W2 — Established Location-Dependence | Current Tiwas design establishes that the stated consequence is delivered through location (not merely plausible or anticipated) |
+| W3 — Current Resolvability | Current Tiwas rules provide a mechanism that can act on the resulting Location Index |
+
+`Generate(LocationIndex) = W1 ∧ W2 ∧ W3`. If any gate is false, no Location Index is generated. The Zero-Step transformation itself remains governed exclusively by §14.1–§14.2 (DEC-014).
+
+**GM-facing operational test.** In play this is a single question:
+
+> Generate a Location Index only when the actor has explicitly stated a distinct outcome beyond ordinary damage, that outcome's location-dependence is already established under current Tiwas design (not merely plausible or anticipated), and current rules can actually resolve it.
+
+**Warrant test (Named-Outcome Test).** A declared objective is definite — and therefore Warrant-eligible — if and only if the actor explicitly names a distinct consequence, other than ordinary damage, whose resolution depends on the specified location. Purpose or motivation language does not by itself create definiteness; conditional phrasing does not defeat definiteness; only the presence of a named distinct outcome matters.
+
+**Explicit-only boundary.** The GM does not infer an unstated distinct objective from location, attack description, fictional context, or cinematic framing alone. Only stated objectives are Warrant-eligible.
+
+**Procedural riders.**
+1. Compound objectives are evaluated disjunctively: if any named branch of a multi-part declaration satisfies the Named-Outcome Test, Warrant is established for that branch.
+2. Stale objectives void the match: a Warrant is invalid if the fictional state on record no longer supports the rationale for the named outcome.
+3. S-1 winner-only: in an opposed contest, only the winning participant's natural roll is eligible for Location Index generation (per §13.2; Quality never alters either participant's historical roll).
+4. Lazy evaluation: because Zero-Step is a read-only post-process of an already-recorded roll (§14.2), Warrant/resolvability evaluation may be deferred to the point a downstream stage first requires the answer.
+
+**Classification architecture.** For documentation and cache maintenance, concepts are classified: State 1 = Established & Resolvable (generate); State 2 = Established, Not Yet Resolvable (do not generate; record as pending); State 3 = Outcome Plausible, Location-Dependence Unresolved (do not generate); State 4 = No Distinct Consequence (do not generate). This four-state scheme is an internal/documentation architecture; a GM applying the operational test above need not separately track it.
+
+**Non-attack boundary.** These gates govern attack-side invocation only. Non-attack Location Index generation is governed separately (DEC-037; DEC-020 formally closed 2026-09-05).
+
+---
 
 The S-2 Design Investigation (v1–v5) proposes the following as a candidate answer to "when should Tiwas generate a Tier-1 Location Index":
 
@@ -116,9 +152,11 @@ The S-2 Design Investigation (v1–v5) proposes the following as a candidate ans
 3. **Outcome Plausible, Location-Dependence Unresolved** — the named consequence is a reasonable future outcome, but whether location specifically delivers it is an open design fork, not just an unimplemented detail → do not generate.
 4. **No Distinct Consequence** — no distinct outcome named → do not generate.
 
-**GM-facing procedure (simplified, draft):**
+**GM-facing procedure (simplified — finalized wording, adopted provisionally 2026-09-05 after light review; see `investigations/tiwas-dec017-s2-invocation-promotion-package-2026-09-05.md` §C):**
 
 > Generate a Location Index only when the player has explicitly stated a distinct outcome beyond ordinary damage, that outcome's location-dependence is already established under current Tiwas design (not merely plausible or anticipated), and current rules can actually resolve it.
+
+*[Wording finalized and adopted provisionally 2026-09-05 (DEC-A1 Option C, "actor" operative text); superseded-in-place by Canonical §14.7 upon formal promotion.]*
 
 **Warrant test (Named-Outcome Test):** a declared objective is definite — and Warrant-eligible — only if the player explicitly names a distinct consequence, other than ordinary damage, tied to the specified location. Conditional phrasing does not defeat definiteness; stated purpose/motivation without a named distinct outcome does not establish it.
 
@@ -979,6 +1017,8 @@ Direct effects of this ruling:
 This ruling does not reopen, alter, or narrow: Zero-Step (attack-side, Canonical §14.1–§14.2), S-1, the attack-side invocation/warrant policy (§2.1A), the Structural Weak Points State-2 classification, the W3 cache, or Tier 0/1/2 scene-selection policy. No Canonical Rules changed. Nothing in this revision is promoted to Canonical status; see §21.
 
 The former §2.5 non-attack bullet (as it stood in v1.4.2, "still open") is superseded by the ruling recorded in §2.5A but retains historical significance as the pre-ruling open-question state.
+
+**2026-09-05:** DEC-017 (S-2 attack-side invocation/warrant policy) formally promoted to Canonical §14.7 under the 8-step Promotion Rule (human designer acceptance; all eight steps stop-and-confirmed). Canonical Rules & Changelog bumped to v1.4. §2.1A is now Superseded by Canonical for the attack-side invocation policy; its remaining S-2 items stand unchanged and unresolved. Reference: `_consolidation/decision-register.md` DEC-017; `investigations/tiwas-dec017-s2-invocation-promotion-package-2026-09-05.md`.
 
 ---
 

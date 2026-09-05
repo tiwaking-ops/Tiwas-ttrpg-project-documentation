@@ -1,16 +1,16 @@
 ---
 document:
   title: "Tiwas — Canonical Rules & Changelog"
-  version: "v1.3"
+  version: "v1.4"
   status: "Canonical / Locked (self-declared; corroborated across D2/D3/D4/D5 — see governance/authority.md)"
 provenance:
   author_llm: {name: "not established", version: "not established"}
   assessor_llm:
     - {name: "Claude Sonnet 5", version: "claude-sonnet-5"}
     - {name: "nemotron-3-super-120b-a12b:free", version: "unknown"}
-  last_modified_by_llm: {name: "not established", version: "not established"}
+  last_modified_by_llm: {name: "opencode", version: "big-pickle"}
   created_date: "not established (source document undated)"
-  last_modified_date: "not established (source document undated)"
+  last_modified_date: "2026-09-05"
 consolidation_note: >
   This file is a placement of the source document into canonical/rules/ during
   initial repository consolidation (2026-08-29). Its substantive content is
@@ -26,11 +26,14 @@ consolidation_note: >
   verified this placement and the byte-identity of the substantive body; the
   independent assessor was appended to assessor_llm per Priority-7 §4.4. The
   placement remains as confirmed by the human 2026-08-29.
+  Edited 2026-09-05 per Promotion Step 6 (DEC-017): version bumped to v1.4,
+  §14.7 attack-side invocation added, §14.3/§15/§17 updated. The source copy
+  in sources/ remains at v1.3 and is unmodified (divergence verified by diff).
 ---
 
 # Tiwas — Canonical Rules & Changelog
 
-**Document Version:** v1.3  
+**Document Version:** v1.4  
 **Document Status:** Canonical Source of Truth  
 **Document Role:** Authoritative statement of the current Tiwas ruleset  
 **Supersedes:** Canonical Rules & Changelog v1.2 and previous standalone Core Rules and locked subsystem documents for any material incorporated here  
@@ -511,7 +514,9 @@ The following are not established by this ruling:
 - Tier-0 and Tier-2 procedures;
 - anatomical mapping from a Location Index to a zone;
 - wound, armour, defence and Outcome Effect interaction;
-- whether any later rule may select, modify or consume a Location Index.
+- whether any later rule may select, modify or consume a Location Index;
+- the attack-side invocation/warrant policy and Named-Outcome Test (established by §14.7 through the separate DEC-017 promotion);
+- the non-attack Location Index generation rule (separately governed by the DEC-037 chain).
 
 These matters remain non-canonical until separately resolved through governance.
 
@@ -540,13 +545,45 @@ Separate from E9, the completed comparative analysis found that Units-Digit requ
 
 The completed physical two-d10 playtest establishes usability only for its tested method. Any relative cost or usability conclusion for other input methods remains outside that playtest's evidence.
 
+## 14.7 Attack-side invocation — when a Location Index is warranted
+
+**Status: Canonical / Locked — attack-side invocation policy. Established 2026-09-05 by DEC-017 (S-2 attack-side invocation/warrant policy) through the 8-step Promotion Rule.**
+
+For an attack-side resolution, a Tier-1 Location Index is generated **only when all three gates are satisfied** for one declared attack objective:
+
+| Gate | Requirement |
+|---|---|
+| W1 — Explicit Objective | The actor explicitly states a distinct consequence beyond ordinary damage |
+| W2 — Established Location-Dependence | Current Tiwas design establishes that the stated consequence is delivered through location (not merely plausible or anticipated) |
+| W3 — Current Resolvability | Current Tiwas rules provide a mechanism that can act on the resulting Location Index |
+
+`Generate(LocationIndex) = W1 ∧ W2 ∧ W3`. If any gate is false, no Location Index is generated. The Zero-Step transformation itself remains governed exclusively by §14.1–§14.2 (DEC-014); §14.7 is an invocation layer around that transformation, not a modification of it.
+
+**GM-facing operational test.** In play this is a single question:
+
+> Generate a Location Index only when the actor has explicitly stated a distinct outcome beyond ordinary damage, that outcome's location-dependence is already established under current Tiwas design (not merely plausible or anticipated), and current rules can actually resolve it.
+
+**Warrant test (Named-Outcome Test).** A declared objective is definite — and therefore Warrant-eligible — if and only if the actor explicitly names a distinct consequence, other than ordinary damage, whose resolution depends on the specified location. Purpose or motivation language does not by itself create definiteness; conditional phrasing does not defeat definiteness; only the presence of a named distinct outcome matters.
+
+**Explicit-only boundary.** The GM does not infer an unstated distinct objective from location, attack description, fictional context, or cinematic framing alone. Only stated objectives are Warrant-eligible.
+
+**Procedural riders.**
+1. Compound objectives are evaluated disjunctively: if any named branch of a multi-part declaration satisfies the Named-Outcome Test, Warrant is established for that branch.
+2. Stale objectives void the match: a Warrant is invalid if the fictional state on record no longer supports the rationale for the named outcome.
+3. S-1 winner-only: in an opposed contest, only the winning participant's natural roll is eligible for Location Index generation (per §13.2; Quality never alters either participant's historical roll).
+4. Lazy evaluation: because Zero-Step is a read-only post-process of an already-recorded roll (§14.2), Warrant/resolvability evaluation may be deferred to the point a downstream stage first requires the answer.
+
+**Classification architecture.** For documentation and cache maintenance, concepts are classified: State 1 = Established & Resolvable (generate); State 2 = Established, Not Yet Resolvable (do not generate; record as pending); State 3 = Outcome Plausible, Location-Dependence Unresolved (do not generate); State 4 = No Distinct Consequence (do not generate). This four-state scheme is an internal/documentation architecture used for cache-content bookkeeping; a GM applying the operational test above need not separately track it. Cache contents are revisable by later subsystem locks without reopening this policy. The W3 reference-cache (see the separate W3 cache record) is shorthand only and never an independent authority.
+
+**Non-attack boundary.** These gates govern attack-side invocation only. Non-attack Location Index generation is governed separately (DEC-037 chain; the former non-attack deferral record DEC-020 was formally closed 2026-09-05).
+
 ---
 
 # 15. Reserved Systems
 
 The following remain outside the locked Core unless separately incorporated into this document through formal governance:
 
-- hit-location rules, except the Tier-1 Zero-Step Location Index provider in Section 14;
+- hit-location rules, except the Tier-1 Zero-Step Location Index provider (§14.1–§14.2) and the attack-side invocation/warrant policy (§14.7);
 - wound activation/severity;
 - Outcome Effects;
 - armor;
@@ -650,6 +687,19 @@ The locked S-1 closure pass:
 2. Explicitly recorded that single-d100, digital, and verbally announced input methods remain untested.
 3. Separated the comparative derivation-cost residual from E9 so that structural comparison and human evidence do not receive conflicting labels.
 4. Preserved Zero-Step as the deterministic canonical Tier-1 provider; preserved the broader S-2 architecture as unresolved.
+
+## S-2 attack-side invocation v1.3 → v1.4 (2026-09-05)
+
+Promotion of DEC-017 (S-2 attack-side invocation/warrant policy) under the 8-step Promotion Rule, accepted by the human designer:
+
+1. Locked the attack-side invocation/warrant policy: the W1/W2/W3 gate rule, the GM-facing operational test, the Named-Outcome Test, the explicit-only boundary (incl. cinematic framing) and the four procedural riders (§14.7).
+2. Locked the four-state classification as an internal/documentation architecture for cache-content bookkeeping.
+3. Locked the W3 reference-cache role as shorthand only, never an independent authority.
+4. Recorded that cache contents (e.g., Structural Weak Points at State 2) are revisable by later subsystem locks without reopening this policy.
+5. Confirmed that §14.7 is an invocation layer around Zero-Step (§14.1–§14.2, DEC-014); Zero-Step itself is unchanged.
+6. No new blind test was required for the §5A GM-facing wording (adopted provisionally after light review; DEC-A1 Option C).
+7. Preserved the broader S-2 architecture (tier selection, anatomical mapping, zone ranges, Tier-2 subdivision) as unresolved.
+8. Preserved the separate non-attack Location Index generation rule as unchanged (governed by the DEC-037 chain; DEC-020 formally closed 2026-09-05).
 
 ## Consolidation change
 
