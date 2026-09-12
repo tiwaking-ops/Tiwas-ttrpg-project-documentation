@@ -1,0 +1,695 @@
+[
+  {
+    "replicate": 1,
+    "total_rounds": 40,
+    "total_exchanges_logged": 147,
+    "victor": "Beta",
+    "termination_cause": "HP <= 0 (DEC-052 forced incapacitation)",
+    "alpha_final_hp": -2,
+    "beta_final_hp": 316,
+    "alpha_final_pe": 50,
+    "beta_final_pe": 91,
+    "alpha_skills": {
+      "Attack": 33,
+      "Grapple": 35,
+      "Trip": 31,
+      "Disarm": 32,
+      "EquipmentDamage": 34,
+      "Defense": 44,
+      "Defense-Adv1(T3)": 1,
+      "Defense-Adv2(T3)": 1,
+      "Defense-Adv3(T3)": 1,
+      "Grapple-Adv4(T3)": 1,
+      "Defense-Adv5(T3)": 1,
+      "Defense-Adv6(T3)": 1,
+      "Trip-Adv7(T3)": 1,
+      "Defense-Adv8(T3)": 1,
+      "Grapple-Adv9(T3)": 1,
+      "Grapple-Adv10(T3)": 1,
+      "EquipmentDamage-Adv11(T3)": 1
+    },
+    "beta_skills": {
+      "Attack": 31,
+      "Grapple": 35,
+      "Trip": 27,
+      "Disarm": 32,
+      "EquipmentDamage": 37,
+      "Defense": 41,
+      "Grapple-Adv1(T3)": 1,
+      "Defense-Adv2(T3)": 1,
+      "Trip-Adv3(T3)": 1,
+      "EquipmentDamage-Adv4(T3)": 1,
+      "Defense-Adv5(T3)": 1,
+      "Attack-Adv6(T3)": 1,
+      "Disarm-Adv7(T3)": 1,
+      "Disarm-Adv8(T3)": 1,
+      "EquipmentDamage-Adv9(T3)": 1,
+      "Defense-Adv10(T3)": 1,
+      "Disarm-Adv11(T3)": 1,
+      "Disarm-Adv12(T3)": 1,
+      "Disarm-Adv13(T3)": 1,
+      "Defense-Adv14(T3)": 1,
+      "EquipmentDamage-Adv15(T3)": 1,
+      "EquipmentDamage-Adv16(T3)": 1
+    },
+    "alpha_advanced_skills": [
+      "Defense-Adv1(T3)",
+      "Defense-Adv2(T3)",
+      "Defense-Adv3(T3)",
+      "Grapple-Adv4(T3)",
+      "Defense-Adv5(T3)",
+      "Defense-Adv6(T3)",
+      "Trip-Adv7(T3)",
+      "Defense-Adv8(T3)",
+      "Grapple-Adv9(T3)",
+      "Grapple-Adv10(T3)",
+      "EquipmentDamage-Adv11(T3)"
+    ],
+    "beta_advanced_skills": [
+      "Grapple-Adv1(T3)",
+      "Defense-Adv2(T3)",
+      "Trip-Adv3(T3)",
+      "EquipmentDamage-Adv4(T3)",
+      "Defense-Adv5(T3)",
+      "Attack-Adv6(T3)",
+      "Disarm-Adv7(T3)",
+      "Disarm-Adv8(T3)",
+      "EquipmentDamage-Adv9(T3)",
+      "Defense-Adv10(T3)",
+      "Disarm-Adv11(T3)",
+      "Disarm-Adv12(T3)",
+      "Disarm-Adv13(T3)",
+      "Defense-Adv14(T3)",
+      "EquipmentDamage-Adv15(T3)",
+      "EquipmentDamage-Adv16(T3)"
+    ],
+    "alpha_conditions_ever": [
+      {
+        "type": "Grappled",
+        "tier": 2,
+        "magnitude": -2,
+        "location": null,
+        "zone": null,
+        "source_exchange": 14
+      },
+      {
+        "type": "Grappled",
+        "tier": 1,
+        "magnitude": -1,
+        "location": null,
+        "zone": null,
+        "source_exchange": 34
+      },
+      {
+        "type": "Grappled",
+        "tier": 2,
+        "magnitude": -2,
+        "location": null,
+        "zone": null,
+        "source_exchange": 48
+      },
+      {
+        "type": "Grappled",
+        "tier": 2,
+        "magnitude": -2,
+        "location": null,
+        "zone": null,
+        "source_exchange": 63
+      },
+      {
+        "type": "Prone",
+        "tier": 2,
+        "magnitude": -2,
+        "location": 91,
+        "zone": "Head",
+        "source_exchange": 65
+      },
+      {
+        "type": "Grappled",
+        "tier": 2,
+        "magnitude": -2,
+        "location": null,
+        "zone": null,
+        "source_exchange": 107
+      },
+      {
+        "type": "EquipmentDamaged",
+        "tier": 2,
+        "magnitude": -2,
+        "location": 42,
+        "zone": "Torso",
+        "source_exchange": 129
+      }
+    ],
+    "beta_conditions_ever": [
+      {
+        "type": "Prone",
+        "tier": 2,
+        "magnitude": -2,
+        "location": 91,
+        "zone": "Head",
+        "source_exchange": 22
+      },
+      {
+        "type": "Grappled",
+        "tier": 2,
+        "magnitude": -2,
+        "location": null,
+        "zone": null,
+        "source_exchange": 35
+      },
+      {
+        "type": "Grappled",
+        "tier": 2,
+        "magnitude": -2,
+        "location": null,
+        "zone": null,
+        "source_exchange": 46
+      },
+      {
+        "type": "Prone",
+        "tier": 2,
+        "magnitude": -2,
+        "location": 21,
+        "zone": "Legs",
+        "source_exchange": 51
+      },
+      {
+        "type": "Prone",
+        "tier": 2,
+        "magnitude": -2,
+        "location": 80,
+        "zone": "Head",
+        "source_exchange": 66
+      },
+      {
+        "type": "Grappled",
+        "tier": 2,
+        "magnitude": -2,
+        "location": null,
+        "zone": null,
+        "source_exchange": 79
+      },
+      {
+        "type": "EquipmentDamaged",
+        "tier": 1,
+        "magnitude": -1,
+        "location": 72,
+        "zone": "Arms",
+        "source_exchange": 99
+      },
+      {
+        "type": "Prone",
+        "tier": 2,
+        "magnitude": -2,
+        "location": 70,
+        "zone": "Arms",
+        "source_exchange": 123
+      },
+      {
+        "type": "Prone",
+        "tier": 2,
+        "magnitude": -2,
+        "location": 32,
+        "zone": "Torso",
+        "source_exchange": 138
+      }
+    ],
+    "alpha_total_failure_xp": 3282,
+    "beta_total_failure_xp": 2871,
+    "alpha_general_xp": 1491,
+    "beta_general_xp": 1278,
+    "outcome_counts": {
+      "defender-wins": 52,
+      "repeat-bothfail": 66,
+      "attacker-wins": 28,
+      "repeat-tie": 1
+    },
+    "effect_counts": {
+      "Impose Condition: Grappled": 8,
+      "Knock Prone": 6,
+      "Inflict Injury": 5,
+      "Equipment Damage -> FAIL-AND-FALL-BACK -> Inflict Injury": 1,
+      "Disarm/Break Hold -> FAIL-AND-FALL-BACK -> Inflict Injury": 6,
+      "Equipment Damage": 2
+    },
+    "tagcheck_counts": {
+      "n/a": 14,
+      "fail-and-fall-back": 7,
+      "pass": 2
+    },
+    "skill_choice_counts": {
+      "Attack": 24,
+      "Grapple": 38,
+      "Trip": 23,
+      "Disarm": 34,
+      "EquipmentDamage": 28
+    },
+    "objective_coverage": {
+      "1_melee_exchange": true,
+      "2_contest_delta_hp": true,
+      "3_effect_tier_magnitude": true,
+      "4_skill_tier_shred": true,
+      "5_zero_step_location": true,
+      "6_tag_location_gating": true,
+      "7_grappled_imposition": true,
+      "7_breakhold_escape": false,
+      "8_wound_target_selection": false,
+      "9_advanced_skill_creation": true,
+      "10_armor_bypass": null
+    }
+  },
+  {
+    "replicate": 2,
+    "total_rounds": 44,
+    "total_exchanges_logged": 144,
+    "victor": "Beta",
+    "termination_cause": "HP <= 0 (DEC-052 forced incapacitation)",
+    "alpha_final_hp": -15,
+    "beta_final_hp": 147,
+    "alpha_final_pe": 50,
+    "beta_final_pe": 150,
+    "alpha_skills": {
+      "Attack": 35,
+      "Grapple": 31,
+      "Trip": 34,
+      "Disarm": 34,
+      "EquipmentDamage": 32,
+      "Defense": 46,
+      "Trip-Adv1(T3)": 1,
+      "Disarm-Adv2(T3)": 1,
+      "Attack-Adv3(T3)": 1,
+      "Defense-Adv4(T3)": 1,
+      "Disarm-Adv5(T3)": 1,
+      "Defense-Adv6(T3)": 1,
+      "Defense-Adv7(T3)": 1,
+      "Grapple-Adv8(T3)": 1,
+      "Defense-Adv9(T3)": 1,
+      "Defense-Adv10(T3)": 1,
+      "Defense-Adv11(T3)": 1
+    },
+    "beta_skills": {
+      "Attack": 34,
+      "Grapple": 32,
+      "Trip": 35,
+      "Disarm": 33,
+      "EquipmentDamage": 30,
+      "Defense": 47,
+      "Defense-Adv1(T3)": 1,
+      "Defense-Adv2(T3)": 1,
+      "Defense-Adv3(T3)": 1,
+      "Defense-Adv4(T3)": 1,
+      "Defense-Adv5(T3)": 1,
+      "Trip-Adv6(T3)": 1,
+      "Defense-Adv7(T3)": 1,
+      "Grapple-Adv8(T3)": 1,
+      "Defense-Adv9(T3)": 1,
+      "Grapple-Adv10(T3)": 1,
+      "Trip-Adv11(T3)": 1
+    },
+    "alpha_advanced_skills": [
+      "Trip-Adv1(T3)",
+      "Disarm-Adv2(T3)",
+      "Attack-Adv3(T3)",
+      "Defense-Adv4(T3)",
+      "Disarm-Adv5(T3)",
+      "Defense-Adv6(T3)",
+      "Defense-Adv7(T3)",
+      "Grapple-Adv8(T3)",
+      "Defense-Adv9(T3)",
+      "Defense-Adv10(T3)",
+      "Defense-Adv11(T3)"
+    ],
+    "beta_advanced_skills": [
+      "Defense-Adv1(T3)",
+      "Defense-Adv2(T3)",
+      "Defense-Adv3(T3)",
+      "Defense-Adv4(T3)",
+      "Defense-Adv5(T3)",
+      "Trip-Adv6(T3)",
+      "Defense-Adv7(T3)",
+      "Grapple-Adv8(T3)",
+      "Defense-Adv9(T3)",
+      "Grapple-Adv10(T3)",
+      "Trip-Adv11(T3)"
+    ],
+    "alpha_conditions_ever": [
+      {
+        "type": "Grappled",
+        "tier": 1,
+        "magnitude": -1,
+        "location": null,
+        "zone": null,
+        "source_exchange": 5
+      },
+      {
+        "type": "Prone",
+        "tier": 1,
+        "magnitude": -1,
+        "location": 11,
+        "zone": "Legs",
+        "source_exchange": 7
+      },
+      {
+        "type": "Prone",
+        "tier": 1,
+        "magnitude": -1,
+        "location": 30,
+        "zone": "Torso",
+        "source_exchange": 29
+      },
+      {
+        "type": "Grappled",
+        "tier": 2,
+        "magnitude": -2,
+        "location": null,
+        "zone": null,
+        "source_exchange": 40
+      },
+      {
+        "type": "Prone",
+        "tier": 2,
+        "magnitude": -2,
+        "location": 70,
+        "zone": "Arms",
+        "source_exchange": 44
+      },
+      {
+        "type": "EquipmentDamaged",
+        "tier": 2,
+        "magnitude": -2,
+        "location": 61,
+        "zone": "Arms",
+        "source_exchange": 49
+      },
+      {
+        "type": "EquipmentDamaged",
+        "tier": 2,
+        "magnitude": -2,
+        "location": 71,
+        "zone": "Arms",
+        "source_exchange": 63
+      },
+      {
+        "type": "Prone",
+        "tier": 2,
+        "magnitude": -2,
+        "location": 40,
+        "zone": "Torso",
+        "source_exchange": 71
+      },
+      {
+        "type": "Grappled",
+        "tier": 2,
+        "magnitude": -2,
+        "location": null,
+        "zone": null,
+        "source_exchange": 120
+      },
+      {
+        "type": "Grappled",
+        "tier": 2,
+        "magnitude": -2,
+        "location": null,
+        "zone": null,
+        "source_exchange": 136
+      },
+      {
+        "type": "Prone",
+        "tier": 2,
+        "magnitude": -2,
+        "location": 80,
+        "zone": "Head",
+        "source_exchange": 140
+      }
+    ],
+    "beta_conditions_ever": [
+      {
+        "type": "EquipmentDamaged",
+        "tier": 2,
+        "magnitude": -2,
+        "location": 51,
+        "zone": "Arms",
+        "source_exchange": 19
+      },
+      {
+        "type": "Grappled",
+        "tier": 2,
+        "magnitude": -2,
+        "location": null,
+        "zone": null,
+        "source_exchange": 41
+      },
+      {
+        "type": "Prone",
+        "tier": 2,
+        "magnitude": -2,
+        "location": 40,
+        "zone": "Torso",
+        "source_exchange": 42
+      },
+      {
+        "type": "Disarmed",
+        "tier": 1,
+        "magnitude": -1,
+        "location": 61,
+        "zone": "Arms",
+        "source_exchange": 46
+      },
+      {
+        "type": "Prone",
+        "tier": 1,
+        "magnitude": -1,
+        "location": 21,
+        "zone": "Legs",
+        "source_exchange": 54
+      },
+      {
+        "type": "EquipmentDamaged",
+        "tier": 2,
+        "magnitude": -2,
+        "location": 41,
+        "zone": "Torso",
+        "source_exchange": 76
+      },
+      {
+        "type": "Grappled",
+        "tier": 1,
+        "magnitude": -1,
+        "location": null,
+        "zone": null,
+        "source_exchange": 97
+      }
+    ],
+    "alpha_total_failure_xp": 3277,
+    "beta_total_failure_xp": 3128,
+    "alpha_general_xp": 1364,
+    "beta_general_xp": 1232,
+    "outcome_counts": {
+      "repeat-bothfail": 56,
+      "defender-wins": 51,
+      "attacker-wins": 37
+    },
+    "effect_counts": {
+      "Impose Condition: Grappled": 6,
+      "Knock Prone": 7,
+      "Disarm/Break Hold -> FAIL-AND-FALL-BACK -> Inflict Injury": 9,
+      "Equipment Damage": 4,
+      "Inflict Injury": 6,
+      "Disarm/Break Hold": 1,
+      "Equipment Damage -> FAIL-AND-FALL-BACK -> Inflict Injury": 4
+    },
+    "tagcheck_counts": {
+      "n/a": 13,
+      "fail-and-fall-back": 13,
+      "pass": 5
+    },
+    "skill_choice_counts": {
+      "Attack": 31,
+      "Grapple": 26,
+      "Trip": 31,
+      "Disarm": 31,
+      "EquipmentDamage": 25
+    },
+    "objective_coverage": {
+      "1_melee_exchange": true,
+      "2_contest_delta_hp": true,
+      "3_effect_tier_magnitude": true,
+      "4_skill_tier_shred": true,
+      "5_zero_step_location": true,
+      "6_tag_location_gating": true,
+      "7_grappled_imposition": true,
+      "7_breakhold_escape": false,
+      "8_wound_target_selection": false,
+      "9_advanced_skill_creation": true,
+      "10_armor_bypass": null
+    }
+  },
+  {
+    "replicate": 3,
+    "total_rounds": 22,
+    "total_exchanges_logged": 93,
+    "victor": "Alpha",
+    "termination_cause": "HP <= 0 (DEC-052 forced incapacitation)",
+    "alpha_final_hp": 303,
+    "beta_final_hp": -8,
+    "alpha_final_pe": 87,
+    "beta_final_pe": 50,
+    "alpha_skills": {
+      "Attack": 28,
+      "Grapple": 34,
+      "Trip": 34,
+      "Disarm": 28,
+      "EquipmentDamage": 32,
+      "Defense": 40,
+      "Defense-Adv1(T3)": 1,
+      "Defense-Adv2(T3)": 1,
+      "Grapple-Adv3(T3)": 1,
+      "Grapple-Adv4(T3)": 1,
+      "Trip-Adv5(T3)": 1,
+      "EquipmentDamage-Adv6(T3)": 1,
+      "Defense-Adv7(T3)": 1,
+      "EquipmentDamage-Adv8(T3)": 1
+    },
+    "beta_skills": {
+      "Attack": 30,
+      "Grapple": 36,
+      "Trip": 27,
+      "Disarm": 31,
+      "EquipmentDamage": 30,
+      "Defense": 45,
+      "Trip-Adv1(T3)": 1,
+      "Disarm-Adv2(T3)": 1,
+      "Defense-Adv3(T3)": 1,
+      "Grapple-Adv4(T3)": 1,
+      "Grapple-Adv5(T3)": 1,
+      "Defense-Adv6(T3)": 1,
+      "Defense-Adv7(T3)": 1,
+      "Defense-Adv8(T3)": 1,
+      "Defense-Adv9(T3)": 1
+    },
+    "alpha_advanced_skills": [
+      "Defense-Adv1(T3)",
+      "Defense-Adv2(T3)",
+      "Grapple-Adv3(T3)",
+      "Grapple-Adv4(T3)",
+      "Trip-Adv5(T3)",
+      "EquipmentDamage-Adv6(T3)",
+      "Defense-Adv7(T3)",
+      "EquipmentDamage-Adv8(T3)"
+    ],
+    "beta_advanced_skills": [
+      "Trip-Adv1(T3)",
+      "Disarm-Adv2(T3)",
+      "Defense-Adv3(T3)",
+      "Grapple-Adv4(T3)",
+      "Grapple-Adv5(T3)",
+      "Defense-Adv6(T3)",
+      "Defense-Adv7(T3)",
+      "Defense-Adv8(T3)",
+      "Defense-Adv9(T3)"
+    ],
+    "alpha_conditions_ever": [
+      {
+        "type": "Grappled",
+        "tier": 1,
+        "magnitude": -1,
+        "location": null,
+        "zone": null,
+        "source_exchange": 71
+      }
+    ],
+    "beta_conditions_ever": [
+      {
+        "type": "Grappled",
+        "tier": 1,
+        "magnitude": -1,
+        "location": null,
+        "zone": null,
+        "source_exchange": 6
+      },
+      {
+        "type": "Prone",
+        "tier": 2,
+        "magnitude": -2,
+        "location": 1,
+        "zone": "Legs",
+        "source_exchange": 10
+      },
+      {
+        "type": "Grappled",
+        "tier": 2,
+        "magnitude": -2,
+        "location": null,
+        "zone": null,
+        "source_exchange": 27
+      },
+      {
+        "type": "EquipmentDamaged",
+        "tier": 2,
+        "magnitude": -2,
+        "location": 40,
+        "zone": "Torso",
+        "source_exchange": 36
+      },
+      {
+        "type": "Grappled",
+        "tier": 2,
+        "magnitude": -2,
+        "location": null,
+        "zone": null,
+        "source_exchange": 78
+      },
+      {
+        "type": "Prone",
+        "tier": 1,
+        "magnitude": -1,
+        "location": 11,
+        "zone": "Legs",
+        "source_exchange": 80
+      }
+    ],
+    "alpha_total_failure_xp": 2117,
+    "beta_total_failure_xp": 2449,
+    "alpha_general_xp": 763,
+    "beta_general_xp": 943,
+    "outcome_counts": {
+      "defender-wins": 23,
+      "attacker-wins": 20,
+      "repeat-bothfail": 50
+    },
+    "effect_counts": {
+      "Inflict Injury": 5,
+      "Impose Condition: Grappled": 4,
+      "Knock Prone": 2,
+      "Disarm/Break Hold -> FAIL-AND-FALL-BACK -> Inflict Injury": 5,
+      "Equipment Damage -> FAIL-AND-FALL-BACK -> Inflict Injury": 3,
+      "Equipment Damage": 1
+    },
+    "tagcheck_counts": {
+      "n/a": 6,
+      "fail-and-fall-back": 8,
+      "pass": 1
+    },
+    "skill_choice_counts": {
+      "Attack": 12,
+      "Grapple": 29,
+      "Trip": 19,
+      "Disarm": 14,
+      "EquipmentDamage": 19
+    },
+    "objective_coverage": {
+      "1_melee_exchange": true,
+      "2_contest_delta_hp": true,
+      "3_effect_tier_magnitude": true,
+      "4_skill_tier_shred": true,
+      "5_zero_step_location": true,
+      "6_tag_location_gating": true,
+      "7_grappled_imposition": true,
+      "7_breakhold_escape": false,
+      "8_wound_target_selection": false,
+      "9_advanced_skill_creation": true,
+      "10_armor_bypass": null
+    }
+  }
+]

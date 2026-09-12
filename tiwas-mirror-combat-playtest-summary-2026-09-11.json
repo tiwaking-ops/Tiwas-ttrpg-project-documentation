@@ -1,0 +1,57 @@
+{
+  "author": "GPT-5.6 Luna",
+  "date": "2026-09-11",
+  "seed": 20260911,
+  "combats": 250,
+  "winner_counts": {
+    "Alpha": 115,
+    "Beta": 134,
+    "tie": 1
+  },
+  "mean_exchanges": 127.944,
+  "median_exchanges": 127.5,
+  "outcomes": {
+    "attacker-wins": 7001,
+    "repeat": 14489,
+    "defender-wins": 10496
+  },
+  "effects": {
+    "Attack": {
+      "n": 6497,
+      "wins": 1428,
+      "fallback": 0,
+      "damage": 18944,
+      "loc": 0
+    },
+    "Grapple": {
+      "n": 6440,
+      "wins": 1434,
+      "fallback": 0,
+      "damage": 0,
+      "loc": 1434
+    },
+    "Trip": {
+      "n": 6399,
+      "wins": 1397,
+      "fallback": 0,
+      "damage": 0,
+      "loc": 1397
+    },
+    "Disarm": {
+      "n": 6353,
+      "wins": 1366,
+      "fallback": 1117,
+      "damage": 15283,
+      "loc": 1366
+    },
+    "Equipment Damage": {
+      "n": 6297,
+      "wins": 1376,
+      "fallback": 776,
+      "damage": 10306,
+      "loc": 1376
+    }
+  },
+  "full_set_armor_bypass_blocked": 244,
+  "block_exchange_median": 17.0
+}
