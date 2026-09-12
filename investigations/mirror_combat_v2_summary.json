@@ -1,0 +1,781 @@
+{
+  "total_exchanges": 129,
+  "total_rounds": 65,
+  "terminated_by_hp": true,
+  "final_state": {
+    "Alpha": {
+      "hp_current": 260,
+      "hp_max": 616,
+      "pe_current": 156,
+      "pe_max": 156,
+      "attrs": {
+        "bee": 52,
+        "bep": 52,
+        "bes": 52,
+        "bex": 52,
+        "bpe": 51,
+        "bpp": 51,
+        "bps": 51,
+        "bpx": 51,
+        "bse": 51,
+        "bsp": 51,
+        "bss": 51,
+        "bsx": 51,
+        "mee": 51,
+        "mep": 51,
+        "mes": 51,
+        "mex": 51,
+        "mpe": 51,
+        "mpp": 51,
+        "mps": 51,
+        "mpx": 51,
+        "mse": 51,
+        "msp": 51,
+        "mss": 51,
+        "msx": 51
+      },
+      "skills": {
+        "Attack": {
+          "value": 29,
+          "cap": 51,
+          "tier": 2,
+          "role": "offense"
+        },
+        "Grapple": {
+          "value": 32,
+          "cap": 51,
+          "tier": 2,
+          "role": "offense"
+        },
+        "Trip": {
+          "value": 30,
+          "cap": 51,
+          "tier": 2,
+          "role": "offense"
+        },
+        "Disarm": {
+          "value": 33,
+          "cap": 51,
+          "tier": 2,
+          "role": "offense"
+        },
+        "EquipmentDamage": {
+          "value": 31,
+          "cap": 51,
+          "tier": 2,
+          "role": "offense"
+        },
+        "Wound": {
+          "value": 26,
+          "cap": 51,
+          "tier": 2,
+          "role": "offense"
+        },
+        "ArmorBypass": {
+          "value": 30,
+          "cap": 51,
+          "tier": 2,
+          "role": "offense"
+        },
+        "Defense": {
+          "value": 47,
+          "cap": 51,
+          "tier": 2,
+          "role": "defense"
+        },
+        "Guard": {
+          "value": 25,
+          "cap": 52,
+          "tier": 2,
+          "role": "defense"
+        },
+        "EquipmentDamage+bse": {
+          "value": 24,
+          "cap": 51,
+          "tier": 3,
+          "role": "offense"
+        },
+        "EquipmentDamage+bse+bsx": {
+          "value": 21,
+          "cap": 51,
+          "tier": 4,
+          "role": "offense"
+        },
+        "Defense+bep": {
+          "value": 1,
+          "cap": 51,
+          "tier": 3,
+          "role": "defense"
+        },
+        "EquipmentDamage+bse+mpp": {
+          "value": 20,
+          "cap": 51,
+          "tier": 4,
+          "role": "offense"
+        },
+        "EquipmentDamage+bse+mpp+bss": {
+          "value": 19,
+          "cap": 51,
+          "tier": 5,
+          "role": "offense"
+        },
+        "Defense+bee": {
+          "value": 1,
+          "cap": 51,
+          "tier": 3,
+          "role": "defense"
+        },
+        "Disarm+msp": {
+          "value": 1,
+          "cap": 51,
+          "tier": 3,
+          "role": "offense"
+        },
+        "Defense+mpx": {
+          "value": 1,
+          "cap": 51,
+          "tier": 3,
+          "role": "defense"
+        },
+        "EquipmentDamage+bse+bsx+msx": {
+          "value": 19,
+          "cap": 51,
+          "tier": 5,
+          "role": "offense"
+        },
+        "Trip+bsx": {
+          "value": 1,
+          "cap": 51,
+          "tier": 3,
+          "role": "offense"
+        },
+        "Disarm+mss": {
+          "value": 1,
+          "cap": 51,
+          "tier": 3,
+          "role": "offense"
+        }
+      },
+      "general_xp_banked": 48,
+      "records": [
+        {
+          "type": "Wound",
+          "tier": 1,
+          "mag": -1,
+          "location": "Head (idx=80, Right)",
+          "attr": "bps"
+        },
+        {
+          "type": "Prone",
+          "tier": 2,
+          "mag": -2,
+          "location": "Torso (idx=30, Right)",
+          "attr": null
+        },
+        {
+          "type": "Wound",
+          "tier": 3,
+          "mag": -3,
+          "location": "Torso (idx=50, Right)",
+          "attr": "bpe"
+        },
+        {
+          "type": "Grappled",
+          "tier": 1,
+          "mag": -1,
+          "location": "Legs (idx=11, Left)",
+          "attr": null
+        },
+        {
+          "type": "Wound",
+          "tier": 1,
+          "mag": -1,
+          "location": "Legs (idx=10, Right)",
+          "attr": "bps"
+        },
+        {
+          "type": "Wound",
+          "tier": 2,
+          "mag": -2,
+          "location": "Arms (idx=61, Left)",
+          "attr": "bps"
+        },
+        {
+          "type": "Wound",
+          "tier": 2,
+          "mag": -2,
+          "location": "Legs (idx=2, Right)",
+          "attr": "bpe"
+        },
+        {
+          "type": "Wound",
+          "tier": 2,
+          "mag": -2,
+          "location": "Torso (idx=41, Left)",
+          "attr": "bps"
+        },
+        {
+          "type": "Prone",
+          "tier": 2,
+          "mag": -2,
+          "location": "Legs (idx=20, Right)",
+          "attr": null
+        },
+        {
+          "type": "ArmorBypass",
+          "tier": 2,
+          "mag": -2,
+          "location": "Heart (Torso, idx=30, Right)",
+          "attr": null
+        },
+        {
+          "type": "EquipmentDamage",
+          "tier": 3,
+          "mag": -3,
+          "location": "Head (idx=90, Right)",
+          "attr": null
+        },
+        {
+          "type": "EquipmentDamage",
+          "tier": 2,
+          "mag": -2,
+          "location": "Torso (idx=32, Right)",
+          "attr": null
+        },
+        {
+          "type": "Wound",
+          "tier": 2,
+          "mag": -2,
+          "location": "Torso (idx=42, Right)",
+          "attr": "bps"
+        }
+      ],
+      "advanced_skills_created": [
+        {
+          "name": "EquipmentDamage+bse",
+          "attrs": [
+            "bpp",
+            "bpe",
+            "bse"
+          ],
+          "parent": "EquipmentDamage",
+          "tier": 3
+        },
+        {
+          "name": "EquipmentDamage+bse+bsx",
+          "attrs": [
+            "bpp",
+            "bpe",
+            "bse",
+            "bsx"
+          ],
+          "parent": "EquipmentDamage+bse",
+          "tier": 4
+        },
+        {
+          "name": "Defense+bep",
+          "attrs": [
+            "bss",
+            "bse",
+            "bep"
+          ],
+          "parent": "Defense",
+          "tier": 3
+        },
+        {
+          "name": "EquipmentDamage+bse+mpp",
+          "attrs": [
+            "bpp",
+            "bpe",
+            "bse",
+            "mpp"
+          ],
+          "parent": "EquipmentDamage+bse",
+          "tier": 4
+        },
+        {
+          "name": "EquipmentDamage+bse+mpp+bss",
+          "attrs": [
+            "bpp",
+            "bpe",
+            "bse",
+            "mpp",
+            "bss"
+          ],
+          "parent": "EquipmentDamage+bse+mpp",
+          "tier": 5
+        },
+        {
+          "name": "Defense+bee",
+          "attrs": [
+            "bss",
+            "bse",
+            "bee"
+          ],
+          "parent": "Defense",
+          "tier": 3
+        },
+        {
+          "name": "Disarm+msp",
+          "attrs": [
+            "bss",
+            "bsx",
+            "msp"
+          ],
+          "parent": "Disarm",
+          "tier": 3
+        },
+        {
+          "name": "Defense+mpx",
+          "attrs": [
+            "bss",
+            "bse",
+            "mpx"
+          ],
+          "parent": "Defense",
+          "tier": 3
+        },
+        {
+          "name": "EquipmentDamage+bse+bsx+msx",
+          "attrs": [
+            "bpp",
+            "bpe",
+            "bse",
+            "bsx",
+            "msx"
+          ],
+          "parent": "EquipmentDamage+bse+bsx",
+          "tier": 5
+        },
+        {
+          "name": "Trip+bsx",
+          "attrs": [
+            "bsp",
+            "bss",
+            "bsx"
+          ],
+          "parent": "Trip",
+          "tier": 3
+        },
+        {
+          "name": "Disarm+mss",
+          "attrs": [
+            "bss",
+            "bsx",
+            "mss"
+          ],
+          "parent": "Disarm",
+          "tier": 3
+        }
+      ]
+    },
+    "Beta": {
+      "hp_current": -22,
+      "hp_max": 624,
+      "pe_current": 52,
+      "pe_max": 156,
+      "attrs": {
+        "bee": 52,
+        "bep": 52,
+        "bes": 52,
+        "bex": 52,
+        "bpe": 52,
+        "bpp": 52,
+        "bps": 52,
+        "bpx": 52,
+        "bse": 52,
+        "bsp": 52,
+        "bss": 52,
+        "bsx": 52,
+        "mee": 52,
+        "mep": 52,
+        "mes": 52,
+        "mex": 52,
+        "mpe": 52,
+        "mpp": 52,
+        "mps": 52,
+        "mpx": 51,
+        "mse": 51,
+        "msp": 51,
+        "mss": 51,
+        "msx": 51
+      },
+      "skills": {
+        "Attack": {
+          "value": 33,
+          "cap": 52,
+          "tier": 2,
+          "role": "offense"
+        },
+        "Grapple": {
+          "value": 31,
+          "cap": 52,
+          "tier": 2,
+          "role": "offense"
+        },
+        "Trip": {
+          "value": 32,
+          "cap": 52,
+          "tier": 2,
+          "role": "offense"
+        },
+        "Disarm": {
+          "value": 25,
+          "cap": 52,
+          "tier": 2,
+          "role": "offense"
+        },
+        "EquipmentDamage": {
+          "value": 32,
+          "cap": 52,
+          "tier": 2,
+          "role": "offense"
+        },
+        "Wound": {
+          "value": 30,
+          "cap": 52,
+          "tier": 2,
+          "role": "offense"
+        },
+        "ArmorBypass": {
+          "value": 36,
+          "cap": 52,
+          "tier": 2,
+          "role": "offense"
+        },
+        "Defense": {
+          "value": 48,
+          "cap": 52,
+          "tier": 2,
+          "role": "defense"
+        },
+        "Guard": {
+          "value": 25,
+          "cap": 52,
+          "tier": 2,
+          "role": "defense"
+        },
+        "Wound+mpx": {
+          "value": 18,
+          "cap": 51,
+          "tier": 3,
+          "role": "offense"
+        },
+        "Defense+mes": {
+          "value": 1,
+          "cap": 52,
+          "tier": 3,
+          "role": "defense"
+        },
+        "Defense+msx": {
+          "value": 1,
+          "cap": 51,
+          "tier": 3,
+          "role": "defense"
+        },
+        "Attack+bex": {
+          "value": 28,
+          "cap": 52,
+          "tier": 3,
+          "role": "offense"
+        },
+        "EquipmentDamage+bes": {
+          "value": 17,
+          "cap": 52,
+          "tier": 3,
+          "role": "offense"
+        },
+        "EquipmentDamage+mex": {
+          "value": 23,
+          "cap": 52,
+          "tier": 3,
+          "role": "offense"
+        },
+        "Attack+bex+bes": {
+          "value": 16,
+          "cap": 52,
+          "tier": 4,
+          "role": "offense"
+        },
+        "EquipmentDamage+mex+msx": {
+          "value": 20,
+          "cap": 51,
+          "tier": 4,
+          "role": "offense"
+        },
+        "Defense+mpx": {
+          "value": 1,
+          "cap": 51,
+          "tier": 3,
+          "role": "defense"
+        },
+        "Defense+bpp": {
+          "value": 1,
+          "cap": 52,
+          "tier": 3,
+          "role": "defense"
+        },
+        "ArmorBypass+msp": {
+          "value": 11,
+          "cap": 51,
+          "tier": 3,
+          "role": "offense"
+        },
+        "Defense+bpe": {
+          "value": 1,
+          "cap": 52,
+          "tier": 3,
+          "role": "defense"
+        },
+        "ArmorBypass+mpx": {
+          "value": 1,
+          "cap": 51,
+          "tier": 3,
+          "role": "offense"
+        }
+      },
+      "general_xp_banked": 17,
+      "records": [
+        {
+          "type": "Disarm",
+          "tier": 2,
+          "mag": -2,
+          "location": "Arms (idx=52, Right)",
+          "attr": null
+        },
+        {
+          "type": "EquipmentDamage",
+          "tier": 2,
+          "mag": -2,
+          "location": "Arms (idx=51, Left)",
+          "attr": null
+        },
+        {
+          "type": "Disarm",
+          "tier": 2,
+          "mag": -2,
+          "location": "Arms (idx=60, Right)",
+          "attr": null
+        },
+        {
+          "type": "Grappled",
+          "tier": 2,
+          "mag": -2,
+          "location": "Head (idx=80, Right)",
+          "attr": null
+        },
+        {
+          "type": "Disarm",
+          "tier": 2,
+          "mag": -2,
+          "location": "Arms (idx=51, Left)",
+          "attr": null
+        },
+        {
+          "type": "EquipmentDamage",
+          "tier": 3,
+          "mag": -3,
+          "location": "Torso (idx=30, Right)",
+          "attr": null
+        },
+        {
+          "type": "Grappled",
+          "tier": 2,
+          "mag": -2,
+          "location": "Legs (idx=2, Right)",
+          "attr": null
+        },
+        {
+          "type": "Wound",
+          "tier": 1,
+          "mag": -1,
+          "location": "Legs (idx=11, Left)",
+          "attr": "bpe"
+        },
+        {
+          "type": "EquipmentDamage",
+          "tier": 3,
+          "mag": -3,
+          "location": "Head (idx=91, Left)",
+          "attr": null
+        },
+        {
+          "type": "EquipmentDamage",
+          "tier": 5,
+          "mag": -5,
+          "location": "Torso (idx=50, Right)",
+          "attr": null
+        },
+        {
+          "type": "EquipmentDamage",
+          "tier": 3,
+          "mag": -3,
+          "location": "Head (idx=90, Right)",
+          "attr": null
+        },
+        {
+          "type": "Prone",
+          "tier": 2,
+          "mag": -2,
+          "location": "Legs (idx=1, Left)",
+          "attr": null
+        },
+        {
+          "type": "EquipmentDamage",
+          "tier": 5,
+          "mag": -5,
+          "location": "Arms (idx=60, Right)",
+          "attr": null
+        },
+        {
+          "type": "EquipmentDamage",
+          "tier": 2,
+          "mag": -2,
+          "location": "Torso (idx=42, Right)",
+          "attr": null
+        },
+        {
+          "type": "EquipmentDamage",
+          "tier": 3,
+          "mag": -3,
+          "location": "Arms (idx=71, Left)",
+          "attr": null
+        }
+      ],
+      "advanced_skills_created": [
+        {
+          "name": "Wound+mpx",
+          "attrs": [
+            "bps",
+            "bpe",
+            "mpx"
+          ],
+          "parent": "Wound",
+          "tier": 3
+        },
+        {
+          "name": "Defense+mes",
+          "attrs": [
+            "bss",
+            "bse",
+            "mes"
+          ],
+          "parent": "Defense",
+          "tier": 3
+        },
+        {
+          "name": "Defense+msx",
+          "attrs": [
+            "bss",
+            "bse",
+            "msx"
+          ],
+          "parent": "Defense",
+          "tier": 3
+        },
+        {
+          "name": "Attack+bex",
+          "attrs": [
+            "bpp",
+            "bps",
+            "bex"
+          ],
+          "parent": "Attack",
+          "tier": 3
+        },
+        {
+          "name": "EquipmentDamage+bes",
+          "attrs": [
+            "bpp",
+            "bpe",
+            "bes"
+          ],
+          "parent": "EquipmentDamage",
+          "tier": 3
+        },
+        {
+          "name": "EquipmentDamage+mex",
+          "attrs": [
+            "bpp",
+            "bpe",
+            "mex"
+          ],
+          "parent": "EquipmentDamage",
+          "tier": 3
+        },
+        {
+          "name": "Attack+bex+bes",
+          "attrs": [
+            "bpp",
+            "bps",
+            "bex",
+            "bes"
+          ],
+          "parent": "Attack+bex",
+          "tier": 4
+        },
+        {
+          "name": "EquipmentDamage+mex+msx",
+          "attrs": [
+            "bpp",
+            "bpe",
+            "mex",
+            "msx"
+          ],
+          "parent": "EquipmentDamage+mex",
+          "tier": 4
+        },
+        {
+          "name": "Defense+mpx",
+          "attrs": [
+            "bss",
+            "bse",
+            "mpx"
+          ],
+          "parent": "Defense",
+          "tier": 3
+        },
+        {
+          "name": "Defense+bpp",
+          "attrs": [
+            "bss",
+            "bse",
+            "bpp"
+          ],
+          "parent": "Defense",
+          "tier": 3
+        },
+        {
+          "name": "ArmorBypass+msp",
+          "attrs": [
+            "bsp",
+            "bsx",
+            "msp"
+          ],
+          "parent": "ArmorBypass",
+          "tier": 3
+        },
+        {
+          "name": "Defense+bpe",
+          "attrs": [
+            "bss",
+            "bse",
+            "bpe"
+          ],
+          "parent": "Defense",
+          "tier": 3
+        },
+        {
+          "name": "ArmorBypass+mpx",
+          "attrs": [
+            "bsp",
+            "bsx",
+            "mpx"
+          ],
+          "parent": "ArmorBypass",
+          "tier": 3
+        }
+      ]
+    }
+  }
+}
