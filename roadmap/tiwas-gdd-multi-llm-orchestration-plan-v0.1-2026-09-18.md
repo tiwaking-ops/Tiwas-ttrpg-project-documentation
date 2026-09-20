@@ -1,20 +1,23 @@
 ---
 document:
   title: "Tiwas GDD — Multi-LLM Orchestration Plan"
-  version: "v0.1"
+  version: "v0.3"
   status: "Non-canonical advisory (self-declared: Rule Authority: None) — implementation/process guidance. Standing instruction for the multi-LLM GDD drafting workflow. Does not create game mechanics and changes no rule authority."
 provenance:
   author_llm: {name: "opencode", version: "big-pickle"}
   assessor_llm: {name: "not established", version: "not established"}
-  last_modified_by_llm: {name: "opencode", version: "big-pickle"}
+  last_modified_by_llm: {name: "opencode", version: "muse-spark-1.3-contributor-free"}
   created_date: "2026-09-18"
-  last_modified_date: "2026-09-18"
+  last_modified_date: "2026-09-19"
 ---
 
 # Tiwas GDD — Multi-LLM Orchestration Plan
 
-**Document Version:** v0.1
+**Document Version:** v0.3
 **Document Status:** Advisory implementation/process guidance
+
+**Change note (v0.2, 2026-09-18):** folds three gaps from the advisory workflow plan `investigations/tiwas-openchamber-multi-llm-workflow-plan-2026-09-18.md` into this document — a promotion-backlog workstream (§3.1), a mandatory governance preamble for draft prompts (§3.2), and the disposition of the existing Tiwas LLM Router (§6.1). Process-only edits; no rule authority changed; no DEC inferred.
+**Change note (v0.3, 2026-09-19):** appends §10 process lessons from the first executed P1→P2→assessment loop (DEC-133.A R3 seven consuming mechanics): tracked-session fusion, line-numbered verifier findings, codified P2b independent assessment, exports straight to `investigations/`. Process-only; no rule authority changed; no DEC inferred.
 **Rule Authority:** None — this document does not create game mechanics
 **No DEC inferred.** This is a workflow plan, not a designer ruling.
 **Important:** Implementation guidance must never be mistaken for a design ruling. No output produced under this plan is authoritative until the designer accepts it (gate G1) and, where canonical status is sought, the 8-step Promotion Rule completes (gate G2).
@@ -58,7 +61,17 @@ Verifier independence is deliberate: a model that drafted a section must not als
 - **P1 — Draft sprint (OpenChamber Multi-run).** Pick a ready leaf section; dispatch one prompt to 3–5 models, each in its own git worktree (zero collisions). Outcomes: N candidates.
 - **P2 — Verify (Verifier).** Each candidate checked against spec-card invariants and the decision register → pass/fail + contradiction report.
 - **P3 — Merge (opencode).** Keep the best, or Fusion the survivors; contradictions become the question list.
-- **P4 — Human gate (G1).** Designer rules on the question list → adopt into the GDD working copy. Anything seeking canonical status then runs the existing proposal → DEC → 8-step Promotion path (G2). The GDD working document stays advisory until formal promotion.
+- **P4 — Human gate (G1).** Designer rules on the question list → adopt into the GDD working copy. Anything seeking canonical status then runs the existing proposal → DEC → 8-step Promotion path (G2) — executed as the §3.1 workstream. The GDD working document stays advisory until formal promotion.
+
+### 3.1 Promotion backlog — separate workstream (gate G2)
+
+The accepted-but-unpromoted rulings backlog is **not** a Multi-run/Fusion task: each item already carries one accepted designer ruling, so there is nothing to compare. Each only needs the formal 8-step Promotion Rule (`governance/status-model.md`) executed and the Canonical Rules & Changelog updated to match. This is single-model, direct-repo editing work — the §2 Backbone Builder / Orchestrator executes it one item at a time, with the §2 registrar discipline. DEC-017 remains the sole item to have completed the full 8-step rule to date. The advisory plan's register survey (`investigations/tiwas-openchamber-multi-llm-workflow-plan-2026-09-18.md`, §4) provides the open-content vs accepted-ruling split that governs which items reach this stream.
+
+### 3.2 Mandatory governance preamble (draft sprints)
+
+Every Multi-run / drafter prompt MUST carry the following preamble verbatim, so no model writes into `canonical/` or silently resolves an open designer fork:
+
+> You are producing non-canonical advisory material only. Per this project's `governance/status-model.md` and the LLM Governance Rules, your output goes into `investigations/` or `proposals/`, is never Canonical, and must not silently resolve an open designer fork. Cite existing DEC IDs from `decision-register.md` where relevant. State your evidence class (mechanical fact / empirical finding / designer ruling / recommendation) for each claim.
 
 Loop: a queue of leaf sections is drained by OpenChamber **scheduled tasks**; every drafting session gets a **Session Goal** («fill section to spec card v2; keep going until the invariant check passes»).
 
@@ -95,6 +108,10 @@ OpenChamber is an MIT-licensed, open-source **visual control room on top of the 
 - Fixtures: reuse existing cross-LLM playtest harnesses and exchange logs as regression material for consistency checks. Spec cards remain markdown-first to match repository conventions.
 - Isolation: one git worktree per Multi-run; a single *integration* worktree for merges.
 
+### 6.1 Disposition of the existing Tiwas LLM Router
+
+The legacy "Tiwas LLM Router" (free-tier browser-automation orchestrator across Claude/ChatGPT/Grok, with fallback chain, broadcast/playtest mode, and a scheduler daemon) is **retired** as a drafting surface for this plan — OpenChamber's native Multi-run/Fusion and scheduled work replace it. One inherited caveat: if a valued model is reachable only through a free consumer chat UI with no corresponding OpenCode provider, the router (or equivalent) remains the only access path for that specific model; verify each router-only model against OpenCode's provider roster before fully decommissioning the router.
+
 ## 7. First-week path
 
 - **Day 0 (designer):** open OpenChamber, connect providers, recreate the §2 agent roster.
@@ -120,3 +137,15 @@ OpenChamber is an MIT-licensed, open-source **visual control room on top of the 
 3. Spec-card format — markdown-first assumed; JSON/YAML machine-checkable structure may be added later.
 4. Nightly scheduled audits — assumed acceptable; trivially manual if not.
 5. Single-maintainer caveat on OpenChamber originates from third-party review (aireiter, 2026-08), not from OpenChamber's own documentation.
+6. **v0.2 fold:** the promotion-backlog stream, governance preamble, and router disposition were folded in from `investigations/tiwas-openchamber-multi-llm-workflow-plan-2026-09-18.md` (see header change note); that advisory plan remains the read-only evidence source and is unchanged.
+
+## 10. Lessons from the first executed loop (2026-09-19)
+
+First full P1→P2→assessment loop executed 2026-09-18/19 on DEC-133.A R3 (seven consuming mechanics): five worktree-isolated drafter session logs → Grok fusion → two independent red-teams (opencode/big-pickle; Upstage solar-pro4:free, "Hermes") → Nemotron-3-Ultra independent assessment; all stored in `investigations/` and recorded on DEC-133.A, verdict FIT-FOR-G1. Four process fixes adopted for subsequent sprints:
+
+1. **Tracked-session fusion.** Fusion must run inside a logged session (OpenChamber Fusion on the Multi-run sessions, or a logged opencode run) so `author_llm` is never ambiguous. Manual export-to-model fusion produced the SA-5 provenance defect (fusing model absent from the source-run list).
+2. **Verifier must cite register line numbers.** The observable difference between the weak pass (findings without line references; missed the DEC-024/030 misattribution pattern, the Grappled-branch inaccuracy, and all six silent assumptions) and the strong pass (every finding pinned to register lines) was citation discipline. The §3 P2 verifier instruction now requires file + DEC/section + line references per finding.
+3. **Codified P2b — independent assessment.** A second-model assessment of the verification is now a standing stage before G1 consumes findings (precedent: Nemotron-3-Ultra reply-only `opencode run --model <provider/model>`, output stored alongside). The assessor must sit outside the drafter pool, the fusion author, and the verification author.
+4. **Session exports go straight to `investigations/`.** Raw run logs are stored under original filenames (raw-log precedent) at export time, never staged at repo root.
+
+Process-only note; no rule authority changed; no DEC inferred.

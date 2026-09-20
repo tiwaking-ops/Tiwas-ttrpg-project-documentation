@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Tiwas — Red Box Solo Playtest Harness (v1.2)
+Tiwas — Red Box Solo Playtest Harness (v1.3)
 Seed: 20260917 | d100 in 1-100, 00 = 100
 Follows Automated Playtest Run Conventions H1–H7 (2026-09-14).
 Layer-tagging: locked / ruled / locked+ruled / advisory / empirical.
@@ -15,14 +15,20 @@ FIXES v1.2 (Muse Spark, 2026-09-17):
   no logic change. Prior v1.1 run wrote the committed 98-record JSON then
   crashed on printing; v1.2 re-runs to reach the LEDGER-CLOSES asserts.
   See execution-report correction register.
+FIXES v1.3 (Muse Spark, 2026-09-17):
+- Optional CLI seed override: `python harness.py [SEED]` (default 20260917).
+  Log filename keys to the seed, so fresh-seed runs never overwrite the
+  committed seed-20260917 authoritative log. No logic change.
 """
 
 import json
 import random
 import math
+import sys
 from pathlib import Path
 
 SEED = 20260917
+DEFAULT_SEED = 20260917
 
 # ── Attribute data ──────────────────────────────────────────────────────
 ROWAN_ATTRS = {
@@ -532,8 +538,8 @@ def run_ending(rng, rowan, aleena, log):
     s11_healing(aleena, rowan, "Devotion", 40, rng, log, scene, "Aleena")
 
 # ── Main ─────────────────────────────────────────────────────────────────
-def main():
-    rng = random.Random(SEED)
+def main(seed=SEED):
+    rng = random.Random(seed)
     log = []
 
     rowan, aleena, goblin, snake, ghoul, bargain = build_all()
@@ -592,7 +598,7 @@ def main():
     }
 
     output = {
-        "seed": SEED,
+        "seed": seed,
         "conventions": "Automated Playtest Run Conventions H1–H7 (2026-09-14)",
         "d100_rule": "1–100, 00 = 100",
         "initial_state": initial,
@@ -617,7 +623,7 @@ def main():
         census[t] = census.get(t, 0) + 1
     output["layer_census"] = census
 
-    out_path = Path(__file__).parent / "tiwas-red-box-playtest-20260917-raw-log.json"
+    out_path = Path(__file__).parent / f"tiwas-red-box-playtest-{seed}-raw-log.json"
     with open(out_path, "w") as f:
         json.dump(output, f, indent=2)
     print(f"Log: {out_path}")
@@ -634,4 +640,4 @@ def main():
     print("LEDGER CLOSES OK")
 
 if __name__ == "__main__":
-    main()
+    main(int(sys.argv[1]) if len(sys.argv) > 1 else SEED)

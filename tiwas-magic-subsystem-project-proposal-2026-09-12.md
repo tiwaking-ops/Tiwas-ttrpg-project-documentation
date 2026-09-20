@@ -1,14 +1,16 @@
 ---
 document:
   title: "Tiwas — Magic & Special Abilities Subsystem: Project Proposal"
-  version: "0.1 (draft advisory proposal — not executed, not ruled)"
-  status: "Advisory / Non-canonical. No DEC assigned. No promotion under the 8-step Promotion Rule (Proposals §21) has been sought or performed. Pending Tiwa's review."
+  version: "0.2 (advisory proposal — Q-M1–Q-M10 ruled by Tiwa 2026-09-18; rulings recorded as non-canonical DEC-146)"
+  status: "Advisory / Non-canonical. Q-M1–Q-M10 ruled by Tiwa (2026-09-18); rulings recorded in the live decision register as DEC-146 (Non-canonical designer rulings). No promotion under the 8-step Promotion Rule (Proposals §21) has been sought or performed. Magic/special-ability implementation remains Reserved (Canonical §15 / DEC-015)."
 provenance:
   author_llm: {name: "Claude Sonnet 5", version: "claude-sonnet-5"}
   assessor_llm: []
+  last_modified_by_llm: {name: "opencode", version: "big-pickle"}
   created_date: "2026-09-12"
-  last_modified_date: "2026-09-12"
+  last_modified_date: "2026-09-18"
 related_decisions:
+  - "DEC-146 (2026-09-18 — non-canonical designer rulings on Q-M1–Q-M10; see §13)"
   - "DEC-015 (Canonical §15 — Magic/Special Abilities is Reserved; Design Direction only)"
   - "DEC-114 R3 (magic:/ability: Tag namespace reserved, zero entries, requires authorization with the Magic subsystem)"
   - "Proposals/WIP v1.4.3 §15 (current non-canonical design direction: magic via Advanced Skills, no mandatory fixed spell list)"
@@ -31,6 +33,13 @@ related_decisions:
 > that conflict is flagged explicitly rather than silently resolved, per the standing
 > LLM Governance Rules (Roadmap §24 Rule 6: never silently resolve an open designer
 > fork).
+>
+> **Post-ruling status (2026-09-18).** Q-M1–Q-M10 were ruled by Tiwa; the rulings are
+> recorded in §13 below and in the live decision register as **DEC-146** (Non-canonical
+> designer rulings; recorded by OpenCode / big-pickle). This document's *proposal
+> content* remains **advisory / non-canonical**, and Magic/special-ability
+> implementation remains **Reserved** (Canonical §15 / DEC-015) pending any future
+> promotion under the 8-step Promotion Rule.
 
 ---
 
@@ -38,12 +47,12 @@ related_decisions:
 
 | Field | Value |
 |---|---|
-| Document ID | (unassigned — advisory draft, no DEC) |
+| Document ID | (unassigned — advisory draft; rulings recorded via DEC-146) |
 | Subsystem | Magic / Special Abilities (Canonical §15; Reserved) |
 | Namespace dependency | `magic:` / `ability:` (reserved, zero entries — DEC-114 R3) |
 | Author | Claude Sonnet 5 (advisory) |
-| Reviewer | Tiwa (ruling authority) — review pending |
-| Recording authority | OpenCode ("big-pickle") — only after Tiwa rules |
+| Reviewer | Tiwa (ruling authority) — Q-M1–Q-M10 ruled 2026-09-18 |
+| Recording authority | OpenCode ("big-pickle") — rulings recorded 2026-09-18 as DEC-146 |
 | Distribution | Tiwa (sole intended reader per this task's brief) |
 
 ---
@@ -509,5 +518,35 @@ This is a **recommendation for Tiwa's consideration**, explicitly not self-execu
 
 ---
 
-*End of document. No DEC assigned. Awaiting Tiwa's review and, if any option is
-selected, formal handoff for OpenCode recording only after an explicit ruling.*
+## 13. Recorded Rulings on Q-M1–Q-M10 (2026-09-18) — Addendum
+
+Ruled by **Tiwa** (human designer / ruling authority) on 2026-09-18 and recorded by
+**OpenCode / big-pickle** as **DEC-146** (Non-canonical designer rulings) in
+`_consolidation/decision-register.md`. Ruling record:
+`investigations/tiwas-magic-subsystem-designer-rulings-2026-09-18.md`. These rulings are
+**non-canonical**; Magic/special-ability implementation remains **Reserved**.
+
+| Q-M | Ruling (Tiwa's option) | Effect |
+|---|---|---|
+| Q-M1 | **A** | **Options 1+2+3 adopted** as the base architecture: Advanced-Skill-native casting; Technique×Form naming layer as an authoring convention (catalogs = DEC-077.A content); ritual magic reuses S-9/S-10 (DEC-067–070). Option 5 **not adopted**. Options 4/6 rejected; Option 7 rejected (negative reference). |
+| Q-M2 | **B** | Setting permission for a magical lineage = **vocabulary-only descriptive Tag(s), no mechanical gate** (DEC-116; DEC-025 preserved). No character-creation gate. Narrative social/reputation effects may accrue later — never mechanically. |
+| Q-M3 | **A** (contingent) | If Option 5 (Corruption) is ever adopted: trigger **coupled** to the same qualifying failed Double that creates the Advanced Skill. |
+| Q-M4 | **A** | Body/Mind mixing permitted by default (Canonical §12.3). Setting restrictions = GM Fiat (DEC-130) / content (DEC-077.A), not a framework gate. |
+| Q-M5 | **A** | DEC-041's Skill-Tier ≥ 2 gate **confirmed** for magic location-referencing Effects; the multi-location fragile-item GM-Fiat check is an ordinary DEC-130 application. |
+| Q-M6 | **A** | No new acquisition rule; Canonical §12 failed Double is the sole mechanical trigger; alternatives are GM Fiat / content. |
+| Q-M7 | **A** | Starter `magic:`/`ability:` Tag vocabulary **deferred**; DEC-114 R3 authorization remains pending (system too primitive). |
+| Q-M8 | **A** | **No minimum Skill-Tier** for Extended-Test ritual magic; available to everyone; DEC-070 GM discretion; DEC-130 available. |
+| Q-M9 | **B** (contingent) | If Option 5 is ever adopted: **two removal routes** (DEC-135.A pattern) — Effect Heal System (base/fallback) + setting-specific restoration action as content. |
+| Q-M10 | **B** | Option 6's "Paradox" re-expression **deferred** as a later separate proposal (neither adopted nor finally closed; possible future grounding in existing attributes/statistics). |
+
+**Scope notes:** Rulings Q-M3 and Q-M9 are contingencies that become operative only if
+Option 5 (Corruption) is adopted — it is not adopted in these rulings. The DEC-114 R3
+vocabulary authorization step was explicitly deferred (Q-M7). Q-M10 is a deferral, not a
+final rejection. Magic/special-ability implementation remains Reserved.
+
+---
+
+*End of document. Q-M1–Q-M10 ruled by Tiwa (2026-09-18); rulings recorded as DEC-146
+(Non-canonical designer rulings) by OpenCode after the explicit ruling. This document's
+proposal content remains advisory / non-canonical; Magic/special-ability implementation
+remains Reserved (Canonical §15 / DEC-015).*
