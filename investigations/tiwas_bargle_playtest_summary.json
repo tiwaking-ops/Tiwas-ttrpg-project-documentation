@@ -1,0 +1,440 @@
+{
+  "initial_state": {
+    "Rowan": {
+      "name": "Rowan",
+      "hp": 615,
+      "hp_max": 615,
+      "pe": 170,
+      "pe_max": 170,
+      "mp": 549,
+      "mp_max": 549,
+      "skills": {
+        "Attack": {
+          "tier": 1,
+          "cap": 58,
+          "current": 29
+        },
+        "Defense": {
+          "tier": 1,
+          "cap": 55,
+          "current": 27
+        },
+        "Perception": {
+          "tier": 1,
+          "cap": 55,
+          "current": 27
+        },
+        "Stealth": {
+          "tier": 1,
+          "cap": 61,
+          "current": 30
+        }
+      },
+      "wounds": [
+        {
+          "location": "Legs (Right)",
+          "tier": 3,
+          "magnitude": -3,
+          "attribute": "mpp"
+        }
+      ],
+      "conditions": {
+        "Prone": 0
+      },
+      "advanced_skills_created": [
+        "Power Strike",
+        "Defense (Advanced)",
+        "Power Strike (Advanced)"
+      ],
+      "general_xp": 0,
+      "incapacitated": false
+    },
+    "Aleena": {
+      "name": "Aleena",
+      "hp": 566,
+      "hp_max": 566,
+      "pe": 159,
+      "pe_max": 159,
+      "mp": 624,
+      "mp_max": 624,
+      "skills": {
+        "Devotion": {
+          "tier": 1,
+          "cap": 65,
+          "current": 32
+        },
+        "Smite": {
+          "tier": 1,
+          "cap": 55,
+          "current": 27
+        },
+        "Defense": {
+          "tier": 1,
+          "cap": 47,
+          "current": 23
+        }
+      },
+      "wounds": [
+        {
+          "location": "Head (Left)",
+          "tier": 3,
+          "magnitude": -3,
+          "attribute": "mpp"
+        },
+        {
+          "location": "Legs (Right)",
+          "tier": 3,
+          "magnitude": -3,
+          "attribute": "mpp"
+        }
+      ],
+      "conditions": {},
+      "advanced_skills_created": [
+        "Smite (Advanced)",
+        "Iron Faith"
+      ],
+      "general_xp": 0,
+      "incapacitated": false
+    },
+    "Goblin": {
+      "name": "Goblin",
+      "hp": 421,
+      "hp_max": 421,
+      "pe": 102,
+      "pe_max": 102,
+      "mp": 273,
+      "mp_max": 273,
+      "skills": {
+        "Crude Attack": {
+          "tier": 1,
+          "cap": 40,
+          "current": 40
+        },
+        "Defense": {
+          "tier": 1,
+          "cap": 48,
+          "current": 24
+        },
+        "Trip": {
+          "tier": 2,
+          "cap": 46,
+          "current": 46
+        }
+      },
+      "wounds": [
+        {
+          "location": "Arms (Left)",
+          "tier": 3,
+          "magnitude": -3,
+          "attribute": "bpp"
+        },
+        {
+          "location": "Torso (Left)",
+          "tier": 3,
+          "magnitude": -3,
+          "attribute": "bsp"
+        }
+      ],
+      "conditions": {},
+      "advanced_skills_created": [],
+      "general_xp": 0,
+      "incapacitated": false
+    },
+    "Bargle": {
+      "name": "Bargle",
+      "hp": 452,
+      "hp_max": 452,
+      "pe": 105,
+      "pe_max": 105,
+      "mp": 680,
+      "mp_max": 680,
+      "skills": {
+        "Bolt": {
+          "tier": 2,
+          "cap": 66,
+          "current": 66
+        },
+        "Defense": {
+          "tier": 1,
+          "cap": 46,
+          "current": 23
+        },
+        "Beguile": {
+          "tier": 1,
+          "cap": 55,
+          "current": 27
+        }
+      },
+      "wounds": [
+        {
+          "location": "Torso (Right)",
+          "tier": 1,
+          "magnitude": -1,
+          "attribute": "bsp"
+        },
+        {
+          "location": "Torso (Left)",
+          "tier": 1,
+          "magnitude": -1,
+          "attribute": "bpp"
+        },
+        {
+          "location": "Head (Left)",
+          "tier": 3,
+          "magnitude": -3,
+          "attribute": "bpp"
+        }
+      ],
+      "conditions": {},
+      "advanced_skills_created": [],
+      "general_xp": 0,
+      "incapacitated": false
+    }
+  },
+  "scene2_goblin_fight": {
+    "rounds": 6,
+    "goblin_hp_final": -6,
+    "rowan_hp_final": 567,
+    "outcome": "Goblin defeated"
+  },
+  "interlude_healing": {
+    "intervals": 8,
+    "final_margin_total": 43,
+    "target": 40,
+    "hp_restored_to_rowan": 43,
+    "rowan_hp_after": 610
+  },
+  "scene3_bargle_fight": {
+    "rounds": 15,
+    "bargle_hp_final": -11,
+    "rowan_hp_final": 515,
+    "aleena_hp_final": 356,
+    "outcome": "Bargle incapacitated (DEC-052)"
+  },
+  "final_state": {
+    "Rowan": {
+      "name": "Rowan",
+      "hp": 515,
+      "hp_max": 615,
+      "pe": 167,
+      "pe_max": 170,
+      "mp": 546,
+      "mp_max": 546,
+      "skills": {
+        "Attack": {
+          "tier": 1,
+          "cap": 58,
+          "current": 31
+        },
+        "Defense": {
+          "tier": 1,
+          "cap": 55,
+          "current": 34
+        },
+        "Perception": {
+          "tier": 1,
+          "cap": 55,
+          "current": 27
+        },
+        "Stealth": {
+          "tier": 1,
+          "cap": 61,
+          "current": 30
+        },
+        "Power Strike": {
+          "tier": 2,
+          "cap": 59,
+          "current": 41
+        },
+        "Defense (Advanced)": {
+          "tier": 2,
+          "cap": 58,
+          "current": 1
+        },
+        "Power Strike (Advanced)": {
+          "tier": 3,
+          "cap": 59,
+          "current": 1
+        }
+      },
+      "wounds": [
+        {
+          "location": "Legs (Right)",
+          "tier": 3,
+          "magnitude": -3,
+          "attribute": "mpp"
+        }
+      ],
+      "conditions": {
+        "Prone": 0
+      },
+      "advanced_skills_created": [
+        "Power Strike",
+        "Defense (Advanced)",
+        "Power Strike (Advanced)"
+      ],
+      "general_xp": 597,
+      "incapacitated": false
+    },
+    "Aleena": {
+      "name": "Aleena",
+      "hp": 356,
+      "hp_max": 566,
+      "pe": 159,
+      "pe_max": 159,
+      "mp": 618,
+      "mp_max": 618,
+      "skills": {
+        "Devotion": {
+          "tier": 1,
+          "cap": 65,
+          "current": 34
+        },
+        "Smite": {
+          "tier": 1,
+          "cap": 55,
+          "current": 34
+        },
+        "Defense": {
+          "tier": 1,
+          "cap": 47,
+          "current": 31
+        },
+        "Smite (Advanced)": {
+          "tier": 2,
+          "cap": 56,
+          "current": 1
+        },
+        "Iron Faith": {
+          "tier": 2,
+          "cap": 52,
+          "current": 1
+        }
+      },
+      "wounds": [
+        {
+          "location": "Head (Left)",
+          "tier": 3,
+          "magnitude": -3,
+          "attribute": "mpp"
+        },
+        {
+          "location": "Legs (Right)",
+          "tier": 3,
+          "magnitude": -3,
+          "attribute": "mpp"
+        }
+      ],
+      "conditions": {},
+      "advanced_skills_created": [
+        "Smite (Advanced)",
+        "Iron Faith"
+      ],
+      "general_xp": 414,
+      "incapacitated": false
+    },
+    "Goblin": {
+      "name": "Goblin",
+      "hp": -6,
+      "hp_max": 415,
+      "pe": 34,
+      "pe_max": 102,
+      "mp": 273,
+      "mp_max": 273,
+      "skills": {
+        "Crude Attack": {
+          "tier": 1,
+          "cap": 37,
+          "current": 40
+        },
+        "Defense": {
+          "tier": 1,
+          "cap": 48,
+          "current": 35
+        },
+        "Trip": {
+          "tier": 2,
+          "cap": 45,
+          "current": 46
+        }
+      },
+      "wounds": [
+        {
+          "location": "Arms (Left)",
+          "tier": 3,
+          "magnitude": -3,
+          "attribute": "bpp"
+        },
+        {
+          "location": "Torso (Left)",
+          "tier": 3,
+          "magnitude": -3,
+          "attribute": "bsp"
+        }
+      ],
+      "conditions": {},
+      "advanced_skills_created": [],
+      "general_xp": 279,
+      "incapacitated": false
+    },
+    "Bargle": {
+      "name": "Bargle",
+      "hp": -11,
+      "hp_max": 447,
+      "pe": 34,
+      "pe_max": 105,
+      "mp": 680,
+      "mp_max": 680,
+      "skills": {
+        "Bolt": {
+          "tier": 2,
+          "cap": 66,
+          "current": 66
+        },
+        "Defense": {
+          "tier": 1,
+          "cap": 46,
+          "current": 38
+        },
+        "Beguile": {
+          "tier": 1,
+          "cap": 55,
+          "current": 27
+        }
+      },
+      "wounds": [
+        {
+          "location": "Torso (Right)",
+          "tier": 1,
+          "magnitude": -1,
+          "attribute": "bsp"
+        },
+        {
+          "location": "Torso (Left)",
+          "tier": 1,
+          "magnitude": -1,
+          "attribute": "bpp"
+        },
+        {
+          "location": "Head (Left)",
+          "tier": 3,
+          "magnitude": -3,
+          "attribute": "bpp"
+        }
+      ],
+      "conditions": {},
+      "advanced_skills_created": [],
+      "general_xp": 475,
+      "incapacitated": false
+    }
+  },
+  "totals": {
+    "total_core_tests": 202,
+    "total_exchanges": 65,
+    "total_100_fumbles": 1,
+    "total_doubles": 15,
+    "total_advanced_skills_created": 5,
+    "total_overflow_events": 30,
+    "total_wounds_recorded": 8
+  }
+}

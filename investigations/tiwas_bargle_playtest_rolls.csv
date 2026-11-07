@@ -1,0 +1,203 @@
+scene,round,exch_id,actor,role,skill,skill_tier,skill_value_at_roll,roll,success,margin,cost,overflow,failure_xp,skill_value_after,is_double,advanced_skill_created,pool_domain,pool_after_recovery,hp_after
+Scene2,1,1,Rowan,attacker,Attack,1,29,17,True,12,17,0,0,29,False,,PE,170,615
+Scene2,1,1,Goblin,defender,Defense,1,24,3,True,21,3,0,0,24,False,,PE,102,421
+Scene2,1,2,Aleena,attacker,Smite,1,27,42,False,0,42,0,15,27,False,,PE,159,566
+Scene2,1,2,Goblin,defender,Defense,1,24,45,False,0,45,0,21,24,False,,PE,91,421
+Scene2,1,2,Aleena,attacker,Smite,1,27,19,True,8,19,0,0,27,False,,PE,159,566
+Scene2,1,2,Goblin,defender,Defense,1,24,73,False,0,73,0,49,26,False,,PE,52,421
+Scene2,1,3,Goblin,attacker,Trip,2,46,62,False,0,62,10,16,46,False,,PE,34,403
+Scene2,1,3,Rowan,defender,Defense,1,27,35,False,0,35,0,8,27,False,,PE,170,615
+Scene2,1,3,Goblin,attacker,Trip,2,46,72,False,0,72,38,26,46,False,,PE,34,365
+Scene2,1,3,Rowan,defender,Defense,1,27,21,True,6,21,0,0,27,False,,PE,170,615
+Scene2,1,4,Goblin,attacker,Crude Attack,1,40,57,False,0,57,23,17,40,False,,PE,34,342
+Scene2,1,4,Rowan,defender,Defense,1,27,98,False,0,98,0,71,29,False,,PE,128,615
+Scene2,1,4,Goblin,attacker,Crude Attack,1,40,41,False,0,41,7,1,40,False,,PE,34,335
+Scene2,1,4,Rowan,defender,Defense,1,29,29,True,0,29,0,0,29,False,,PE,155,615
+Scene2,2,5,Rowan,attacker,Attack,1,29,100,False,0,100,0,71,31,True,Power Strike,PE,111,615
+Scene2,2,5,Goblin,defender,Defense,1,26,10,True,16,10,0,0,26,False,,PE,58,335
+Scene2,2,6,Aleena,attacker,Smite,1,27,13,True,14,13,0,0,27,False,,PE,159,566
+Scene2,2,6,Goblin,defender,Defense,1,26,97,False,0,97,39,71,28,False,,PE,34,296
+Scene2,2,7,Goblin,attacker,Trip,2,46,16,True,30,16,0,0,46,False,,PE,52,282
+Scene2,2,7,Rowan,defender,Defense,1,29,59,False,0,59,0,30,30,False,,PE,108,615
+Scene2,2,8,Goblin,attacker,Crude Attack,1,40,25,True,15,25,0,0,40,False,,PE,61,282
+Scene2,2,8,Rowan,defender,Defense,1,30,48,False,0,48,0,18,30,False,,PE,116,615
+Scene2,3,9,Rowan,attacker,Power Strike,2,28,75,False,0,75,0,47,29,False,,PE,97,600
+Scene2,3,9,Goblin,defender,Defense,1,28,67,False,0,67,6,39,29,False,,PE,34,276
+Scene2,3,9,Rowan,attacker,Power Strike,2,29,17,True,12,17,0,0,29,False,,PE,136,600
+Scene2,3,9,Goblin,defender,Defense,1,29,91,False,0,91,57,62,31,False,,PE,34,219
+Scene2,3,10,Aleena,attacker,Smite,1,27,72,False,0,72,0,45,28,False,,PE,137,566
+Scene2,3,10,Goblin,defender,Defense,1,31,20,True,11,20,0,0,31,False,,PE,48,219
+Scene2,3,11,Goblin,attacker,Trip,2,46,18,True,28,18,0,0,46,False,,PE,64,219
+Scene2,3,11,Rowan,defender,Defense,1,30,33,False,0,33,0,3,30,True,Defense (Advanced),PE,159,600
+Scene2,3,12,Goblin,attacker,Crude Attack,1,40,51,False,0,51,0,11,40,False,,PE,47,219
+Scene2,3,12,Rowan,defender,Defense,1,30,59,False,0,59,0,29,30,False,,PE,156,600
+Scene2,3,12,Goblin,attacker,Crude Attack,1,40,64,False,0,64,17,24,40,False,,PE,34,202
+Scene2,3,12,Rowan,defender,Defense,1,30,38,False,0,38,0,8,30,False,,PE,170,600
+Scene2,3,12,Goblin,attacker,Crude Attack,1,40,89,False,0,89,55,49,40,False,,PE,34,147
+Scene2,3,12,Rowan,defender,Defense,1,30,6,True,24,6,0,0,30,False,,PE,170,600
+Scene2,4,13,Rowan,attacker,Power Strike,2,28,14,True,14,14,0,0,28,False,,PE,170,600
+Scene2,4,13,Goblin,defender,Defense,1,31,54,False,0,54,20,23,31,False,,PE,34,127
+Scene2,4,14,Aleena,attacker,Smite,1,28,18,True,10,18,0,0,28,False,,PE,159,566
+Scene2,4,14,Goblin,defender,Defense,1,31,86,False,0,86,52,55,32,False,,PE,34,75
+Scene2,4,15,Goblin,attacker,Trip,2,46,14,True,32,14,0,0,46,False,,PE,54,65
+Scene2,4,15,Rowan,defender,Defense,1,30,8,True,22,8,0,0,30,False,,PE,170,600
+Scene2,4,16,Goblin,attacker,Crude Attack,1,40,14,True,26,14,0,0,40,False,,PE,74,65
+Scene2,4,16,Rowan,defender,Defense,1,30,83,False,0,83,0,53,31,False,,PE,143,600
+Scene2,5,17,Rowan,attacker,Power Strike,2,31,81,False,0,81,0,50,32,False,,PE,118,574
+Scene2,5,17,Goblin,defender,Defense,1,32,3,True,29,3,0,0,32,False,,PE,102,65
+Scene2,5,18,Aleena,attacker,Smite,1,28,34,False,0,34,0,6,28,False,,PE,159,566
+Scene2,5,18,Goblin,defender,Defense,1,32,78,False,0,78,0,46,33,False,,PE,58,65
+Scene2,5,18,Aleena,attacker,Smite,1,28,15,True,13,15,0,0,28,False,,PE,159,566
+Scene2,5,18,Goblin,defender,Defense,1,33,47,False,0,47,0,14,33,False,,PE,45,65
+Scene2,5,19,Goblin,attacker,Trip,2,46,31,True,15,31,0,0,46,False,,PE,48,52
+Scene2,5,19,Rowan,defender,Defense,1,31,55,False,0,55,0,24,31,True,,PE,119,574
+Scene2,5,20,Goblin,attacker,Crude Attack,1,40,33,True,7,33,0,0,40,True,,PE,49,52
+Scene2,5,20,Rowan,defender,Defense,1,31,70,False,0,70,0,39,32,False,,PE,105,574
+Scene2,6,21,Rowan,attacker,Power Strike,2,29,47,False,0,47,0,18,29,False,,PE,114,567
+Scene2,6,21,Goblin,defender,Defense,1,33,73,False,0,73,24,40,34,False,,PE,34,28
+Scene2,6,21,Rowan,attacker,Power Strike,2,29,31,False,0,31,0,2,29,False,,PE,139,567
+Scene2,6,21,Goblin,defender,Defense,1,34,68,False,0,68,34,34,35,False,,PE,34,-6
+Scene3,1,22,Rowan,attacker,Power Strike,2,32,55,False,0,55,0,23,32,True,Power Strike (Advanced),PE,140,610
+Scene3,1,22,Bargle,defender,Defense,1,23,25,False,0,25,0,2,23,False,,PE,105,452
+Scene3,1,22,Rowan,attacker,Power Strike,2,32,91,False,0,91,0,59,33,False,,PE,105,610
+Scene3,1,22,Bargle,defender,Defense,1,23,66,False,0,66,0,43,24,True,,PE,73,452
+Scene3,1,22,Rowan,attacker,Power Strike,2,33,74,False,0,74,0,41,34,False,,PE,87,610
+Scene3,1,22,Bargle,defender,Defense,1,24,39,False,0,39,0,15,24,False,,PE,68,452
+Scene3,1,22,Rowan,attacker,Power Strike,2,34,64,False,0,64,0,30,34,False,,PE,79,610
+Scene3,1,22,Bargle,defender,Defense,1,24,34,False,0,34,0,10,24,False,,PE,68,452
+Scene3,1,22,Rowan,attacker,Power Strike,2,34,12,True,22,12,0,0,34,False,,PE,123,610
+Scene3,1,22,Bargle,defender,Defense,1,24,3,True,21,3,0,0,24,False,,PE,99,452
+Scene3,1,23,Aleena,attacker,Smite,1,28,55,False,0,55,0,27,28,True,Smite (Advanced),PE,154,566
+Scene3,1,23,Bargle,defender,Defense,1,24,75,False,0,75,0,51,26,False,,PE,58,452
+Scene3,1,23,Aleena,attacker,Smite,1,28,24,True,4,24,0,0,28,False,,PE,159,566
+Scene3,1,23,Bargle,defender,Defense,1,26,8,True,18,8,0,0,26,False,,PE,84,452
+Scene3,1,24,Bargle,attacker,Bolt,2,66,12,True,54,12,0,0,66,False,,MP,680,452
+Scene3,1,24,Rowan,defender,Defense,1,32,64,False,0,64,0,32,33,False,,PE,115,610
+Scene3,2,25,Rowan,attacker,Power Strike,2,34,8,True,26,8,0,0,34,False,,PE,163,556
+Scene3,2,25,Bargle,defender,Defense,1,26,10,True,16,10,0,0,26,False,,PE,105,452
+Scene3,2,26,Aleena,attacker,Smite,1,28,51,False,0,51,0,23,28,False,,PE,158,566
+Scene3,2,26,Bargle,defender,Defense,1,26,98,False,0,98,0,72,28,False,,PE,41,452
+Scene3,2,26,Aleena,attacker,Smite,1,28,53,False,0,53,0,25,28,False,,PE,155,566
+Scene3,2,26,Bargle,defender,Defense,1,28,29,False,0,29,0,1,28,False,,PE,46,452
+Scene3,2,26,Aleena,attacker,Smite,1,28,9,True,19,9,0,0,28,False,,PE,159,566
+Scene3,2,26,Bargle,defender,Defense,1,28,4,True,24,4,0,0,28,False,,PE,76,452
+Scene3,2,27,Bargle,attacker,Bolt,2,66,87,False,0,87,0,21,66,False,,MP,652,452
+Scene3,2,27,Aleena,defender,Defense,1,23,92,False,0,92,0,69,25,False,,PE,117,566
+Scene3,2,27,Bargle,attacker,Bolt,2,66,8,True,58,8,0,0,66,False,,MP,680,452
+Scene3,2,27,Aleena,defender,Defense,1,25,9,True,16,9,0,0,25,False,,PE,158,566
+Scene3,3,28,Rowan,attacker,Power Strike,2,34,80,False,0,80,0,46,35,False,,PE,139,556
+Scene3,3,28,Bargle,defender,Defense,1,28,25,True,3,25,0,0,28,False,,PE,85,452
+Scene3,3,29,Aleena,attacker,Smite,1,28,13,True,15,13,0,0,28,False,,PE,159,524
+Scene3,3,29,Bargle,defender,Defense,1,28,31,False,0,31,0,3,28,False,,PE,88,452
+Scene3,3,30,Bargle,attacker,Bolt,2,66,12,True,54,12,0,0,66,False,,MP,680,437
+Scene3,3,30,Rowan,defender,Defense,1,33,4,True,29,4,0,0,33,False,,PE,170,556
+Scene3,4,31,Rowan,attacker,Power Strike,2,35,16,True,19,16,0,0,35,False,,PE,170,556
+Scene3,4,31,Bargle,defender,Defense,1,28,63,False,0,63,0,35,29,False,,PE,59,437
+Scene3,4,32,Aleena,attacker,Smite,1,28,16,True,12,16,0,0,28,False,,PE,159,524
+Scene3,4,32,Bargle,defender,Defense,1,29,60,False,0,60,1,31,30,False,,PE,34,417
+Scene3,4,33,Bargle,attacker,Bolt,2,66,87,False,0,87,0,21,66,False,,MP,652,405
+Scene3,4,33,Aleena,defender,Defense,1,25,78,False,0,78,0,53,27,False,,PE,131,524
+Scene3,4,33,Bargle,attacker,Bolt,2,66,91,False,0,91,0,25,66,False,,MP,620,405
+Scene3,4,33,Aleena,defender,Defense,1,27,1,True,26,1,0,0,27,False,,PE,159,524
+Scene3,5,34,Rowan,attacker,Power Strike,2,35,65,False,0,65,0,30,35,False,,PE,161,556
+Scene3,5,34,Bargle,defender,Defense,1,30,30,True,0,30,0,0,30,False,,PE,38,405
+Scene3,5,35,Aleena,attacker,Smite,1,28,37,False,0,37,0,9,28,False,,PE,159,524
+Scene3,5,35,Bargle,defender,Defense,1,30,22,True,8,22,0,0,30,True,,PE,50,405
+Scene3,5,36,Bargle,attacker,Bolt,2,66,53,True,13,53,0,0,66,False,,MP,626,405
+Scene3,5,36,Rowan,defender,Defense,1,33,49,False,0,49,0,16,33,False,,PE,168,556
+Scene3,6,37,Rowan,attacker,Power Strike,2,35,63,False,0,63,0,28,35,False,,PE,161,543
+Scene3,6,37,Bargle,defender,Defense,1,30,35,False,0,35,0,5,30,False,,PE,49,405
+Scene3,6,37,Rowan,attacker,Power Strike,2,35,3,True,32,3,0,0,35,False,,PE,170,543
+Scene3,6,37,Bargle,defender,Defense,1,30,28,True,2,28,0,0,30,False,,PE,55,405
+Scene3,6,38,Aleena,attacker,Smite,1,28,41,False,0,41,0,13,28,False,,PE,159,524
+Scene3,6,38,Bargle,defender,Defense,1,30,94,False,0,94,39,64,32,False,,PE,34,366
+Scene3,6,38,Aleena,attacker,Smite,1,28,6,True,22,6,0,0,28,False,,PE,159,524
+Scene3,6,38,Bargle,defender,Defense,1,32,8,True,24,8,0,0,32,False,,PE,60,366
+Scene3,6,39,Bargle,attacker,Bolt,2,66,74,False,0,74,0,8,66,False,,MP,611,366
+Scene3,6,39,Aleena,defender,Defense,1,27,77,False,0,77,0,50,28,True,Iron Faith,PE,132,524
+Scene3,6,39,Bargle,attacker,Bolt,2,66,58,True,8,58,0,0,66,False,,MP,612,366
+Scene3,6,39,Aleena,defender,Defense,1,28,35,False,0,35,0,7,28,False,,PE,147,524
+Scene3,7,40,Rowan,attacker,Power Strike,2,35,94,False,0,94,0,59,36,False,,PE,132,543
+Scene3,7,40,Bargle,defender,Defense,1,32,48,False,0,48,0,16,32,False,,PE,46,366
+Scene3,7,40,Rowan,attacker,Power Strike,2,36,19,True,17,19,0,0,36,False,,PE,169,543
+Scene3,7,40,Bargle,defender,Defense,1,32,21,True,11,21,0,0,32,False,,PE,59,366
+Scene3,7,41,Aleena,attacker,Smite,1,28,63,False,0,63,0,35,29,False,,PE,134,524
+Scene3,7,41,Bargle,defender,Defense,1,32,85,False,0,85,26,53,33,False,,PE,34,334
+Scene3,7,41,Aleena,attacker,Smite,1,29,90,False,0,90,0,61,31,False,,PE,94,524
+Scene3,7,41,Bargle,defender,Defense,1,33,67,False,0,67,33,34,34,False,,PE,34,301
+Scene3,7,41,Aleena,attacker,Smite,1,31,98,False,0,98,4,67,33,False,,PE,50,520
+Scene3,7,41,Bargle,defender,Defense,1,34,13,True,21,13,0,0,34,False,,PE,55,301
+Scene3,7,42,Bargle,attacker,Bolt,2,66,68,False,0,68,0,2,66,False,,MP,603,301
+Scene3,7,42,Rowan,defender,Defense,1,33,43,False,0,43,0,10,33,False,,PE,170,543
+Scene3,7,42,Bargle,attacker,Bolt,2,66,72,False,0,72,0,6,66,False,,MP,590,301
+Scene3,7,42,Rowan,defender,Defense,1,33,10,True,23,10,0,0,33,False,,PE,170,543
+Scene3,8,43,Rowan,attacker,Power Strike,2,36,87,False,0,87,0,51,37,False,,PE,139,543
+Scene3,8,43,Bargle,defender,Defense,1,34,85,False,0,85,30,51,35,False,,PE,34,271
+Scene3,8,43,Rowan,attacker,Power Strike,2,37,25,True,12,25,0,0,37,False,,PE,170,543
+Scene3,8,43,Bargle,defender,Defense,1,35,76,False,0,76,42,41,36,False,,PE,34,229
+Scene3,8,44,Aleena,attacker,Smite,1,33,45,False,0,45,0,12,33,False,,PE,55,520
+Scene3,8,44,Bargle,defender,Defense,1,36,18,True,18,18,0,0,36,False,,PE,50,217
+Scene3,8,45,Bargle,attacker,Bolt,2,66,3,True,63,3,0,0,66,False,,MP,646,217
+Scene3,8,45,Aleena,defender,Defense,1,28,47,False,0,47,0,19,28,False,,PE,58,520
+Scene3,9,46,Rowan,attacker,Power Strike,2,37,86,False,0,86,0,49,38,False,,PE,140,543
+Scene3,9,46,Bargle,defender,Defense,1,36,91,False,0,91,41,55,37,False,,PE,34,176
+Scene3,9,46,Rowan,attacker,Power Strike,2,38,80,False,0,80,0,42,39,False,,PE,116,543
+Scene3,9,46,Bargle,defender,Defense,1,37,65,False,0,65,31,28,37,False,,PE,34,145
+Scene3,9,46,Rowan,attacker,Power Strike,2,39,34,True,5,34,0,0,39,False,,PE,138,543
+Scene3,9,46,Bargle,defender,Defense,1,37,35,True,2,35,1,0,37,False,,PE,34,144
+Scene3,9,47,Aleena,attacker,Smite,1,33,61,False,0,61,3,28,33,False,,PE,50,454
+Scene3,9,47,Bargle,defender,Defense,1,37,14,True,23,14,0,0,37,False,,PE,54,144
+Scene3,9,48,Bargle,attacker,Bolt,2,66,99,False,0,99,0,33,66,True,,MP,606,144
+Scene3,9,48,Rowan,defender,Defense,1,33,99,False,0,99,0,66,34,True,,PE,95,543
+Scene3,9,48,Bargle,attacker,Bolt,2,66,41,True,25,41,0,0,66,False,,MP,624,144
+Scene3,9,48,Rowan,defender,Defense,1,34,65,False,0,65,0,31,34,False,,PE,86,543
+Scene3,10,49,Rowan,attacker,Power Strike,2,39,82,False,0,82,0,43,40,False,,PE,60,543
+Scene3,10,49,Bargle,defender,Defense,1,37,27,True,10,27,0,0,37,False,,PE,61,144
+Scene3,10,50,Aleena,attacker,Smite,1,33,25,True,8,25,0,0,33,False,,PE,75,454
+Scene3,10,50,Bargle,defender,Defense,1,37,4,True,33,4,0,0,37,False,,PE,91,144
+Scene3,10,51,Bargle,attacker,Bolt,2,66,8,True,58,8,0,0,66,False,,MP,675,144
+Scene3,10,51,Aleena,defender,Defense,1,28,13,True,15,13,0,0,28,False,,PE,112,454
+Scene3,11,52,Rowan,attacker,Power Strike,2,40,8,True,32,8,0,0,40,False,,PE,108,543
+Scene3,11,52,Bargle,defender,Defense,1,37,7,True,30,7,0,0,37,False,,PE,105,144
+Scene3,11,53,Aleena,attacker,Smite,1,33,90,False,0,90,0,57,34,False,,PE,72,411
+Scene3,11,53,Bargle,defender,Defense,1,37,28,True,9,28,0,0,37,False,,PE,105,142
+Scene3,11,54,Bargle,attacker,Bolt,2,66,28,True,38,28,0,0,66,False,,MP,680,142
+Scene3,11,54,Rowan,defender,Defense,1,34,15,True,19,15,0,0,34,False,,PE,149,543
+Scene3,12,55,Rowan,attacker,Power Strike,2,40,59,False,0,59,0,19,40,False,,PE,146,524
+Scene3,12,55,Bargle,defender,Defense,1,37,61,False,0,61,0,24,37,False,,PE,78,142
+Scene3,12,55,Rowan,attacker,Power Strike,2,40,70,False,0,70,0,30,40,False,,PE,132,524
+Scene3,12,55,Bargle,defender,Defense,1,37,23,True,14,23,0,0,37,False,,PE,89,142
+Scene3,12,56,Aleena,attacker,Smite,1,34,49,False,0,49,0,15,34,False,,PE,73,411
+Scene3,12,56,Bargle,defender,Defense,1,37,15,True,22,15,0,0,37,False,,PE,105,142
+Scene3,12,57,Bargle,attacker,Bolt,2,66,77,False,0,77,0,11,66,True,,MP,662,142
+Scene3,12,57,Aleena,defender,Defense,1,28,89,False,0,89,16,61,30,False,,PE,50,395
+Scene3,12,57,Bargle,attacker,Bolt,2,66,80,False,0,80,0,14,66,False,,MP,641,142
+Scene3,12,57,Aleena,defender,Defense,1,30,35,False,0,35,0,5,30,False,,PE,65,395
+Scene3,12,57,Bargle,attacker,Bolt,2,66,22,True,44,22,0,0,66,True,,MP,678,142
+Scene3,12,57,Aleena,defender,Defense,1,30,74,False,0,74,9,44,31,False,,PE,50,386
+Scene3,13,58,Rowan,attacker,Power Strike,2,40,38,True,2,38,0,0,40,False,,PE,150,524
+Scene3,13,58,Bargle,defender,Defense,1,37,4,True,33,4,0,0,37,False,,PE,105,142
+Scene3,13,59,Aleena,attacker,Smite,1,34,15,True,19,15,0,0,34,False,,PE,85,386
+Scene3,13,59,Bargle,defender,Defense,1,37,56,False,0,56,0,19,37,False,,PE,83,142
+Scene3,13,60,Bargle,attacker,Bolt,2,66,57,True,9,57,0,0,66,False,,MP,680,123
+Scene3,13,60,Rowan,defender,Defense,1,34,48,False,0,48,0,14,34,False,,PE,158,524
+Scene3,14,61,Rowan,attacker,Power Strike,2,40,19,True,21,19,0,0,40,False,,PE,170,515
+Scene3,14,61,Bargle,defender,Defense,1,37,66,False,0,66,0,29,37,True,,PE,51,123
+Scene3,14,62,Aleena,attacker,Smite,1,34,25,True,9,25,0,0,34,False,,PE,110,386
+Scene3,14,62,Bargle,defender,Defense,1,37,95,False,0,95,44,58,38,False,,PE,34,79
+Scene3,14,63,Bargle,attacker,Bolt,2,66,36,True,30,36,0,0,66,False,,MP,680,70
+Scene3,14,63,Aleena,defender,Defense,1,31,31,True,0,31,0,0,31,False,,PE,129,386
+Scene3,15,64,Rowan,attacker,Power Strike,2,40,99,False,0,99,0,59,41,True,,PE,127,515
+Scene3,15,64,Bargle,defender,Defense,1,38,39,False,0,39,5,1,38,False,,PE,34,65
+Scene3,15,64,Rowan,attacker,Power Strike,2,41,16,True,25,16,0,0,41,False,,PE,167,515
+Scene3,15,64,Bargle,defender,Defense,1,38,62,False,0,62,28,24,38,False,,PE,34,37
+Scene3,15,65,Aleena,attacker,Smite,1,34,3,True,31,3,0,0,34,False,,PE,159,356
+Scene3,15,65,Bargle,defender,Defense,1,38,57,False,0,57,23,19,38,False,,PE,34,-11
+Interlude,1,0,Aleena,healer,Devotion,1,32,93,False,0,93,0,61,33,False,,MP,588,566
+Interlude,2,0,Aleena,healer,Devotion,1,33,30,True,3,30,0,0,33,False,,MP,615,566
+Interlude,3,0,Aleena,healer,Devotion,1,33,19,True,14,19,0,0,33,False,,MP,624,566
+Interlude,4,0,Aleena,healer,Devotion,1,33,50,False,0,50,0,17,33,False,,MP,624,566
+Interlude,5,0,Aleena,healer,Devotion,1,33,24,True,9,24,0,0,33,False,,MP,624,566
+Interlude,6,0,Aleena,healer,Devotion,1,33,52,False,0,52,0,19,33,False,,MP,624,566
+Interlude,7,0,Aleena,healer,Devotion,1,33,91,False,0,91,0,58,34,False,,MP,590,566
+Interlude,8,0,Aleena,healer,Devotion,1,34,17,True,17,17,0,0,34,False,,MP,624,566

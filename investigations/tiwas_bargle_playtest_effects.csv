@@ -1,0 +1,64 @@
+scene,round,exch_id,attacker,defender,atk_skill,def_skill,declared_effect,location_index,zone,laterality,effect_tier,effect_magnitude,wound_attribute,hp_change,notes
+Scene2,1,1,Rowan,Goblin,Attack,Defense,defender_wins_both_succeeded,,,,,,,0,"Both succeeded; defender's Margin was higher -> defender wins, no counter-Effect."
+Scene2,1,2,Aleena,Goblin,Smite,Defense,injury,,,,,,,-8,
+Scene2,1,3,Goblin,Rowan,Trip,Defense,defender_wins_no_effect,,,,,,,0,"DEC-101: defender wins, attack fails, no counter-Effect."
+Scene2,1,4,Goblin,Rowan,Crude Attack,Defense,defender_wins_no_effect,,,,,,,0,"DEC-101: defender wins, attack fails, no counter-Effect."
+Scene2,2,5,Rowan,Goblin,Attack,Defense,defender_wins_no_effect,,,,,,,0,"DEC-101: defender wins, attack fails, no counter-Effect."
+Scene2,2,6,Aleena,Goblin,Smite,Defense,injury,,,,,,,-14,
+Scene2,2,7,Goblin,Rowan,Trip,Defense,trip,61,Arms,Left,3,-3,,0,Prone imposed/raised to Tier-3.
+Scene2,2,8,Goblin,Rowan,Crude Attack,Defense,injury,,,,,,,-15,
+Scene2,3,9,Rowan,Goblin,Power Strike,Defense,wound,71,Arms,Left,3,-3,bpp,0,"Wound: Arms (Left) Tier-3, attribute bpp -3."
+Scene2,3,10,Aleena,Goblin,Smite,Defense,defender_wins_no_effect,,,,,,,0,"DEC-101: defender wins, attack fails, no counter-Effect."
+Scene2,3,11,Goblin,Rowan,Trip,Defense,trip,81,Head,Left,3,-3,,0,Prone imposed/raised to Tier-3.
+Scene2,3,12,Goblin,Rowan,Crude Attack,Defense,defender_wins_no_effect,,,,,,,0,"DEC-101: defender wins, attack fails, no counter-Effect."
+Scene2,4,13,Rowan,Goblin,Power Strike,Defense,wound,41,Torso,Left,3,-3,bsp,0,"Wound: Torso (Left) Tier-3, attribute bsp -3."
+Scene2,4,14,Aleena,Goblin,Smite,Defense,injury,,,,,,,-10,
+Scene2,4,15,Goblin,Rowan,Trip,Defense,trip,41,Torso,Left,0,0,,0,Effect fully negated by shred + de-escalation (DEC-103 carry rule).
+Scene2,4,16,Goblin,Rowan,Crude Attack,Defense,injury,,,,,,,-26,
+Scene2,5,17,Rowan,Goblin,Power Strike,Defense,defender_wins_no_effect,,,,,,,0,"DEC-101: defender wins, attack fails, no counter-Effect."
+Scene2,5,18,Aleena,Goblin,Smite,Defense,injury,,,,,,,-13,
+Scene2,5,19,Goblin,Rowan,Trip,Defense,trip,13,Legs,Left,3,-3,,0,Prone imposed/raised to Tier-3.
+Scene2,5,20,Goblin,Rowan,Crude Attack,Defense,injury,,,,,,,-7,
+Scene3,1,22,Rowan,Bargle,Power Strike,Defense,wound,21,Legs,Left,0,0,,0,Effect fully negated by shred + de-escalation (DEC-103 carry rule).
+Scene3,1,23,Aleena,Bargle,Smite,Defense,defender_wins_both_succeeded,,,,,,,0,"Both succeeded; defender's Margin was higher -> defender wins, no counter-Effect."
+Scene3,1,24,Bargle,Rowan,Bolt,Defense,armor_bypass,,,,,,,-54,"Tag+Location match: defense:armor present (simplified coarse match, not full DEC-137 address). NOTE: no numeric plain-armor mitigation formula exists in the ruled corpus, so match vs. fallback produce an IDENTICAL numeric outcome here -- a genuine completeness gap, not a script bug."
+Scene3,2,25,Rowan,Bargle,Power Strike,Defense,wound,80,Head,Right,0,0,,0,Effect fully negated by shred + de-escalation (DEC-103 carry rule).
+Scene3,2,26,Aleena,Bargle,Smite,Defense,defender_wins_both_succeeded,,,,,,,0,"Both succeeded; defender's Margin was higher -> defender wins, no counter-Effect."
+Scene3,2,27,Bargle,Aleena,Bolt,Defense,injury,,,,,,,-42,
+Scene3,3,28,Rowan,Bargle,Power Strike,Defense,defender_wins_no_effect,,,,,,,0,"DEC-101: defender wins, attack fails, no counter-Effect."
+Scene3,3,29,Aleena,Bargle,Smite,Defense,injury,,,,,,,-15,
+Scene3,3,30,Bargle,Rowan,Bolt,Defense,wound,21,Legs,Left,0,0,,0,Effect fully negated by shred + de-escalation (DEC-103 carry rule).
+Scene3,4,31,Rowan,Bargle,Power Strike,Defense,armor_bypass,,,,,,,-19,"No defense:armor tag on target -> DEC-030 fail-and-fall-back to Base Inflict Injury. NOTE: no numeric plain-armor mitigation formula exists in the ruled corpus, so match vs. fallback produce an IDENTICAL numeric outcome here -- a genuine completeness gap, not a script bug."
+Scene3,4,32,Aleena,Bargle,Smite,Defense,injury,,,,,,,-12,
+Scene3,4,33,Bargle,Aleena,Bolt,Defense,defender_wins_no_effect,,,,,,,0,"DEC-101: defender wins, attack fails, no counter-Effect."
+Scene3,5,34,Rowan,Bargle,Power Strike,Defense,defender_wins_no_effect,,,,,,,0,"DEC-101: defender wins, attack fails, no counter-Effect."
+Scene3,5,35,Aleena,Bargle,Smite,Defense,defender_wins_no_effect,,,,,,,0,"DEC-101: defender wins, attack fails, no counter-Effect."
+Scene3,5,36,Bargle,Rowan,Bolt,Defense,injury,,,,,,,-13,
+Scene3,6,37,Rowan,Bargle,Power Strike,Defense,wound,30,Torso,Right,1,-1,bsp,0,"Wound: Torso (Right) Tier-1, attribute bsp -1."
+Scene3,6,38,Aleena,Bargle,Smite,Defense,defender_wins_both_succeeded,,,,,,,0,"Both succeeded; defender's Margin was higher -> defender wins, no counter-Effect."
+Scene3,6,39,Bargle,Aleena,Bolt,Defense,wound,85,Head,Left,3,-3,mpp,0,"Wound: Head (Left) Tier-3, attribute mpp -3."
+Scene3,7,40,Rowan,Bargle,Power Strike,Defense,injury,,,,,,,-6,
+Scene3,7,41,Aleena,Bargle,Smite,Defense,defender_wins_no_effect,,,,,,,0,"DEC-101: defender wins, attack fails, no counter-Effect."
+Scene3,7,42,Bargle,Rowan,Bolt,Defense,defender_wins_no_effect,,,,,,,0,"DEC-101: defender wins, attack fails, no counter-Effect."
+Scene3,8,43,Rowan,Bargle,Power Strike,Defense,armor_bypass,,,,,,,-12,"No defense:armor tag on target -> DEC-030 fail-and-fall-back to Base Inflict Injury. NOTE: no numeric plain-armor mitigation formula exists in the ruled corpus, so match vs. fallback produce an IDENTICAL numeric outcome here -- a genuine completeness gap, not a script bug."
+Scene3,8,44,Aleena,Bargle,Smite,Defense,defender_wins_no_effect,,,,,,,0,"DEC-101: defender wins, attack fails, no counter-Effect."
+Scene3,8,45,Bargle,Aleena,Bolt,Defense,injury,,,,,,,-63,
+Scene3,9,46,Rowan,Bargle,Power Strike,Defense,wound,43,Torso,Left,1,-1,bpp,0,"Wound: Torso (Left) Tier-1, attribute bpp -1."
+Scene3,9,47,Aleena,Bargle,Smite,Defense,defender_wins_no_effect,,,,,,,0,"DEC-101: defender wins, attack fails, no counter-Effect."
+Scene3,9,48,Bargle,Rowan,Bolt,Defense,wound,14,Legs,Right,3,-3,mpp,0,"Wound: Legs (Right) Tier-3, attribute mpp -3."
+Scene3,10,49,Rowan,Bargle,Power Strike,Defense,defender_wins_no_effect,,,,,,,0,"DEC-101: defender wins, attack fails, no counter-Effect."
+Scene3,10,50,Aleena,Bargle,Smite,Defense,defender_wins_both_succeeded,,,,,,,0,"Both succeeded; defender's Margin was higher -> defender wins, no counter-Effect."
+Scene3,10,51,Bargle,Aleena,Bolt,Defense,armor_bypass,,,,,,,-43,"No defense:armor tag on target -> DEC-030 fail-and-fall-back to Base Inflict Injury. NOTE: no numeric plain-armor mitigation formula exists in the ruled corpus, so match vs. fallback produce an IDENTICAL numeric outcome here -- a genuine completeness gap, not a script bug."
+Scene3,11,52,Rowan,Bargle,Power Strike,Defense,injury,,,,,,,-2,
+Scene3,11,53,Aleena,Bargle,Smite,Defense,defender_wins_no_effect,,,,,,,0,"DEC-101: defender wins, attack fails, no counter-Effect."
+Scene3,11,54,Bargle,Rowan,Bolt,Defense,injury,,,,,,,-19,
+Scene3,12,55,Rowan,Bargle,Power Strike,Defense,defender_wins_no_effect,,,,,,,0,"DEC-101: defender wins, attack fails, no counter-Effect."
+Scene3,12,56,Aleena,Bargle,Smite,Defense,defender_wins_no_effect,,,,,,,0,"DEC-101: defender wins, attack fails, no counter-Effect."
+Scene3,12,57,Bargle,Aleena,Bolt,Defense,wound,22,Legs,Right,3,-3,mpp,0,"Wound: Legs (Right) Tier-3, attribute mpp -3."
+Scene3,13,58,Rowan,Bargle,Power Strike,Defense,defender_wins_both_succeeded,,,,,,,0,"Both succeeded; defender's Margin was higher -> defender wins, no counter-Effect."
+Scene3,13,59,Aleena,Bargle,Smite,Defense,injury,,,,,,,-19,
+Scene3,13,60,Bargle,Rowan,Bolt,Defense,armor_bypass,,,,,,,-9,"Tag+Location match: defense:armor present (simplified coarse match, not full DEC-137 address). NOTE: no numeric plain-armor mitigation formula exists in the ruled corpus, so match vs. fallback produce an IDENTICAL numeric outcome here -- a genuine completeness gap, not a script bug."
+Scene3,14,61,Rowan,Bargle,Power Strike,Defense,wound,91,Head,Left,3,-3,bpp,0,"Wound: Head (Left) Tier-3, attribute bpp -3."
+Scene3,14,62,Aleena,Bargle,Smite,Defense,injury,,,,,,,-9,
+Scene3,14,63,Bargle,Aleena,Bolt,Defense,injury,,,,,,,-30,
+Scene3,15,64,Rowan,Bargle,Power Strike,Defense,injury,,,,,,,-25,

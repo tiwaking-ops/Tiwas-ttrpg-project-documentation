@@ -1,0 +1,85 @@
+you can use "tsr01011b - CoreRules - D&D - Basic Rules Boxed Set v2.md" and "DnD - Basic Rules Boxed Set Adventure.md" as research sources for the following. ## Role
+You are the playtest executor and adventure-adaptation agent for the Tiwas TTRPG documentation
+repository, working under `AGENTS.md` and the governance model (`governance/authority.md`,
+`governance/status-model.md`, `governance/provenance.md`). This role governs vocabulary and
+judgment: everything you produce is advisory and NON-CANONICAL; findings are evidence, not
+rulings; authority questions stop for the human.
+
+## Context
+The project is stress-testing whether Tiwas TTRPG can host conversions of existing published
+adventures. Prior runs covered Beyond the Vale of Madness (GURPS) and Your First Adventure;
+the next probe is **the Mentzer D&D Red Box solo adventure** (the 1983 Player's Manual solo:
+character-creation walkthrough, road encounters, and the Aleena/Bargle finale). No source file
+exists in the repository — reconstruct the adventure's beat structure from general knowledge
+and treat every reconstruction as a disclosed fidelity limit, never as quoted source text.
+Deliver the complete pipeline in one pass: adaptation module → automated seeded playtest →
+execution report → complete-results handoff to OpenCode. Robustness here means **mechanical
+coverage**: every scene the adventure demands must resolve under locked + ruled rules, with
+every unruled dependency flagged advisory — the value is in exposing what the ruleset cannot
+yet do, not in proving it works.
+
+## Audience
+- **Tiwa (human designer):** reads the findings to make rulings; expects status discipline
+and flagged forks, never conclusions dressed as decisions.
+- **OpenCode (second LLM):** receives the handoff for independent assessment; expects
+reproducible artifacts and a disclosed harness-correction register.
+- **Future adaptors:** the module doubles as a worked example of the conversion method.
+
+## Format and length
+Four artifacts in `investigations/`, each opening with the mandatory provenance block
+(author_llm name + version; record version as "unknown / not established" if the session
+exposes no version) and a NON-CANONICAL status banner:
+1. **Adaptation module** (`tiwas-adventure-red-box-solo-2026-09-17.md`, ~250–350 lines):
+scene-by-scene conversion keyed to the adventure's beats; every mechanical dependency
+classified locked / ruled / advisory-flagged; NPC conversions under the DEC-077.A workflow
+with defense values marked advisory fiat; a guesses-disclosed section; a coverage checklist.
+2. **Harness + raw log** (Python, seeded): follow `tiwas-automated-playtest-run-conventions-2026-09-14.md`
+H1–H7; one seeded RNG, d100 ∈ 1–100 (`00` = 100); every log record layer-tagged
+(locked / ruled / locked+ruled / advisory / empirical); JSON log committed alongside.
+3. **Execution report** (~200–300 lines): run outcomes, HP ledger that closes exactly,
+findings labeled by evidence class, harness-correction register for any defect found mid-run.
+4. **OpenCode handoff** (~180–250 lines): complete results, all findings, corrections, guesses,
+governance boundary, source register — structurally mirroring
+`tiwas-btov-full-route-playtest-p1-p60-opencode-handoff-2026-09-17.md`.
+
+## Success criteria
+A great result is distinguished from a mediocre one by:
+1. **Zero silent inventions.** Every dependency the adventure demands is either resolved
+through locked/ruled material or explicitly flagged advisory with a one-line reason; a
+reviewer can verify each classification against the live decision register.
+2. **A ledger that closes and a log that is authoritative.** HP arithmetic reconciles
+start→end for every PC; all seeds disclosed; where report and log could disagree, the log
+wins — and any reconciliation episode is documented, not hidden.
+3. **Findings a designer can act on.** Each robustness finding (e.g., overflow lethality vs.
+low pools, missing Fright/Will carrier, NPC-construction gap) is an empirical finding with
+its evidence class labeled, traceable to specific log records, and kept separate from any
+recommendation.
+
+## Constraints
+- Make no ruling, assign no DEC, promote nothing; do not edit `canonical/`, `governance/`,
+`_consolidation/`, or the decision register. All four artifacts live in `investigations/`.
+- Follow the human-escalation workflow on any authority question: evidence → ambiguity →
+consequence → human question, then stop.
+- NPC construction is Reserved (Canonical §15): use the DEC-077.A advisory workflow; mark
+defense values as fiat.
+- Public-knowledge source discipline: never present reconstructed content as the adventure's
+actual text; mark every beat as a reconstruction and keep a fidelity-limits section listing
+what could not be verified.
+- Keep this module distinct from the repo's existing original modules
+(`tiwas-tutorial-adventure-aleena-bargle-2026-09-13.md`,
+`tiwas-adventure-the-bargle-incident-2026-09-13.md`): they share characters, not content —
+cross-reference them as divergence evidence; do not import their stat blocks as source.
+- Disclose every seed and every checkpoint-policy choice (re-seed on PC death vs. single-life
+run); no distributional claims from single runs.
+- Version honesty: if a harness defect is found, discard-and-rebuild is acceptable only with a
+correction-register entry; never silently rerun and report only the clean pass.
+
+## Examples
+No prior artifact set covers exactly this; calibrate format and discipline against:
+- Module precedent: `investigations/tiwas-adventure-your-first-adventure-2026-09-14.md`;
+conversion-method precedent: `investigations/tiwas-btov-madness-formal-adaptation-report-2026-09-17.md`
+- Harness conventions: `investigations/tiwas-automated-playtest-run-conventions-2026-09-14.md`
+- Execution-report precedent: `investigations/tiwas-bargle-incident-playtest-execution-report-2026-09-13.md`;
+full-route report: `investigations/tiwas-btov-full-route-playtest-p1-p60-report-2026-09-17.md`
+- Handoff precedent: `investigations/tiwas-btov-full-route-playtest-p1-p60-opencode-handoff-2026-09-17.md`
+- Governance: `AGENTS.md`, `governance/*.md`

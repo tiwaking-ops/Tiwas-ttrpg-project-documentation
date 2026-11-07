@@ -1,0 +1,55 @@
+You are producing non-canonical advisory material only. Per this project's governance/status-model.md and the LLM Governance Rules, your output goes into investigations/ or proposals/, is never Canonical, and must not silently resolve an open designer fork. Cite existing DEC IDs from decision-register.md where relevant. State your evidence class (mechanical fact / empirical finding / designer ruling / recommendation) for each claim.
+
+ROLE: P1 drafter, third pass (conform to new rulings). Target file:
+investigations/tiwas-g5-seven-consuming-mechanics-corrected-rerun-2026-09-19.md
+(currently v0.2-corrected, 328 lines). Touch no other file. No git operations.
+
+STEP 0 — READ FIRST (full text, not snapshots): _consolidation/decision-register.md
+lines 196-199 (DEC-150 U-6/U-7/U-9; DEC-151 U-8; DEC-152 Q2/U-10 + mootings;
+DEC-153 Q3/Q5/Q8/Q9). These rows are long; read them whole. WARNING: register
+line numbers have drifted three times in two days — re-derive every DEC line
+number live at write time and cite what you read, never any prior snapshot's
+numbers (including mine).
+
+STEP 1 — CONFORM EACH SECTION (narrow to adopted; demote, don't delete):
+(a) Disengage (§1): D-B (free exit) ADOPTED per DEC-150 U-7; D-A retired to a
+"mooted by DEC-150" note. Keep D-A text struck/annotated, not silently dropped.
+(b) Pin/Hold (§6): P-A Restrained-carrier ADOPTED per DEC-151 U-8
+(event-terminated persistence as ruled); P-B demoted to "rejected/mooted by
+DEC-151" note. Show the U-8 difference-statement already in the draft against
+the DEC-151 wording; keep whichever is narrower.
+(c) ZoC (§2): Z-B ADOPTED per DEC-152 (ZoC = movement-trigger Reaction,
+reaction:vigilant; U-10 resolved by identity). Z-A/Z-C demoted to mooted notes;
+the §A Z-A fixes (floor clause, order of ops, StateRecord) are moot via U-1/
+U-2/U-11 mooting — record as mooted, do not present as live candidates.
+(d) Chase (§3): K-A band steps ADOPTED per DEC-153 Q3; K-B demoted to mooted note.
+(e) Forced Movement (§5): F-A Tier-scaled ADOPTED per DEC-153 Q5; F-B/F-C demoted.
+(f) Fork C (§8): C3 (cost-only) ADOPTED per DEC-153 Q8 — close the fork in the
+draft, record C1/C2 as mooted. Update §9 Q7 accordingly.
+(g) Fork T (§0.3/§9 Q9): NO extra Skill-Tier gate per DEC-153 Q9 — close, record.
+(h) Open/Close Lane (U-6): alias to Seize/Deny per DEC-150 R1 — record; it is
+not an eighth mechanic.
+(i) Restrained Break-Free (U-9): carry the DEC-150 R3 mechanism + opposition
+source into §6's Restrained branch verbatim-as-recorded (transcription, not
+authorship — tag designer ruling DEC-150).
+
+STEP 2 — RESIDUAL DEFECTS (pre-authorized): fix the ln 34 compound cite
+(execute §C: DEC-079 operative, R2-as-inference, drop 126), ln 123, ln 187,
+ln 194 (all DEC-030 misanchors -> DEC-024/DEC-107/DEC-023.A).
+
+STEP 3 — QUESTION LIST (§9): close Q2/Q3/Q5/Q8/Q9/Q10/Q13 and U-1/U-2/U-6/U-7/
+U-8/U-9/U-10/U-11 as ruled/mooted with DEC refs; RETAIN open: Q1/Q4/Q6/Q7/Q11/
+Q12 (confirm each still open against the live register before retaining),
+Fork G, ZoC↔Seize residue if any survives DEC-152, SA-5/E5 divergence.
+
+STEP 4 — HOUSEKEEPING: version -> 0.3-conformed; last_modified_by_llm :=
+this session's exact model ID; last_modified_date := true date; §11 append
+this pass honestly. Append (do not replace) a conformance note listing
+adopted/mooted/retained items with DEC refs.
+
+FORBIDDEN: ruling anything not already ruled in DEC-150-153; reviving mooted
+options as live; deleting rejected-option text without a mooted-note trace;
+resolving the retained residue; inferring any DEC.
+
+RETURN: diff summary (adopted / mooted / retained / residual-fixes, with new
+line numbers) + git-status confirmation (this file the only content change).
