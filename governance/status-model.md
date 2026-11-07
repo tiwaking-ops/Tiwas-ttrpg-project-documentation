@@ -8,9 +8,9 @@ provenance:
   assessor_llm:
     - {name: "Claude Sonnet 5", version: "claude-sonnet-5"}
     - {name: "nemotron-3-super-120b-a12b:free", version: "unknown"}
-  last_modified_by_llm: {name: "opencode", version: "big-pickle"}
+  last_modified_by_llm: {name: "tencent", version: "hy4-preview-free"}
   created_date: "2026-08-29"
-  last_modified_date: "2026-08-31"
+  last_modified_date: "2026-11-08"
 ---
 
 # Document Status Model
@@ -63,7 +63,11 @@ An item may return to WIP if evidence exposes a substantive problem.
 7. The former proposal is marked Superseded or Locked in its source document.
 8. Implementation documentation is updated.
 
-No item currently in `proposals/` or `investigations/` in this repository has completed this process — see `_consolidation/decision-register.md` §B. A detailed proposal, however fully described, is not a rule merely because it is detailed (D3 §21).
+No item **other than DEC-017** currently in `proposals/` or `investigations/` in this repository has completed this process — see `_consolidation/decision-register.md` §B. A detailed proposal, however fully described, is not a rule merely because it is detailed (D3 §21).
+
+> **Maintenance note — added 2026-11-08.** The sentence above described the repository state at authoring (2026-08-29 / last modified 2026-08-31). DEC-017 has since completed all eight steps of this Promotion Rule — human-designer stop-and-confirm at every step — on 2026-09-05, and was promoted to **Canonical / Locked**; see `_consolidation/decision-register.md` §A and §B. Its promotion package remains in `investigations/` (`investigations/tiwas-dec017-s2-invocation-promotion-package-2026-09-05.md`), so the presence of a promotion package under `investigations/` does not by itself indicate that the process was left incomplete. Per the §B preamble, DEC-017 is the sole exception; every other item in `proposals/` and `investigations/` remains non-canonical.
+>
+> This note is documentation maintenance only. It records existing decision-register state and does not promote, demote, supersede, or otherwise reclassify any item.
 
 ## LLM Governance Rules (D2 §24) — binding on any LLM working in this repository going forward
 

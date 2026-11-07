@@ -22,6 +22,9 @@ Thumbs.db
 __pycache__/
 *.pyc
 
+# Docker quickstart compose file — local tool scaffolding, not part of the documentation corpus
+docker-compose.quickstart.yml
+
 # Larksuite https://chatgpt.com/g/g-p-6a8e0606157881918b14a4da3e52770c/c/6a9df02d-da0c-83ec-9579-71514fae4a81
 .venv/
 .env
