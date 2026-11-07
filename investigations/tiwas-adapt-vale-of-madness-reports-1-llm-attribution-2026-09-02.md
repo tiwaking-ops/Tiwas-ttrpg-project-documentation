@@ -11301,7 +11301,7 @@ However, *Beyond the Vale of Madness* also exposes the difference between having
 
 # 1. Executive Summary
 
-*Beyond the Vale of Madness* is a suitable practical benchmark for Tiwas because it exercises more than ordinary skill resolution. Although it is a relatively short solo adventure, it assumes systems for character capability, exploration, environmental hazards, climbing, fatigue, equipment, encumbrance, fear, combat, tactical positioning, damage, injury, conditions, creatures, and death. [Beyond-the-Vale-of-Madness-GURPS](Beyond-the-Vale-of-Madness-GURPS.pdf)
+*Beyond the Vale of Madness* is a suitable practical benchmark for Tiwas because it exercises more than ordinary skill resolution. Although it is a relatively short solo adventure, it assumes systems for character capability, exploration, environmental hazards, climbing, fatigue, equipment, encumbrance, fear, combat, tactical positioning, damage, injury, conditions, creatures, and death. [Beyond-the-Vale-of-Madness-GURPS](../Beyond-the-Vale-of-Madness-GURPS.pdf)
 
 Tiwas can already support the adventure’s **basic resolution layer**. Ordinary GURPS skill and attribute rolls can be replaced by the Tiwas Core Test without creating a second resolution engine. Tiwas also has usable foundations for attributes, skills, physical and mental resources, opposed contests, and hazard-related Location Index generation. 
 
@@ -11371,7 +11371,7 @@ A result may be “playtestable” in a deliberately provisional alpha test whil
 
 ## 3.1 Adventure structure
 
-The adventure is a solo, numbered-paragraph “Choose Your Path” scenario. The player reads a paragraph, makes choices, records discovered bold-faced items, and proceeds to another numbered entry. It is presented as an introductory GURPS Fantasy or Dungeon Fantasy adventure and assumes either a 150-point fantasy character or one of two pregenerated characters. [Beyond-the-Vale-of-Madness-GURPS](Beyond-the-Vale-of-Madness-GURPS.pdf)
+The adventure is a solo, numbered-paragraph “Choose Your Path” scenario. The player reads a paragraph, makes choices, records discovered bold-faced items, and proceeds to another numbered entry. It is presented as an introductory GURPS Fantasy or Dungeon Fantasy adventure and assumes either a 150-point fantasy character or one of two pregenerated characters. [Beyond-the-Vale-of-Madness-GURPS](../Beyond-the-Vale-of-Madness-GURPS.pdf)
 
 The following are **adventure procedures or content**, not Tiwas subsystems:
 
@@ -11418,7 +11418,7 @@ These still require adaptation work, but they do not indicate missing Tiwas rule
 | Creature statistics | The ice troll must be represented as an opponent. |
 | Magic | The adventure supports a pregenerated character using GURPS Magic, creating a possible magic-system dependency. |
 
-The PDF evidence directly shows Will, DX, Climbing, ST, falling damage, fatigue-point depletion, weapon statistics, tactical combat, and the ice-troll encounter. [Beyond-the-Vale-of-Madness-GURPS](Beyond-the-Vale-of-Madness-GURPS.pdf)
+The PDF evidence directly shows Will, DX, Climbing, ST, falling damage, fatigue-point depletion, weapon statistics, tactical combat, and the ice-troll encounter. [Beyond-the-Vale-of-Madness-GURPS](../Beyond-the-Vale-of-Madness-GURPS.pdf)
 
 ***
 
@@ -11495,7 +11495,7 @@ This is one of the clearest areas where an ordinary Tiwas skill roll is insuffic
 | Defence | Defense appears as a gated effect category, but a complete defence procedure is not demonstrated. | Non-canonical/ruling direction; incomplete contents | **Design-Stage Dependency** | Critical | Complete defence mechanics. |
 | Grappling or close control | May be represented by opposed contests and condition/equipment effects. | Partial S-1/S-3 support | **Design-Stage Dependency** | Medium | Define applicable effects. |
 
-The ice-troll encounter is the principal full-playtest blocker. The adventure does not merely ask whether the character succeeds at an attack; it assumes an integrated combat model with movement, positioning, attack order, damage, and creature behaviour. [Beyond-the-Vale-of-Madness-GURPS](Beyond-the-Vale-of-Madness-GURPS.pdf)
+The ice-troll encounter is the principal full-playtest blocker. The adventure does not merely ask whether the character succeeds at an attack; it assumes an integrated combat model with movement, positioning, attack order, damage, and creature behaviour. [Beyond-the-Vale-of-Madness-GURPS](../Beyond-the-Vale-of-Madness-GURPS.pdf)
 
 ## 4.6 Damage, injury, conditions, and death
 
@@ -11645,7 +11645,7 @@ The opening route requires travel through cold, snow, darkness, and environmenta
 
 ## 7.2 Castle approach and climbing route
 
-The cliff or castle approach requires Climbing, encumbrance penalties, and falling consequences. The adventure explicitly uses Climbing or DX-5 and applies falling damage on failure. [Beyond-the-Vale-of-Madness-GURPS](Beyond-the-Vale-of-Madness-GURPS.pdf)
+The cliff or castle approach requires Climbing, encumbrance penalties, and falling consequences. The adventure explicitly uses Climbing or DX-5 and applies falling damage on failure. [Beyond-the-Vale-of-Madness-GURPS](../Beyond-the-Vale-of-Madness-GURPS.pdf)
 
 **Tiwas result:** The test itself is compatible. Hazard-location provenance is supported by DEC-037. Falling damage, encumbrance, armour, and injury are not complete.
 
@@ -11674,7 +11674,7 @@ The ice-troll encounter is the strongest readiness test. It includes:
 - Damage.
 - Possible escape or death.
 
-The adventure states that the troll rushes toward the character and provides different starting positions depending on whether the character has recorded “AMBUSHED.” [Beyond-the-Vale-of-Madness-GURPS](Beyond-the-Vale-of-Madness-GURPS.pdf)
+The adventure states that the troll rushes toward the character and provides different starting positions depending on whether the character has recorded “AMBUSHED.” [Beyond-the-Vale-of-Madness-GURPS](../Beyond-the-Vale-of-Madness-GURPS.pdf)
 
 **Tiwas result:** The encounter cannot currently function as a complete Tiwas combat benchmark without provisional combat, damage, creature, and condition rules.
 
@@ -11842,7 +11842,7 @@ The adventure also demonstrates that a Core Test is not a complete game system. 
 
 | ID | Source | Use in this report |
 |---|---|---|
-|  [Beyond-the-Vale-of-Madness-GURPS](Beyond-the-Vale-of-Madness-GURPS.pdf) | `Beyond-the-Vale-of-Madness-GURPS.pdf` | Adventure structure, tests, climbing, falling, fatigue, equipment, tactical combat, ice troll, fear, and GURPS assumptions. |
+|  [Beyond-the-Vale-of-Madness-GURPS](../Beyond-the-Vale-of-Madness-GURPS.pdf) | `Beyond-the-Vale-of-Madness-GURPS.pdf` | Adventure structure, tests, climbing, falling, fatigue, equipment, tactical combat, ice troll, fear, and GURPS assumptions. |
 |   | `Tiwas-Alpha-Playtest-Corpus-2026-09-01.md` | Tiwas authority model, Core Test, attributes, derived resources, S-1, S-2, S-3, S-4, and status distinctions. |
 
 The Tiwas corpus identifies DEC-001 through DEC-016 as the Core Locked Rules and states that the complete Core Test Transaction and canonical invariants are preserved there. It also identifies ruled non-canonical subsystems, including S-1 opposed contests, S-2/S-4 Location Index generation, and S-3 effect gating. 

@@ -19506,7 +19506,7 @@ The report is an **advisory compilation only**. Any design decision arising from
 
 ### 1.2 Source-Report Authorship
 - **Primary Corpus:** `tiwas-adapt-vale-of-madness-reports-1-llm-attribution-2026-09-02.md`
-- **Attribution Index:** [LLM Attribution Index (Annotated Copy)](4e6fd18b-2dcb-4da5-8418-172c52657ace)
+- **Attribution Index:** LLM Attribution Index (Annotated Copy) — *referenced local artifact is not present in this repository*
 - **Total Reports:** 25
 
 ### 1.3 Source Boundary
